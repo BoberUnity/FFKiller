@@ -22,6 +22,8 @@ public class DialogPanel : MonoBehaviour
   {
     thisAnimator.SetBool("IsVisible", true);
     characterMoving.CanMove = false;
+    NameText.text = "";
+    PortraitImage.sprite = null;
   }
 
   public void Hide()

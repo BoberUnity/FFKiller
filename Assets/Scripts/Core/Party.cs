@@ -39,14 +39,12 @@ public class Party : MonoBehaviour
   public void Connect(Transform newNPC)
   {
     vagons.Add(newNPC);
-    Start();
-      //Array.Resize(ref trace, vagons.Count * distance + 1);
+    Start();    
   }
 
   public void Disconnect(Transform nPC)
   {
     vagons.Remove(nPC);
-    Start();
-    //Array.Resize(ref trace, vagons.Count * distance + 1);
+    Start();    
   }  
 }

@@ -1,18 +1,17 @@
 ﻿using UnityEngine;
 
-public class Dialog : MonoBehaviour
+public class TriggerBase : MonoBehaviour
 {
   [SerializeField] private string textAssetName = "Klaus";
-  [SerializeField] private bool automatic = false;
-  [SerializeField] private Sprite myPortrait = null;
-  [SerializeField] private Sprite otherPortrait = null;
+  [SerializeField] private bool automatic = false;  
   private string file = "";
-  private string[,] allBoxes;
+  protected string[,] allBoxes;
   protected DialogPanel dialogPanel = null;
   private int currentLine = 2;
   private bool hasStartSpeaking = false;
   private bool dialogFinished = false;
   private bool canSpeak = false;
+  protected CharacterMoving characterMoving = null;
 
   protected virtual void Start()
   {
@@ -56,11 +55,9 @@ public class Dialog : MonoBehaviour
     }
   }
 
-  private void SetDialog(int line)
+  protected virtual void SetDialog(int line)
   {
-    dialogPanel.MainText.text = allBoxes[3 + dialogPanel.CurrentLanguage, line];
-    dialogPanel.NameText.text = allBoxes[1 + dialogPanel.CurrentLanguage, line];
-    dialogPanel.PortraitImage.sprite = allBoxes[0, line] == "0" ? otherPortrait : myPortrait;
+    dialogPanel.MainText.text = allBoxes[3 + dialogPanel.CurrentLanguage, line];    
   }
 
   protected virtual void Update()
@@ -88,6 +85,7 @@ public class Dialog : MonoBehaviour
   {
     if (other.GetComponent<CharacterMoving>() != null)
     {
+      characterMoving = other.GetComponent<CharacterMoving>();
       OnCharacterTriggerEnter();
       if (!hasStartSpeaking && !dialogFinished)
       {

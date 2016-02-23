@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Vagon : Peasant
+public class Vagon : TriggerNPC
 {
   private bool isConnected = false;
 

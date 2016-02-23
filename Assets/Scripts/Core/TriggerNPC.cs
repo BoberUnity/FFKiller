@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 
-public class Peasant : Dialog
+public class TriggerNPC : TriggerBase
 {
+  public Sprite Portrait = null;
   [SerializeField] private Animator bodyAnimator = null;
   protected Animator thisAnimator = null;
   private Vector3 previousPosition = Vector3.zero;
@@ -14,20 +15,20 @@ public class Peasant : Dialog
     thisAnimator.speed = Random.value * 0.5f + 0.5f;
   }
 
+  protected override void SetDialog(int line)
+  {
+    base.SetDialog(line);
+    dialogPanel.NameText.text = allBoxes[1 + dialogPanel.CurrentLanguage, line];
+    Sprite otherPortrait = characterMoving.Portrait;
+    dialogPanel.PortraitImage.sprite = allBoxes[0, line] == "0" ? otherPortrait : Portrait;    
+  }
+
   protected override void StartDialog()
   {
     base.StartDialog();
     bodyAnimator.SetBool("IsMoving", false);
     bodyAnimator.SetBool("Running", false);
     thisAnimator.speed = 0;
-  }
-
-  protected override void EndDialog()
-  {
-    base.EndDialog();
-    //bodyAnimator.SetBool("IsMoving", true);
-    //bodyAnimator.SetBool("Running", true);
-    //thisAnimator.speed = Random.value * 0.5f + 0.5f;    
   }
 
   protected override void Update()

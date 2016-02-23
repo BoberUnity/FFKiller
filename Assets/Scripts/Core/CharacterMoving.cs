@@ -1,18 +1,20 @@
 ﻿using UnityEngine;
-using System.Collections;
+
+[RequireComponent(typeof(Animator))]
 
 public class CharacterMoving : MonoBehaviour
 {
+  public Sprite Portrait = null;
   [SerializeField] private float speed = 1;
-  [SerializeField] private Animator thisAnimator = null;
+  private Animator thisAnimator = null;
   [HideInInspector] public bool CanMove = true;
-	// Use this for initialization
-	void Start ()
+
+	private void Start ()
   {
     thisAnimator = GetComponent<Animator>();
   }
 	
-		void FixedUpdate ()
+	private	void FixedUpdate ()
   {
     if (CanMove)
     {
@@ -43,7 +45,7 @@ public class CharacterMoving : MonoBehaviour
       }
     }
 
-      if ((!Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.DownArrow)) || !CanMove)
+    if ((!Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.DownArrow)) || !CanMove)
         thisAnimator.SetBool("IsMoving", false);    
   }
 }
