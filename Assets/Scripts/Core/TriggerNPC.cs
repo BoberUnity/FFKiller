@@ -20,6 +20,7 @@ public class TriggerNPC : TriggerBase
     base.SetDialog(line);
     dialogPanel.NameText.text = allBoxes[1 + dialogPanel.CurrentLanguage, line];
     Sprite otherPortrait = characterMoving.Portrait;
+    dialogPanel.PortraitImage.enabled = true;
     dialogPanel.PortraitImage.sprite = allBoxes[0, line] == "1" ? Portrait : otherPortrait;    
   }
 

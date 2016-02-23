@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System;
 
+[RequireComponent(typeof(BoxCollider2D))]
+
 [Serializable]
 public class ChangeTrigger
 {
@@ -23,6 +25,7 @@ public class TriggerBase : MonoBehaviour
   protected CharacterMoving characterMoving = null;
   private int[] triggerNumLines = new int[1];//номера строк с которых начинаются триггеры в .csv таблице
   private int currentTrigger = 1;
+  public Action<int> OnTriggerAction;
 
   private int CurrentTrigger
   {
@@ -155,12 +158,14 @@ public class TriggerBase : MonoBehaviour
     dialogPanel.Hide();
     hasStartSpeaking = false;
     dialogFinished = true;
-
     foreach (var changeTrigger in changeTriggers)
     {
       if (changeTrigger.MyTrigger == CurrentTrigger)
         changeTrigger.OtherTrigger.CurrentTrigger = changeTrigger.OtherTriggerNewValue;
-    }      
+    }
+    var handler = OnTriggerAction;
+    if (handler != null)
+      handler(CurrentTrigger);
   }
 
   protected virtual void OnCharacterTriggerEnter()
