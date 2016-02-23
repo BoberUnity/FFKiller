@@ -1,9 +1,18 @@
 ﻿using UnityEngine;
+using System;
 
+[Serializable]
+public class ChangeTrigger
+{
+  public int MyTrigger = 1;
+  public TriggerBase OtherTrigger = null;
+  public int OtherTriggerNewValue = 1;
+}
 public class TriggerBase : MonoBehaviour
 {
   [SerializeField] private string textAssetName = "Klaus";
-  [SerializeField] private bool automatic = false;  
+  [SerializeField] private bool automatic = false;
+  [SerializeField] private ChangeTrigger[] changeTriggers = null;
   private string file = "";
   protected string[,] allBoxes;
   protected DialogPanel dialogPanel = null;
@@ -12,6 +21,18 @@ public class TriggerBase : MonoBehaviour
   private bool dialogFinished = false;
   private bool canSpeak = false;
   protected CharacterMoving characterMoving = null;
+  private int[] triggerNumLines = new int[1];//номера строк с которых начинаются триггеры в .csv таблице
+  private int currentTrigger = 1;
+
+  private int CurrentTrigger
+  {
+    get { return currentTrigger;}
+    set
+    {
+      currentTrigger = value;
+      currentLine = currentLine = triggerNumLines[currentTrigger];
+    }
+  }
 
   protected virtual void Start()
   {
@@ -20,6 +41,7 @@ public class TriggerBase : MonoBehaviour
     if (System.IO.File.Exists(file))
     {
       WriteAllBoxes();
+      SetTriggers();
     }
     else
     {
@@ -55,6 +77,20 @@ public class TriggerBase : MonoBehaviour
     }
   }
 
+  private void SetTriggers()
+  {
+    for (int i = 1; i < allBoxes.GetLength(1) - 1; i++)
+    {
+      if (allBoxes[0, i].Length > 1)
+      {
+        Array.Resize(ref triggerNumLines, triggerNumLines.Length + 1);
+        triggerNumLines[triggerNumLines.Length - 1] = i + 1;
+      }
+    }
+    Array.Resize(ref triggerNumLines, triggerNumLines.Length + 1);
+    triggerNumLines[triggerNumLines.Length - 1] = allBoxes.GetLength(1) + 1;
+  }
+
   protected virtual void SetDialog(int line)
   {
     dialogPanel.MainText.text = allBoxes[3 + dialogPanel.CurrentLanguage, line];    
@@ -67,13 +103,13 @@ public class TriggerBase : MonoBehaviour
       if (hasStartSpeaking)
       {
         currentLine += 1;
-        if (currentLine < allBoxes.GetLength(1))
+        if (currentLine == allBoxes.GetLength(1) || currentLine == triggerNumLines[currentTrigger + 1] - 1)//
         {
-          SetDialog(currentLine);
+          EndDialog(); 
         }
         else
         {
-          EndDialog();
+          SetDialog(currentLine);
         }
       }
       if (canSpeak && !dialogFinished && !hasStartSpeaking)
@@ -101,6 +137,7 @@ public class TriggerBase : MonoBehaviour
     if (other.GetComponent<CharacterMoving>() != null)
     {
       canSpeak = false;
+      dialogFinished = false;
       OnCharacterTriggerExit();
     }
   }
@@ -109,7 +146,7 @@ public class TriggerBase : MonoBehaviour
   {
     dialogPanel.Show();
     hasStartSpeaking = true;
-    currentLine = 2;
+    currentLine = triggerNumLines[currentTrigger];
     SetDialog(currentLine);
   }
 
@@ -118,6 +155,12 @@ public class TriggerBase : MonoBehaviour
     dialogPanel.Hide();
     hasStartSpeaking = false;
     dialogFinished = true;
+
+    foreach (var changeTrigger in changeTriggers)
+    {
+      if (changeTrigger.MyTrigger == CurrentTrigger)
+        changeTrigger.OtherTrigger.CurrentTrigger = changeTrigger.OtherTriggerNewValue;
+    }      
   }
 
   protected virtual void OnCharacterTriggerEnter()
