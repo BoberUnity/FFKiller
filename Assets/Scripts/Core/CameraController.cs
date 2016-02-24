@@ -6,8 +6,7 @@ public class CameraController : MonoBehaviour
   public float EffectTime = 1;
   private float alfha = 0;
   private MeshRenderer shadowMeshRenderer = null;
-  private bool isShadowEffect = false;
-  
+  private bool isShadowEffect = false;  
   private bool back = false;
 
   private void Start ()

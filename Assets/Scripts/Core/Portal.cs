@@ -5,6 +5,7 @@ public class Portal : MonoBehaviour
 {
   [SerializeField] private Portal otherPortal = null;
   public Transform TargetPoint = null;
+  [SerializeField] private Animator doorAnimator = null;
   private CharacterMoving characterMoving = null;
   [HideInInspector] public bool IsFinish = false;
   private CameraController cameraController = null;  
@@ -12,32 +13,28 @@ public class Portal : MonoBehaviour
   private void Start ()
   {
     characterMoving = FindObjectOfType<CharacterMoving>();
-    cameraController = FindObjectOfType<CameraController>();
-    //enabled = false;
+    cameraController = FindObjectOfType<CameraController>();    
   }
 	
 	private void OnTriggerEnter2D(Collider2D other)
   {    
-    //if (!IsFinish)
-    //{
-      characterMoving.CanMove = false;      
-      cameraController.StartEffect();
-      //otherPortal.IsFinish = true;
-      Invoke("ChangePosition", cameraController.EffectTime);
-    //}    
-	}
+    characterMoving.CanMove = false;      
+    cameraController.StartEffect();
+    Invoke("ChangePosition", cameraController.EffectTime);
+    if (doorAnimator != null)
+      doorAnimator.SetTrigger("Open"); 
+  }
 
   private void OnTriggerExit2D(Collider2D other)
   {
-    //if (IsFinish)
-    //{
-    //  IsFinish = false;
-    //}
+
   }
 
   private void ChangePosition()
   {
     characterMoving.transform.position = otherPortal.TargetPoint.transform.position;
     characterMoving.CanMove = true;
+    //if (doorAnimator != null)
+    //  doorAnimator.SetTrigger("Open");
   }
 }

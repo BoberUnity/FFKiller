@@ -2,7 +2,7 @@
 
 public class OnTriggerActionAnimatorSetBool : MonoBehaviour
 {
-  [SerializeField] TriggerBase trigger = null;//Не удалять!
+  [SerializeField] TriggerBase trigger = null;
   [SerializeField] private int numTrigger = 1;
   [SerializeField] private Animator thisAnimator = null;
   [SerializeField] private string paramName = "GoAway";
@@ -10,12 +10,12 @@ public class OnTriggerActionAnimatorSetBool : MonoBehaviour
 
   private void Start ()
   {
-    trigger.OnTriggerAction += OnTriggerAction;//Не удалять!    
+    trigger.OnTriggerAction += OnTriggerAction;  
   }
 	
 	private void OnDestroy ()
   {
-    trigger.OnTriggerAction -= OnTriggerAction;//Не удалять!
+    trigger.OnTriggerAction -= OnTriggerAction;
   }
 
   private void OnTriggerAction(int currTrigger)
