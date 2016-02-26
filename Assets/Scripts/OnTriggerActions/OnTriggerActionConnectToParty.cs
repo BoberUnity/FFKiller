@@ -4,7 +4,6 @@ public class OnTriggerActionConnectToParty : MonoBehaviour
 {
   [SerializeField] TriggerBase trigger = null;
   [SerializeField] private int numTrigger = 1;
-  private bool isConnected = false;
 
   private void Start ()
   {
@@ -20,7 +19,6 @@ public class OnTriggerActionConnectToParty : MonoBehaviour
   {
     if (currTrigger == numTrigger)
     {
-      isConnected = true;
       GetComponent<Animator>().enabled = false;
       FindObjectOfType<Party>().Connect(transform);
     }

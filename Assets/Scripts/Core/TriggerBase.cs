@@ -26,6 +26,7 @@ public class TriggerBase : MonoBehaviour
   private int[] triggerNumLines = new int[1];//номера строк с которых начинаются триггеры в .csv таблице
   private int currentTrigger = 1;
   public Action<int> OnTriggerAction;
+  protected bool isCharacterRight = false;
 
   private int CurrentTrigger
   {
@@ -33,7 +34,7 @@ public class TriggerBase : MonoBehaviour
     set
     {
       currentTrigger = value;
-      currentLine = currentLine = triggerNumLines[currentTrigger];
+      currentLine = triggerNumLines[currentTrigger];
     }
   }
 
@@ -125,6 +126,7 @@ public class TriggerBase : MonoBehaviour
     if (other.GetComponent<CharacterMoving>() != null)
     {
       characterMoving = other.GetComponent<CharacterMoving>();
+      isCharacterRight = other.transform.position.x > transform.position.x;
       OnCharacterTriggerEnter();
       if (!hasStartSpeaking && !dialogFinished)
       {
@@ -150,7 +152,7 @@ public class TriggerBase : MonoBehaviour
     dialogPanel.Show();
     hasStartSpeaking = true;
     currentLine = triggerNumLines[currentTrigger];
-    SetDialog(currentLine);
+    SetDialog(currentLine);    
   }
 
   protected virtual void EndDialog()
