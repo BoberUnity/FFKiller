@@ -2,7 +2,7 @@
 
 public class OnTriggerActionTriggerOnOff : MonoBehaviour
 {
-  [SerializeField] TriggerBase targetTrigger = null;
+  [SerializeField] GameObject targetObject = null;
   [SerializeField] private int numTrigger = 1;
   [SerializeField] private bool newState = false;
   TriggerBase thisTrigger = null;
@@ -22,7 +22,7 @@ public class OnTriggerActionTriggerOnOff : MonoBehaviour
   {
     if (currTrigger == numTrigger)
     {
-      targetTrigger.gameObject.SetActive(newState);
+      targetObject.gameObject.SetActive(newState);
     }
   }
 }
