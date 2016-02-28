@@ -2,25 +2,27 @@
 
 public class OnTriggerActionTriggerOnOff : MonoBehaviour
 {
-  [SerializeField] TriggerBase trigger = null;
+  [SerializeField] TriggerBase targetTrigger = null;
   [SerializeField] private int numTrigger = 1;
   [SerializeField] private bool newState = false;
+  TriggerBase thisTrigger = null;
 
   private void Start ()
   {
-    trigger.OnTriggerAction += OnTriggerAction;  
+    thisTrigger = GetComponent<TriggerBase>();
+    thisTrigger.OnTriggerAction += OnTriggerAction;  
   }
 
   private void OnDestroy()
   {
-    trigger.OnTriggerAction -= OnTriggerAction;
+    thisTrigger.OnTriggerAction -= OnTriggerAction;
   }
 
   private void OnTriggerAction(int currTrigger)
   {
     if (currTrigger == numTrigger)
     {
-      trigger.gameObject.SetActive(newState);
+      targetTrigger.gameObject.SetActive(newState);
     }
   }
 }
