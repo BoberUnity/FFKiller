@@ -237,6 +237,7 @@ GameObject:
   - 95: {fileID: 9569536}
   - 114: {fileID: 11442556}
   - 114: {fileID: 11494818}
+  - 114: {fileID: 11451520}
   m_Layer: 0
   m_Name: WarehouseKeeper
   m_TagString: Untagged
@@ -343,6 +344,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &149214
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 432024}
+  - 61: {fileID: 6183520}
+  - 114: {fileID: 11497848}
+  - 114: {fileID: 11431508}
+  m_Layer: 0
+  m_Name: BoxPlace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &151156
 GameObject:
   m_ObjectHideFlags: 1
@@ -370,7 +389,7 @@ GameObject:
   - 114: {fileID: 11443564}
   - 114: {fileID: 11408762}
   m_Layer: 0
-  m_Name: BoxPlace
+  m_Name: BagPlace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -573,6 +592,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 482444}
   m_RootOrder: 0
+--- !u!4 &432024
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149214}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.62, y: 0.32, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 452468}
+  m_RootOrder: 1
 --- !u!4 &433388
 Transform:
   m_ObjectHideFlags: 1
@@ -580,7 +611,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 136870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.46, y: -15.82, z: 0}
+  m_LocalPosition: {x: 31.46, y: -14.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 448320}
@@ -648,6 +679,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 416766}
+  - {fileID: 432024}
   - {fileID: 457398}
   m_Father: {fileID: 471968}
   m_RootOrder: 8
@@ -671,11 +703,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.62, y: 0.32, z: 0}
+  m_LocalPosition: {x: 9.72, y: 9.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 452468}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!4 &457684
 Transform:
   m_ObjectHideFlags: 1
@@ -842,7 +874,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.1875, y: -16.40625, z: 0}
+  m_LocalPosition: {x: 31.46, y: -15.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 467152}
@@ -1117,6 +1149,20 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1.2, y: 1.4}
+--- !u!61 &6183520
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149214}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!61 &6190592
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -1444,7 +1490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f692e063916a5f4b9e207c9003e0e1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 11443564}
+  targetObject: {fileID: 160304}
   numTrigger: 1
   newState: 0
 --- !u!114 &11413908
@@ -1477,7 +1523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f692e063916a5f4b9e207c9003e0e1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 11413908}
+  targetObject: {fileID: 0}
   numTrigger: 1
   newState: 0
 --- !u!114 &11417416
@@ -1491,7 +1537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f692e063916a5f4b9e207c9003e0e1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 11456608}
+  targetObject: {fileID: 136870}
   numTrigger: 1
   newState: 0
 --- !u!114 &11429776
@@ -1510,6 +1556,20 @@ MonoBehaviour:
   thisAnimator: {fileID: 9599996}
   paramName: GoAway
   newValue: 1
+--- !u!114 &11431508
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f692e063916a5f4b9e207c9003e0e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 149214}
+  numTrigger: 1
+  newState: 0
 --- !u!114 &11434134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1584,9 +1644,6 @@ MonoBehaviour:
   textAssetName: Warehouse/WarehouseKeeper
   automatic: 0
   changeTriggers:
-  - MyTrigger: 1
-    OtherTrigger: {fileID: 0}
-    OtherTriggerNewValue: 2
   - MyTrigger: 2
     OtherTrigger: {fileID: 11442556}
     OtherTriggerNewValue: 3
@@ -1603,12 +1660,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc453f204cb3c7a40840800e1d832e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textAssetName: Warehouse/BoxPlace
+  textAssetName: Warehouse/BagPlace
   automatic: 1
   changeTriggers:
   - MyTrigger: 1
     OtherTrigger: {fileID: 11442556}
-    OtherTriggerNewValue: 2
+    OtherTriggerNewValue: 4
 --- !u!114 &11449224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1625,6 +1682,20 @@ MonoBehaviour:
   changeTriggers: []
   Portrait: {fileID: 21300000, guid: 22c79ca8fcc1bca48b57c58c9b2e5455, type: 3}
   bodyAnimator: {fileID: 9556696}
+--- !u!114 &11451520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f692e063916a5f4b9e207c9003e0e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 160304}
+  numTrigger: 3
+  newState: 1
 --- !u!114 &11456608
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1707,7 +1778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f692e063916a5f4b9e207c9003e0e1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 11443564}
+  targetObject: {fileID: 149214}
   numTrigger: 1
   newState: 1
 --- !u!114 &11496908
@@ -1726,6 +1797,23 @@ MonoBehaviour:
   thisAnimator: {fileID: 9581720}
   paramName: GoAway
   newValue: 1
+--- !u!114 &11497848
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc453f204cb3c7a40840800e1d832e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textAssetName: Warehouse/BoxPlace
+  automatic: 1
+  changeTriggers:
+  - MyTrigger: 1
+    OtherTrigger: {fileID: 11442556}
+    OtherTriggerNewValue: 2
 --- !u!212 &21212338
 SpriteRenderer:
   m_ObjectHideFlags: 1
