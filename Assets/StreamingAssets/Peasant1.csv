@@ -1,13 +1,2 @@
 Trigger1;Russian;English;Russian;English
-1;Крестьянин;Peasant;Я ранен. Принеси мне бинты;Will be enough to stand aside. I go to Held!
-0;Геханд;;Конечно, я помогу тебе;
-1;Крестьянин;Peasant;Поторопись, а то я помру;
-Trigger2;;;;
-1;Крестьянин;Klaus;Эй, Гехенд!;Hallo, Gehand
-1;Крестьянин;Klaus;О! Ты принёс бинты, как я рад!;You have well a rest? The grandmother calls you to us to the house. You after all want to eat as well as all people? And, Gekhend?
-0;Геханд;Gehand;Да, ;Yes, Claus. As well as all people.
-0;Геханд;Gehand;я стоптал все пятки;What for vanity? Again someone died?
-1;Крестьянин;Klaus;Я буду помнить твоё доброе дело;No...
-Trigger3;;;;
-1;Крестьянин;Klaus;Я помню как ты мне помог, когда я был ранен.;You have well a rest? The grandmother calls you to us to the house. You after all want to eat as well as all people? And, Gekhend?
-0;Геханд;Gehand;Тогда я стоптал пятки.;Yes, Claus. As well as all people.
+1;Крестьянин;;Хватит оставаться в стороне. Я отправляюсь в Хельд!;

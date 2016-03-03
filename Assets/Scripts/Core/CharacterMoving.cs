@@ -5,7 +5,9 @@
 public class CharacterMoving : MonoBehaviour
 {
   public Sprite Portrait = null;
-  [SerializeField] private float speed = 1;
+  [SerializeField] private float speedWalk = 1;
+  [SerializeField] private float speedRun = 1;
+  private float currentSpeed = 0;
   private Animator thisAnimator = null;
   [HideInInspector] public bool CanMove = true;
 
@@ -18,34 +20,39 @@ public class CharacterMoving : MonoBehaviour
   {
     if (CanMove)
     {
+      currentSpeed = Input.GetKey(KeyCode.RightShift) ? speedRun : speedWalk;
       if (Input.GetKey(KeyCode.UpArrow))
       {
-        transform.position += Vector3.up * Time.fixedDeltaTime * speed;
-        thisAnimator.SetBool("IsMoving", true);
-        thisAnimator.SetInteger("Direction", 0);
+        transform.position += Vector3.up * Time.fixedDeltaTime * currentSpeed;
+        thisAnimator.SetBool("Running", true);
+        thisAnimator.SetFloat("SpeedY", 1);
+        thisAnimator.SetFloat("SpeedX", 0);
       }
 
       if (Input.GetKey(KeyCode.DownArrow))
       {
-        transform.position -= Vector3.up * Time.fixedDeltaTime * speed;
-        thisAnimator.SetBool("IsMoving", true);
-        thisAnimator.SetInteger("Direction", 2);
+        transform.position -= Vector3.up * Time.fixedDeltaTime * currentSpeed;
+        thisAnimator.SetBool("Running", true);
+        thisAnimator.SetFloat("SpeedY", -1);
+        thisAnimator.SetFloat("SpeedX", 0);
       }
       if (Input.GetKey(KeyCode.RightArrow))
       {
-        transform.position += Vector3.right * Time.fixedDeltaTime * speed;
-        thisAnimator.SetBool("IsMoving", true);
-        thisAnimator.SetInteger("Direction", 1);
+        transform.position += Vector3.right * Time.fixedDeltaTime * currentSpeed;
+        thisAnimator.SetBool("Running", true);
+        thisAnimator.SetFloat("SpeedX", 1);
+        thisAnimator.SetFloat("SpeedY", 0);
       }
       if (Input.GetKey(KeyCode.LeftArrow))
       {
-        transform.position -= Vector3.right * Time.fixedDeltaTime * speed;
-        thisAnimator.SetBool("IsMoving", true);
-        thisAnimator.SetInteger("Direction", 3);
+        transform.position -= Vector3.right * Time.fixedDeltaTime * currentSpeed;
+        thisAnimator.SetBool("Running", true);
+        thisAnimator.SetFloat("SpeedX", -1);
+        thisAnimator.SetFloat("SpeedY", 0);
       }
     }
 
     if ((!Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.DownArrow)) || !CanMove)
-        thisAnimator.SetBool("IsMoving", false);    
+        thisAnimator.SetBool("Running", false);    
   }
 }

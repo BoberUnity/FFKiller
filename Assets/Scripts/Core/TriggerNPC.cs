@@ -6,13 +6,15 @@ public class TriggerNPC : TriggerBase
   [SerializeField] private Animator bodyAnimator = null;
   protected Animator thisAnimator = null;
   private Vector3 previousPosition = Vector3.zero;
+  private bool isRotateToCharacter = false;
 
   protected override void Start()
   {
     base.Start();
     previousPosition = transform.position;
     thisAnimator = GetComponent<Animator>();
-    thisAnimator.speed = Random.value * 0.5f + 0.5f;
+    if (thisAnimator != null)
+      thisAnimator.speed = Random.value * 0.5f + 0.5f;
   }
 
   protected override void SetDialog(int line)
@@ -26,33 +28,36 @@ public class TriggerNPC : TriggerBase
 
   protected override void StartDialog()
   {
-    base.StartDialog();
-    bodyAnimator.SetBool("IsMoving", false);
-    bodyAnimator.SetBool("Running", false);
-    thisAnimator.speed = 0;
+    base.StartDialog();    
+    bodyAnimator.SetBool("Running", false);    
+    if (thisAnimator != null)
+      thisAnimator.speed = 0;
   }
 
   protected override void Update()
   {
     base.Update();
-    if (transform.position.x - previousPosition.x > 0)
-      bodyAnimator.SetInteger("Direction", 1);
-    if (transform.position.x - previousPosition.x < 0)
-      bodyAnimator.SetInteger("Direction", 3);
-    bodyAnimator.SetFloat("SpeedX", transform.position.x - previousPosition.x);
-    bodyAnimator.SetFloat("SpeedY", transform.position.y - previousPosition.y);
-    bodyAnimator.SetBool("Running", previousPosition != transform.position);
-    bodyAnimator.SetBool("IsMoving", previousPosition != transform.position);
+    if (!isRotateToCharacter)
+    {
+      bodyAnimator.SetFloat("SpeedX", transform.position.x - previousPosition.x);
+      bodyAnimator.SetFloat("SpeedY", transform.position.y - previousPosition.y);
+    }
+    bodyAnimator.SetBool("Running", previousPosition != transform.position);    
     previousPosition = transform.position;    
   }
 
   protected override void OnCharacterTriggerEnter()
   {
-    thisAnimator.speed = 0;
+    if (thisAnimator != null)
+      thisAnimator.speed = 0;
+    bodyAnimator.SetFloat("SpeedX", isCharacterRight ? 1 : -1);
+    isRotateToCharacter = true;
   }
 
   protected override void OnCharacterTriggerExit()
   {
-    thisAnimator.speed = 1;
+    if (thisAnimator != null)
+      thisAnimator.speed = 1;
+    isRotateToCharacter = false;
   }  
 }

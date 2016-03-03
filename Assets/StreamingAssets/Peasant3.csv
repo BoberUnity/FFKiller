@@ -1,3 +1,3 @@
-Portrait;Russian;English;Russian;English
-1;Крестьянин;Peasant;Этот человек утверждает, что единственный выход из сложившейся ситуации заключается в объединении усилий.;This person claims that the only exit from current situation consists in association of efforts.
-1;Крестьянин;Peasant;Возможно, он прав.;Perhaps, it is right.
+Trigger1;Russian;English;Russian;English
+1;Крестьянин;;Этот человек утверждает, что единственный выход из сложившейся ситуации заключается в объединении усилий.;
+1;Крестьянин;;Возможно, он прав.;

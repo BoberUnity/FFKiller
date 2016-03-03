@@ -4,13 +4,15 @@ public class OnTriggerActionAnimatorSetBool : MonoBehaviour
 {
   [SerializeField] TriggerBase trigger = null;
   [SerializeField] private int numTrigger = 1;
-  [SerializeField] private Animator thisAnimator = null;
+  private Animator thisAnimator = null;
   [SerializeField] private string paramName = "GoAway";
   [SerializeField] private bool newValue = true;
+  [SerializeField] private float time = 0;
 
   private void Start ()
   {
-    trigger.OnTriggerAction += OnTriggerAction;  
+    trigger.OnTriggerAction += OnTriggerAction;
+    thisAnimator = GetComponent<Animator>();
   }
 	
 	private void OnDestroy ()
@@ -22,7 +24,12 @@ public class OnTriggerActionAnimatorSetBool : MonoBehaviour
   {
     if (currTrigger == numTrigger)
     {
-      thisAnimator.SetBool(paramName, newValue);
+      Invoke("SetAnimatorBool", time);
     }
+  }
+
+  private void SetAnimatorBool()
+  {
+    thisAnimator.SetBool(paramName, newValue);
   }
 }
