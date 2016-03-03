@@ -175,7 +175,7 @@ Transform:
   m_Children:
   - {fileID: 508428540}
   m_Father: {fileID: 1812444598}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!1 &179360440
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,6 +279,7 @@ MonoBehaviour:
     OtherTriggerNewValue: 2
   Portrait: {fileID: 21300000, guid: a91e822c540672543a62185abb48876f, type: 3}
   bodyAnimator: {fileID: 1897158600}
+  CharSpriteRenderer: {fileID: 1897158601}
 --- !u!61 &333099910
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -353,7 +354,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1812444598}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!114 &432297826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,6 +374,7 @@ MonoBehaviour:
     OtherTriggerNewValue: 2
   Portrait: {fileID: 21300008, guid: 5a81276de80f0d045894a3207aa6567e, type: 3}
   bodyAnimator: {fileID: 432297828}
+  CharSpriteRenderer: {fileID: 432297827}
 --- !u!212 &432297827
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -397,8 +399,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 50
+  m_SortingLayerID: 103704465
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300008, guid: 5a81276de80f0d045894a3207aa6567e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!95 &432297828
@@ -537,6 +539,7 @@ MonoBehaviour:
   changeTriggers: []
   Portrait: {fileID: 21300008, guid: 1514b627d0276ce4194b4a5d3e5c6d60, type: 3}
   bodyAnimator: {fileID: 508428537}
+  CharSpriteRenderer: {fileID: 1404783711}
 --- !u!95 &508428537
 Animator:
   serializedVersion: 3
@@ -738,6 +741,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.125, y: 3.125, z: 3.20000029}
   m_Children:
+  - {fileID: 840971606}
   - {fileID: 1812444598}
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -771,7 +775,7 @@ Transform:
   - {fileID: 1561876463}
   - {fileID: 1581787504}
   m_Father: {fileID: 1812444598}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1 &787337331
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,10 +943,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 840971605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.9300003, y: -63.4799995, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 8.77099991, y: -7.87200022, z: 0}
+  m_LocalScale: {x: .319999993, y: .319999993, z: .31249997}
   m_Children: []
-  m_Father: {fileID: 1812444598}
+  m_Father: {fileID: 623702151}
   m_RootOrder: 0
 --- !u!114 &840971607
 MonoBehaviour:
@@ -967,9 +971,9 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -.25}
+  m_Offset: {x: .0199999996, y: -.360000014}
   serializedVersion: 2
-  m_Radius: .5
+  m_Radius: .409999996
 --- !u!50 &840971609
 Rigidbody2D:
   serializedVersion: 2
@@ -1042,8 +1046,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 20
+  m_SortingLayerID: 103704465
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 24f125be9bec9bf48be7e87f56343e70, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &924099788
@@ -1077,7 +1081,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1812444598}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!114 &924099790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1094,6 +1098,7 @@ MonoBehaviour:
   changeTriggers: []
   Portrait: {fileID: 21300008, guid: d955b6988db8f7947a784213bbf9eaea, type: 3}
   bodyAnimator: {fileID: 924099792}
+  CharSpriteRenderer: {fileID: 924099791}
 --- !u!212 &924099791
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1118,8 +1123,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 50
+  m_SortingLayerID: 103704465
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300008, guid: d955b6988db8f7947a784213bbf9eaea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!95 &924099792
@@ -1309,8 +1314,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 50
+  m_SortingLayerID: 103704465
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3405c76b75ed60c429f1e5990611f131, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1210417752
@@ -1631,6 +1636,7 @@ MonoBehaviour:
   changeTriggers: []
   Portrait: {fileID: 21300008, guid: 3405c76b75ed60c429f1e5990611f131, type: 3}
   bodyAnimator: {fileID: 1018243364}
+  CharSpriteRenderer: {fileID: 1018243365}
 --- !u!61 &1388157239
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1744,8 +1750,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 50
+  m_SortingLayerID: 103704465
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1514b627d0276ce4194b4a5d3e5c6d60, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1430247339
@@ -1872,7 +1878,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1812444598}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!114 &1441327170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1889,6 +1895,7 @@ MonoBehaviour:
   changeTriggers: []
   Portrait: {fileID: 21300008, guid: a91e822c540672543a62185abb48876f, type: 3}
   bodyAnimator: {fileID: 1441327172}
+  CharSpriteRenderer: {fileID: 1441327171}
 --- !u!212 &1441327171
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1913,8 +1920,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 50
+  m_SortingLayerID: 103704465
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300008, guid: a91e822c540672543a62185abb48876f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!95 &1441327172
@@ -2198,7 +2205,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1812444598}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!114 &1649773359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2215,6 +2222,7 @@ MonoBehaviour:
   changeTriggers: []
   Portrait: {fileID: 21300008, guid: 792531d858344c14d86885fcfcc6aaa8, type: 3}
   bodyAnimator: {fileID: 1649773361}
+  CharSpriteRenderer: {fileID: 1649773360}
 --- !u!212 &1649773360
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2239,8 +2247,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 50
+  m_SortingLayerID: 103704465
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300008, guid: 792531d858344c14d86885fcfcc6aaa8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!95 &1649773361
@@ -2270,9 +2278,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -.200000003}
+  m_Offset: {x: 0, y: -.360000014}
   serializedVersion: 2
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: .939999998, y: .660000026}
 --- !u!61 &1649773363
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2339,6 +2347,7 @@ MonoBehaviour:
     OtherTriggerNewValue: 3
   Portrait: {fileID: 21300008, guid: 22c79ca8fcc1bca48b57c58c9b2e5455, type: 3}
   bodyAnimator: {fileID: 1016758257}
+  CharSpriteRenderer: {fileID: 1016758258}
 --- !u!114 &1795548096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2486,7 +2495,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: .319999993, y: .319999993, z: .31249997}
   m_Children:
-  - {fileID: 840971606}
   - {fileID: 769557604}
   - {fileID: 1649773358}
   - {fileID: 1441327169}
@@ -2497,7 +2505,7 @@ Transform:
   - {fileID: 1889672187}
   - {fileID: 114824582}
   m_Father: {fileID: 623702151}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1001 &1835742913
 Prefab:
   m_ObjectHideFlags: 0
@@ -2536,6 +2544,22 @@ Prefab:
     - target: {fileID: 449590, guid: 586c6608a3bfed742a656e0fa4fbb81b, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 21275866, guid: 586c6608a3bfed742a656e0fa4fbb81b, type: 2}
+      propertyPath: m_SortingLayerID
+      value: -231611137
+      objectReference: {fileID: 0}
+    - target: {fileID: 21275866, guid: 586c6608a3bfed742a656e0fa4fbb81b, type: 2}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 21264038, guid: 586c6608a3bfed742a656e0fa4fbb81b, type: 2}
+      propertyPath: m_SortingLayerID
+      value: -515988577
+      objectReference: {fileID: 0}
+    - target: {fileID: 21264038, guid: 586c6608a3bfed742a656e0fa4fbb81b, type: 2}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 586c6608a3bfed742a656e0fa4fbb81b, type: 2}
@@ -2610,6 +2634,7 @@ MonoBehaviour:
     OtherTriggerNewValue: 3
   Portrait: {fileID: 21300000, guid: 792531d858344c14d86885fcfcc6aaa8, type: 3}
   bodyAnimator: {fileID: 1844523806}
+  CharSpriteRenderer: {fileID: 1844523807}
 --- !u!61 &1844523805
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2778,7 +2803,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1812444598}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!114 &1889672188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2795,6 +2820,7 @@ MonoBehaviour:
   changeTriggers: []
   Portrait: {fileID: 21300008, guid: d08c93b77e800a94aa70d14333e04700, type: 3}
   bodyAnimator: {fileID: 1889672190}
+  CharSpriteRenderer: {fileID: 1889672189}
 --- !u!212 &1889672189
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2819,8 +2845,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 50
+  m_SortingLayerID: 103704465
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300008, guid: d08c93b77e800a94aa70d14333e04700, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!95 &1889672190
@@ -2971,7 +2997,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1812444598}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!114 &2009707603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2988,6 +3014,7 @@ MonoBehaviour:
   changeTriggers: []
   Portrait: {fileID: 21300008, guid: 22c79ca8fcc1bca48b57c58c9b2e5455, type: 3}
   bodyAnimator: {fileID: 2009707605}
+  CharSpriteRenderer: {fileID: 2009707604}
 --- !u!212 &2009707604
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3012,8 +3039,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 50
+  m_SortingLayerID: 103704465
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300008, guid: 22c79ca8fcc1bca48b57c58c9b2e5455, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!95 &2009707605
@@ -3301,7 +3328,7 @@ Transform:
   m_Children:
   - {fileID: 1388157236}
   m_Father: {fileID: 1812444598}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1 &2142019439
 GameObject:
   m_ObjectHideFlags: 0

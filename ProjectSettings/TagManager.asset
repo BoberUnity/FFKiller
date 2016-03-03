@@ -41,38 +41,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Core
-    uniqueID: 3789583357
-    locked: 0
-  - name: ground grass 0 lvl 1
-    uniqueID: 2511093729
-    locked: 0
-  - name: grass lvl 1 deep
-    uniqueID: 2699617703
-    locked: 0
-  - name: Swamp
-    uniqueID: 4183115961
-    locked: 0
-  - name: object on grass
-    uniqueID: 1617292831
-    locked: 0
-  - name: Bridge
+  - name: Bottom
     uniqueID: 4063356159
     locked: 0
   - name: Character
     uniqueID: 103704465
     locked: 0
-  - name: Behind trees lvl 1
+  - name: Top
     uniqueID: 3778978719
-    locked: 0
-  - name: Trees lvl 1
-    uniqueID: 3363426517
-    locked: 0
-  - name: Camps
-    uniqueID: 3249696913
-    locked: 0
-  - name: Trees lvl 2
-    uniqueID: 4125797123
     locked: 0
   - name: UI
     uniqueID: 2846435305

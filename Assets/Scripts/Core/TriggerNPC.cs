@@ -8,7 +8,9 @@ public class TriggerNPC : TriggerBase
   private Vector3 previousPosition = Vector3.zero;
   private bool isRotateToCharacter = false;
 
-  protected override void Start()
+  public SpriteRenderer CharSpriteRenderer;
+
+    protected override void Start()
   {
     base.Start();
     previousPosition = transform.position;
@@ -37,6 +39,8 @@ public class TriggerNPC : TriggerBase
   protected override void Update()
   {
     base.Update();
+    CharSpriteRenderer.sortingOrder = (int)(-transform.position.y*2);
+
     if (!isRotateToCharacter)
     {
       bodyAnimator.SetFloat("SpeedX", transform.position.x - previousPosition.x);
