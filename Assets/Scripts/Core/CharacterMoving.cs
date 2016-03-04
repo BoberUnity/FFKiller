@@ -11,12 +11,25 @@ public class CharacterMoving : MonoBehaviour
   private Animator thisAnimator = null;
   [HideInInspector] public bool CanMove = true;
 
-	private void Start ()
-  {
-    thisAnimator = GetComponent<Animator>();
-  }
-	
-	private	void FixedUpdate ()
+    //DV{
+    public SpriteRenderer CharSpriteRenderer;
+    //DV}
+    private void Start ()
+    {
+        thisAnimator = GetComponent<Animator>();
+        //DV{
+        CharSpriteRenderer = GetComponent<SpriteRenderer>();
+        //DV}
+    }
+
+    //DV{
+    void Update()
+    {
+        CharSpriteRenderer.sortingOrder = (int)(-transform.position.y * 2);
+    }
+    //DV}
+
+    private void FixedUpdate ()
   {
     if (CanMove)
     {
