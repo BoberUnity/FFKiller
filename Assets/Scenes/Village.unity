@@ -570,10 +570,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 821457500}
---- !u!1 &1146126915 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 186596, guid: 586c6608a3bfed742a656e0fa4fbb81b, type: 2}
-  m_PrefabInternal: {fileID: 700309639}
 --- !u!1 &1210417752
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,6 +896,10 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1401416380 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 186596, guid: 586c6608a3bfed742a656e0fa4fbb81b, type: 2}
+  m_PrefabInternal: {fileID: 700309639}
 --- !u!1 &1430247339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1094,7 +1094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 19507389}
   EffectTime: 0.7
-  Map: {fileID: 1146126915}
+  Map: {fileID: 1401416380}
   CameraZoom: 1
   traction: 0
 --- !u!1 &1809881056
