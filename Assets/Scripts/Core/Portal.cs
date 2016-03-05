@@ -8,9 +8,12 @@ public class Portal : MonoBehaviour
   [SerializeField] private Animator doorAnimator = null;
   private CharacterMoving characterMoving = null;
   [HideInInspector] public bool IsFinish = false;
-  private CameraController cameraController = null;  
-	
-  private void Start ()
+  private CameraController cameraController = null;
+    //DV{
+    public GameObject TargetMap;
+    //DV}
+
+    private void Start ()
   {
     characterMoving = FindObjectOfType<CharacterMoving>();
     cameraController = FindObjectOfType<CameraController>();    
@@ -36,5 +39,10 @@ public class Portal : MonoBehaviour
     characterMoving.CanMove = true;
     //if (doorAnimator != null)
     //  doorAnimator.SetTrigger("Open");
+
+    //DV{
+    cameraController.Map = TargetMap;
+    cameraController.TuneMap();
+    //DV}
   }
 }

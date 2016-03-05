@@ -32,9 +32,7 @@ public class CameraController : MonoBehaviour
         Sprite Spr = Map.GetComponent<SpriteRenderer>().sprite;
         UpLeft = Map.transform.position;
 
-        //Ширину и длину поля считаем в юнитах
-        fieldWidth = Spr.rect.width * UnitsPerPixel;
-        fieldHeight = Spr.rect.height * UnitsPerPixel;
+        TuneMap();
 
         Camera.orthographicSize = Screen.height * 0.5f * UnitsPerPixel / CameraZoom;
         cameraHeight = Camera.orthographicSize;
@@ -114,4 +112,14 @@ public class CameraController : MonoBehaviour
     }
     shadowMeshRenderer.material.color = new Color(1, 1, 1, alfha);
   }
+
+    public void TuneMap()
+    {
+        Sprite Spr = Map.GetComponent<SpriteRenderer>().sprite;
+        UpLeft = Map.transform.position;
+
+        //Ширину и длину поля считаем в юнитах
+        fieldWidth = Spr.rect.width * UnitsPerPixel;
+        fieldHeight = Spr.rect.height * UnitsPerPixel;
+    }
 }
