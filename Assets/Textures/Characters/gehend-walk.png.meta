@@ -41,7 +41,7 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: .25
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
@@ -53,7 +53,7 @@ TextureImporter:
   textureFormat: -3
   maxTextureSize: 256
   textureSettings:
-    filterMode: 2
+    filterMode: 0
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -61,11 +61,12 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
+  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
+  spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 32
   alphaIsTransparency: 1
@@ -83,6 +84,16 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 23}
+        - {x: -10, y: 23}
+        - {x: -14, y: 18}
+        - {x: -14, y: -22}
+        - {x: -8, y: -23}
+        - {x: 10, y: -23}
+        - {x: 12, y: -19}
+        - {x: 15, y: -12}
+        - {x: 15, y: 22}
     - name: gehend-walk-4_1
       rect:
         serializedVersion: 2
@@ -93,6 +104,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 24}
+        - {x: -14, y: 19}
+        - {x: -14, y: -10}
+        - {x: -9, y: -21}
+        - {x: -6, y: -24}
+        - {x: 6, y: -24}
+        - {x: 13, y: -21}
+        - {x: 14, y: -15}
+        - {x: 14, y: 20}
+        - {x: 13, y: 24}
     - name: gehend-walk-4_2
       rect:
         serializedVersion: 2
@@ -103,6 +125,15 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 14, y: 23}
+        - {x: -14, y: 23}
+        - {x: -14, y: -15}
+        - {x: -12, y: -24}
+        - {x: 8, y: -24}
+        - {x: 12, y: -22}
+        - {x: 15, y: -7}
+        - {x: 15, y: 22}
     - name: gehend-walk-4_3
       rect:
         serializedVersion: 2
@@ -113,6 +144,12 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 23}
+        - {x: -14, y: -21}
+        - {x: -11, y: -23}
+        - {x: 14, y: -23}
+        - {x: 14, y: 23}
     - name: gehend-walk-4_4
       rect:
         serializedVersion: 2
@@ -123,6 +160,14 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 24}
+        - {x: -14, y: 23}
+        - {x: -14, y: -18}
+        - {x: -12, y: -24}
+        - {x: 9, y: -24}
+        - {x: 15, y: -17}
+        - {x: 15, y: 24}
     - name: gehend-walk-4_5
       rect:
         serializedVersion: 2
@@ -133,6 +178,15 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 23}
+        - {x: -14, y: 22}
+        - {x: -14, y: -19}
+        - {x: -12, y: -22}
+        - {x: -6, y: -24}
+        - {x: 10, y: -24}
+        - {x: 15, y: -16}
+        - {x: 15, y: 23}
     - name: gehend-walk-4_6
       rect:
         serializedVersion: 2
@@ -143,6 +197,15 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 24}
+        - {x: -16, y: 21}
+        - {x: -16, y: -8}
+        - {x: -12, y: -24}
+        - {x: 8, y: -24}
+        - {x: 16, y: -8}
+        - {x: 16, y: 21}
+        - {x: 11, y: 24}
     - name: gehend-walk-4_7
       rect:
         serializedVersion: 2
@@ -153,6 +216,16 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 24}
+        - {x: -16, y: 23}
+        - {x: -16, y: 7}
+        - {x: -13, y: -19}
+        - {x: -9, y: -23}
+        - {x: -7, y: -24}
+        - {x: 10, y: -24}
+        - {x: 16, y: -12}
+        - {x: 16, y: 24}
     - name: gehend-walk-4_8
       rect:
         serializedVersion: 2
@@ -163,6 +236,16 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 23}
+        - {x: -14, y: 22}
+        - {x: -16, y: 20}
+        - {x: -16, y: -23}
+        - {x: -13, y: -24}
+        - {x: 13, y: -24}
+        - {x: 14, y: -23}
+        - {x: 16, y: -8}
+        - {x: 16, y: 23}
     - name: gehend-walk-4_9
       rect:
         serializedVersion: 2
@@ -173,6 +256,16 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 24}
+        - {x: -16, y: 22}
+        - {x: -16, y: -14}
+        - {x: -12, y: -24}
+        - {x: 8, y: -24}
+        - {x: 10, y: -22}
+        - {x: 16, y: 0}
+        - {x: 16, y: 23}
+        - {x: 13, y: 24}
     - name: gehend-walk-4_10
       rect:
         serializedVersion: 2
@@ -183,6 +276,16 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 24}
+        - {x: -16, y: 23}
+        - {x: -16, y: -17}
+        - {x: -15, y: -23}
+        - {x: -10, y: -24}
+        - {x: 7, y: -24}
+        - {x: 7, y: -23}
+        - {x: 16, y: 4}
+        - {x: 16, y: 24}
     - name: gehend-walk-4_11
       rect:
         serializedVersion: 2
@@ -193,6 +296,14 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 23}
+        - {x: -16, y: 22}
+        - {x: -16, y: -8}
+        - {x: -12, y: -24}
+        - {x: 14, y: -24}
+        - {x: 16, y: -12}
+        - {x: 16, y: 23}
     - name: gehend-walk-4_12
       rect:
         serializedVersion: 2
@@ -203,6 +314,12 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 24}
+        - {x: -16, y: -11}
+        - {x: -14, y: -24}
+        - {x: 16, y: -24}
+        - {x: 16, y: 24}
     - name: gehend-walk-4_13
       rect:
         serializedVersion: 2
@@ -213,6 +330,15 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: 24}
+        - {x: -16, y: 24}
+        - {x: -16, y: -18}
+        - {x: -15, y: -24}
+        - {x: 9, y: -24}
+        - {x: 12, y: -19}
+        - {x: 16, y: -8}
+        - {x: 16, y: 22}
     - name: gehend-walk-4_14
       rect:
         serializedVersion: 2
@@ -223,6 +349,14 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 23}
+        - {x: -16, y: 22}
+        - {x: -16, y: -16}
+        - {x: -14, y: -24}
+        - {x: 7, y: -24}
+        - {x: 16, y: -23}
+        - {x: 16, y: 23}
     - name: gehend-walk-4_15
       rect:
         serializedVersion: 2
@@ -233,6 +367,19 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 24}
+        - {x: -16, y: 22}
+        - {x: -16, y: -1}
+        - {x: -8, y: -5}
+        - {x: -7, y: -1}
+        - {x: -7, y: 3}
+        - {x: -7, y: -21}
+        - {x: -5, y: -24}
+        - {x: 9, y: -24}
+        - {x: 14, y: -20}
+        - {x: 16, y: -5}
+        - {x: 16, y: 24}
     - name: gehend-walk-4_16
       rect:
         serializedVersion: 2
@@ -243,6 +390,14 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 24}
+        - {x: -16, y: -2}
+        - {x: -8, y: -23}
+        - {x: -7, y: -24}
+        - {x: 14, y: -24}
+        - {x: 16, y: -16}
+        - {x: 16, y: 24}
     - name: gehend-walk-4_17
       rect:
         serializedVersion: 2
@@ -253,6 +408,14 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 23}
+        - {x: -16, y: 20}
+        - {x: -16, y: -16}
+        - {x: -15, y: -24}
+        - {x: 15, y: -24}
+        - {x: 16, y: -21}
+        - {x: 16, y: 23}
     - name: gehend-walk-4_18
       rect:
         serializedVersion: 2
@@ -263,6 +426,15 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: 20}
+        - {x: 6, y: 23}
+        - {x: -13, y: 23}
+        - {x: -13, y: -22}
+        - {x: -7, y: -23}
+        - {x: 10, y: -23}
+        - {x: 12, y: -19}
+        - {x: 15, y: -7}
     - name: gehend-walk-4_19
       rect:
         serializedVersion: 2
@@ -273,6 +445,15 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 24}
+        - {x: -14, y: 23}
+        - {x: -14, y: -15}
+        - {x: -12, y: -23}
+        - {x: 11, y: -23}
+        - {x: 13, y: -20}
+        - {x: 15, y: -1}
+        - {x: 15, y: 24}
     - name: gehend-walk-4_20
       rect:
         serializedVersion: 2
@@ -283,6 +464,16 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 24}
+        - {x: -14, y: 19}
+        - {x: -14, y: 2}
+        - {x: -12, y: -21}
+        - {x: -5, y: -24}
+        - {x: 10, y: -24}
+        - {x: 15, y: -3}
+        - {x: 15, y: 21}
+        - {x: 14, y: 24}
     - name: gehend-walk-4_21
       rect:
         serializedVersion: 2
@@ -293,6 +484,16 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 23}
+        - {x: -11, y: 23}
+        - {x: -14, y: 19}
+        - {x: -14, y: -13}
+        - {x: -9, y: -23}
+        - {x: 9, y: -23}
+        - {x: 15, y: -22}
+        - {x: 15, y: 15}
+        - {x: 12, y: 22}
     - name: gehend-walk-4_22
       rect:
         serializedVersion: 2
@@ -303,6 +504,13 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 24}
+        - {x: -13, y: -16}
+        - {x: -9, y: -23}
+        - {x: 9, y: -23}
+        - {x: 15, y: -9}
+        - {x: 15, y: 24}
     - name: gehend-walk-4_23
       rect:
         serializedVersion: 2
@@ -313,6 +521,19 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: 23}
+        - {x: 10, y: 24}
+        - {x: -12, y: 24}
+        - {x: -14, y: 20}
+        - {x: -14, y: 7}
+        - {x: -11, y: -22}
+        - {x: -5, y: -24}
+        - {x: 4, y: -24}
+        - {x: 10, y: -19}
+        - {x: 13, y: -9}
+        - {x: 15, y: -2}
+    outline: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
