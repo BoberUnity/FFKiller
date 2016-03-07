@@ -19,7 +19,7 @@ TextureImporter:
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -29,7 +29,7 @@ TextureImporter:
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: .25
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
@@ -38,8 +38,8 @@ TextureImporter:
   cubemapConvolutionSteps: 8
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
-  maxTextureSize: 2048
+  textureFormat: -2
+  maxTextureSize: 256
   textureSettings:
     filterMode: 0
     aniso: 16
@@ -49,11 +49,12 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
+  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
+  spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 32
   alphaIsTransparency: 1
@@ -69,8 +70,18 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 9
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 19}
+        - {x: -14, y: -22}
+        - {x: -11, y: -24}
+        - {x: 6, y: -24}
+        - {x: 15, y: -22}
+        - {x: 15, y: 5}
+        - {x: 14, y: 17}
+        - {x: 7, y: 22}
+        - {x: -8, y: 22}
     - name: KlausGrandma_1_0
       rect:
         serializedVersion: 2
@@ -79,8 +90,17 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 9
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 22}
+        - {x: -14, y: 21}
+        - {x: -14, y: -22}
+        - {x: -4, y: -24}
+        - {x: 13, y: -24}
+        - {x: 16, y: -21}
+        - {x: 16, y: 17}
+        - {x: 9, y: 22}
     - name: KlausGrandma_2_0
       rect:
         serializedVersion: 2
@@ -89,8 +109,18 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 9
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 22}
+        - {x: -1, y: 22}
+        - {x: -14, y: 16}
+        - {x: -14, y: -22}
+        - {x: -6, y: -24}
+        - {x: 9, y: -24}
+        - {x: 13, y: -20}
+        - {x: 15, y: 11}
+        - {x: 15, y: 19}
     - name: KlausGrandma_3_0
       rect:
         serializedVersion: 2
@@ -99,8 +129,18 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 9
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 19}
+        - {x: -14, y: -22}
+        - {x: -11, y: -24}
+        - {x: 6, y: -24}
+        - {x: 15, y: -22}
+        - {x: 15, y: 5}
+        - {x: 14, y: 17}
+        - {x: 7, y: 22}
+        - {x: -8, y: 22}
     - name: KlausGrandma_0_1
       rect:
         serializedVersion: 2
@@ -109,8 +149,18 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 9
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 20}
+        - {x: -14, y: -21}
+        - {x: -11, y: -23}
+        - {x: 6, y: -23}
+        - {x: 15, y: -21}
+        - {x: 15, y: 6}
+        - {x: 14, y: 18}
+        - {x: 7, y: 23}
+        - {x: -8, y: 23}
     - name: KlausGrandma_1_1
       rect:
         serializedVersion: 2
@@ -119,8 +169,18 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 9
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: 23}
+        - {x: -10, y: 23}
+        - {x: -14, y: 22}
+        - {x: -14, y: -7}
+        - {x: -13, y: -20}
+        - {x: -3, y: -23}
+        - {x: 13, y: -23}
+        - {x: 15, y: -22}
+        - {x: 15, y: 20}
     - name: KlausGrandma_2_1
       rect:
         serializedVersion: 2
@@ -129,8 +189,18 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 9
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 23}
+        - {x: -14, y: 17}
+        - {x: -14, y: -20}
+        - {x: -10, y: -23}
+        - {x: 3, y: -23}
+        - {x: 14, y: -20}
+        - {x: 15, y: -12}
+        - {x: 15, y: 22}
+        - {x: 11, y: 23}
     - name: KlausGrandma_3_1
       rect:
         serializedVersion: 2
@@ -139,8 +209,18 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 9
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 20}
+        - {x: -14, y: -21}
+        - {x: -11, y: -23}
+        - {x: 6, y: -23}
+        - {x: 15, y: -21}
+        - {x: 15, y: 6}
+        - {x: 14, y: 18}
+        - {x: 7, y: 23}
+        - {x: -8, y: 23}
     - name: KlausGrandma_0_2
       rect:
         serializedVersion: 2
@@ -149,8 +229,18 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 9
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 19}
+        - {x: -14, y: -22}
+        - {x: -11, y: -24}
+        - {x: 6, y: -24}
+        - {x: 15, y: -22}
+        - {x: 15, y: 5}
+        - {x: 14, y: 17}
+        - {x: 7, y: 22}
+        - {x: -8, y: 22}
     - name: KlausGrandma_1_2
       rect:
         serializedVersion: 2
@@ -159,8 +249,18 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 9
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7, y: 22}
+        - {x: -14, y: 22}
+        - {x: -14, y: -1}
+        - {x: -12, y: -20}
+        - {x: -8, y: -24}
+        - {x: 7, y: -24}
+        - {x: 15, y: -22}
+        - {x: 15, y: 15}
+        - {x: 13, y: 17}
     - name: KlausGrandma_2_2
       rect:
         serializedVersion: 2
@@ -169,8 +269,18 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 9
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1, y: 22}
+        - {x: -15, y: 19}
+        - {x: -15, y: -20}
+        - {x: -11, y: -24}
+        - {x: 3, y: -24}
+        - {x: 14, y: -21}
+        - {x: 15, y: 3}
+        - {x: 15, y: 19}
+        - {x: 11, y: 22}
     - name: KlausGrandma_3_2
       rect:
         serializedVersion: 2
@@ -179,8 +289,19 @@ TextureImporter:
         width: 32
         height: 48
       alignment: 9
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 19}
+        - {x: -14, y: -22}
+        - {x: -11, y: -24}
+        - {x: 6, y: -24}
+        - {x: 15, y: -22}
+        - {x: 15, y: 5}
+        - {x: 14, y: 17}
+        - {x: 7, y: 22}
+        - {x: -8, y: 22}
+    outline: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
