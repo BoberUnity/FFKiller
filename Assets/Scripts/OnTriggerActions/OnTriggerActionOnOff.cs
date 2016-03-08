@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 
-public class OnTriggerActionTriggerOnOff : MonoBehaviour
+public class OnTriggerActionOnOff : MonoBehaviour
 {
   [SerializeField] GameObject targetObject = null;
   [SerializeField] private int numTrigger = 1;
   [SerializeField] private bool newState = false;
+  [SerializeField] private float time = 0;
   TriggerBase thisTrigger = null;
 
   private void Start ()
@@ -22,7 +23,12 @@ public class OnTriggerActionTriggerOnOff : MonoBehaviour
   {
     if (currTrigger == numTrigger)
     {
-      targetObject.gameObject.SetActive(newState);
+      Invoke("SetObjectState", time);
     }
+  }
+
+  private void SetObjectState()
+  {
+    targetObject.SetActive(newState);
   }
 }

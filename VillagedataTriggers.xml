@@ -1,0 +1,18 @@
+<Village>
+  <WarehouseKeeper trigger="1" automatic="0" />
+  <PeasantWife trigger="1" automatic="0" />
+  <TriggerStartHomeExit trigger="1" automatic="1" />
+  <GrandDaughter trigger="1" automatic="0" />
+  <TriggerVillageEnter trigger="1" automatic="1" />
+  <TriggerVillageEnter trigger="1" automatic="1" />
+  <TriggerLadderStart trigger="1" automatic="1" />
+  <Multidialog trigger="1" automatic="1" />
+  <Peasant1 trigger="1" automatic="0" />
+  <Peasant3 trigger="1" automatic="0" />
+  <Grandpa trigger="1" automatic="0" />
+  <Peasant2 trigger="1" automatic="0" />
+  <Pilgrim trigger="1" automatic="0" />
+  <Peasant4 trigger="1" automatic="0" />
+  <Peasant1 trigger="1" automatic="0" />
+  <Klaus trigger="1" automatic="0" />
+</Village>

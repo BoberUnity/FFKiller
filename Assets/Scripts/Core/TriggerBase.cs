@@ -13,7 +13,7 @@ public class ChangeTrigger
 public class TriggerBase : MonoBehaviour
 {
   [SerializeField] private string textAssetName = "Klaus";
-  [SerializeField] private bool automatic = false;
+  public bool automatic = false;
   [SerializeField] private ChangeTrigger[] changeTriggers = null;
   private string file = "";
   protected string[,] allBoxes;
@@ -28,7 +28,7 @@ public class TriggerBase : MonoBehaviour
   public Action<int> OnTriggerAction;
   protected bool isCharacterRight = false;
 
-  private int CurrentTrigger
+  public int CurrentTrigger
   {
     get { return currentTrigger;}
     set
