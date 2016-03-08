@@ -568,7 +568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textAssetName: ToPrevVillage
-  automatic: 1
+  automatic: 0
   changeTriggers: []
 --- !u!61 &326327195
 BoxCollider2D:

@@ -1878,7 +1878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textAssetName: ToNextVillage
-  automatic: 1
+  automatic: 0
   changeTriggers: []
 --- !u!114 &11457572
 MonoBehaviour:

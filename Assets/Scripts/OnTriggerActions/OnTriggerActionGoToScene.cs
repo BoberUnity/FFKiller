@@ -22,6 +22,11 @@ public class OnTriggerActionGoToScene : MonoBehaviour
   {
     if (currTrigger == numTrigger)
     {
+      SaveController saveController = FindObjectOfType<SaveController>();
+      if (saveController != null)
+        saveController.SaveScene();
+      else
+        Debug.LogWarning("Scene did not save");
       SceneManager.LoadScene(sceneIndex);
     }
   }  

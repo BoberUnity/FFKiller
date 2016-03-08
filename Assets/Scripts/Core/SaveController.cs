@@ -19,7 +19,6 @@ public class SaveController : MonoBehaviour
   [SerializeField] private Button loadButton = null;
   private string sceneName = "";
   private string filePath = "";
-  private bool isLoadSavedGame = false;
   private List<Atribut> atributs = new List<Atribut>();
 
   private void Start()
@@ -33,11 +32,11 @@ public class SaveController : MonoBehaviour
   {
     sceneName = SceneManager.GetActiveScene().name;
     filePath = Application.dataPath + "/StreamingAssets/Saves/" + sceneName + "Data.xml";    
-    if (isLoadSavedGame)
-      Invoke("LoadGame", 0);
+    if (File.Exists(filePath))
+      Invoke("LoadScene", 0);    
   }
 
-  void SaveGame()
+  public void SaveScene()
   {   
     XmlDocument doc = new XmlDocument();
     XmlNode rootNode = null;
@@ -115,17 +114,16 @@ public class SaveController : MonoBehaviour
   {
     if (Input.GetKeyDown(KeyCode.S))
     {
-      SaveGame();
+      SaveScene();
     }
     if (Input.GetKeyDown(KeyCode.L))
     {
-      LoadGame();
+      LoadScene();
     }
   }
 
-  void LoadGame()
-  {
-    isLoadSavedGame = false;
+  public void LoadScene()
+  {    
     XmlDocument doc = new XmlDocument();
     XmlNodeList elemList;
     doc.Load(filePath);
@@ -156,12 +154,17 @@ public class SaveController : MonoBehaviour
   
   public void PressButtonNewGame()
   {
+    DirectoryInfo dirInfo = new DirectoryInfo(Application.dataPath + "/StreamingAssets/Saves/");
+
+    foreach (FileInfo file in dirInfo.GetFiles())
+    {
+      file.Delete();
+    }
     SceneManager.LoadScene(firstScene);
   }  
 
   public void PressButtonLoadGame()
   {
-    isLoadSavedGame = true;
     filePath = Application.dataPath + "/StreamingAssets/Saves/LastScene.xml";
     XmlDocument doc = new XmlDocument();
     doc.Load(filePath);
