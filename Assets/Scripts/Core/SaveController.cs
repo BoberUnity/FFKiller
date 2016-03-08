@@ -17,29 +17,30 @@ public class SaveController : MonoBehaviour
 {
   [SerializeField] private int firstScene = 1;
   [SerializeField] private Button loadButton = null;
-  private string sceneName = "";
-  private string filePath = "";
+  private string sceneName = "";  
   private List<Atribut> atributs = new List<Atribut>();
 
   private void Start()
   {    
     DontDestroyOnLoad(this);
-    filePath = Application.dataPath + "/StreamingAssets/Saves/LastScene.xml";
+    string filePath = Application.dataPath + "/StreamingAssets/Saves/LastScene.xml";
     loadButton.interactable = File.Exists(filePath);    
   }
 
   private void OnLevelWasLoaded(int level)
   {
     sceneName = SceneManager.GetActiveScene().name;
-    filePath = Application.dataPath + "/StreamingAssets/Saves/" + sceneName + "Data.xml";    
+    string filePath = Application.dataPath + "/StreamingAssets/Saves/" + sceneName + "Data.xml";
     if (File.Exists(filePath))
-      Invoke("LoadScene", 0);    
+      Invoke("LoadScene", 0);
+    LoadHeroesParams();
   }
 
   public void SaveScene()
   {   
     XmlDocument doc = new XmlDocument();
     XmlNode rootNode = null;
+    string filePath = Application.dataPath + "/StreamingAssets/Saves/" + sceneName + "Data.xml";
     if (!File.Exists(filePath))
     {      
       rootNode = doc.CreateElement("Triggers");      
@@ -68,14 +69,16 @@ public class SaveController : MonoBehaviour
       AddAtribute("positionY", (pos.y).ToString());
       AddXmlElements(doc, rootNode, "SavePosition" + savePositionOject.name);
     }    
-    //    
+    //  
     doc.Save(filePath);
-    ///////////////////////Save current Scene
-    doc = new XmlDocument();    
-    filePath = Application.dataPath + "/StreamingAssets/Saves/LastScene.xml";
+
+    //  Save Hero Params
+    doc = new XmlDocument();
+    rootNode = null;
+    filePath = Application.dataPath + "/StreamingAssets/Saves/Heroes.xml";
     if (!File.Exists(filePath))
     {
-      rootNode = doc.CreateElement("LastSceneData");
+      rootNode = doc.CreateElement("HeroesData");
       doc.AppendChild(rootNode);
     }
     else
@@ -84,9 +87,15 @@ public class SaveController : MonoBehaviour
       rootNode = doc.DocumentElement;
     }
     rootNode.RemoveAll();
-    AddAtribute("lastScene", sceneName);
-    AddXmlElements(doc, rootNode, "LastScene");    
-    doc.Save(filePath);
+    Hero[] heroes = FindObjectsOfType<Hero>();
+    foreach (var hero in heroes)
+    {
+      AddAtribute("Mhp", (hero.Mhp).ToString());
+      AddAtribute("Hp", (hero.Hp).ToString());
+      AddAtribute("Agi", (hero.Agi).ToString());
+      AddXmlElements(doc, rootNode, "Hero" + hero.name);
+    }
+    doc.Save(filePath);    
   }
 
   private void AddXmlElements(XmlDocument d, XmlNode node, string name)
@@ -126,6 +135,7 @@ public class SaveController : MonoBehaviour
   {    
     XmlDocument doc = new XmlDocument();
     XmlNodeList elemList;
+    string filePath = Application.dataPath + "/StreamingAssets/Saves/" + sceneName + "Data.xml";
     doc.Load(filePath);
     //LoadTriggers
     TriggerBase[] triggersBase = FindObjectsOfType<TriggerBase>();
@@ -149,7 +159,47 @@ public class SaveController : MonoBehaviour
         float y = Convert.ToSingle(elemList[i].Attributes["positionY"].Value, new CultureInfo("en-US"));
         savePositionOject.transform.position = new Vector3(x, y, 0);
       }
-    }      
+    }    
+    ///////////////////////Save current Scene
+    doc = new XmlDocument();
+    XmlNode rootNode = null;
+    filePath = Application.dataPath + "/StreamingAssets/Saves/LastScene.xml";
+    if (!File.Exists(filePath))
+    {
+      rootNode = doc.CreateElement("LastSceneData");
+      doc.AppendChild(rootNode);
+    }
+    else
+    {
+      doc.Load(filePath);
+      rootNode = doc.DocumentElement;
+    }
+    rootNode.RemoveAll();
+    AddAtribute("lastScene", sceneName);
+    AddXmlElements(doc, rootNode, "LastScene");
+    doc.Save(filePath);
+  }
+
+  private void LoadHeroesParams()
+  {
+    string filePath = Application.dataPath + "/StreamingAssets/Saves/Heroes.xml";
+    if (File.Exists(filePath))
+    {
+      XmlDocument doc = new XmlDocument();
+      XmlNodeList elemList = null;
+      doc.Load(filePath);
+      Hero[] heroes = FindObjectsOfType<Hero>();
+      foreach (var hero in heroes)
+      {
+        elemList = doc.GetElementsByTagName("Hero" + hero.name);
+        for (int i = 0; i < elemList.Count; i++)
+        {
+          hero.Mhp = Convert.ToSingle(elemList[i].Attributes["Mhp"].Value, new CultureInfo("en-US"));
+          hero.Hp = Convert.ToSingle(elemList[i].Attributes["Hp"].Value, new CultureInfo("en-US"));
+          hero.Agi = Convert.ToSingle(elemList[i].Attributes["Agi"].Value, new CultureInfo("en-US"));
+        }
+      }
+    }
   }
   
   public void PressButtonNewGame()
@@ -165,7 +215,7 @@ public class SaveController : MonoBehaviour
 
   public void PressButtonLoadGame()
   {
-    filePath = Application.dataPath + "/StreamingAssets/Saves/LastScene.xml";
+    string filePath = Application.dataPath + "/StreamingAssets/Saves/LastScene.xml";
     XmlDocument doc = new XmlDocument();
     doc.Load(filePath);
     XmlNodeList elemList = doc.GetElementsByTagName("LastScene");

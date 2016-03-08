@@ -15,6 +15,7 @@ GameObject:
   - 58: {fileID: 5832488}
   - 114: {fileID: 11454042}
   - 114: {fileID: 11486684}
+  - 114: {fileID: 11458328}
   m_Layer: 0
   m_Name: Gehand
   m_TagString: SavePosition
@@ -95,6 +96,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vagons: []
   distance: 40
+--- !u!114 &11458328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e841ba15e8a984b409a0124836aaa7b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hero: {fileID: 11486684}
+  nameText: {fileID: 0}
+  mhpText: {fileID: 0}
+  hpText: {fileID: 0}
+  aglImage: {fileID: 0}
 --- !u!114 &11486684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -106,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 873c0791559e2c84590fb78f865a3eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroUi: {fileID: 0}
+  heroUi: {fileID: 11458328}
   thisName: Hero
   mhp: 1000
   hp: 500
@@ -172,6 +189,14 @@ Prefab:
       propertyPath: m_TagString
       value: SavePosition
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: heroUi
+      value: 
+      objectReference: {fileID: 11458328}
+    - target: {fileID: 0}
+      propertyPath: hero
+      value: 
+      objectReference: {fileID: 11486684}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 151194}
