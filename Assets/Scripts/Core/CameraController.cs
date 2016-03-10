@@ -2,30 +2,24 @@
 
 public class CameraController : MonoBehaviour
 {
-  public Transform Target = null;
-  public float EffectTime = 1;
-  private float alfha = 0;
-  private MeshRenderer shadowMeshRenderer = null;
-  private bool isShadowEffect = false;  
-  private bool back = false;
-    //DV{
+    public Transform Target = null;
+    public float EffectTime = 1;
+    public GameObject Map;
+    public float CameraZoom = 1;    //увеличение камеры
+    public float traction = 0.0f;   //расстояние (в юнитах), через которое камера начинает двигаться за целью
+
     Camera Camera;
+    Animator Animator;
     float fieldWidth, fieldHeight;      //размеры карты
     float cameraWidth, cameraHeight;    //половинные размеры камеры
     float AvgVelocity;
     float UnitsPerPixel = 1f/32f;
-    public GameObject Map;
     private Vector2 UpLeft;
 
-    public float CameraZoom = 1;    //увеличение камеры
-    public float traction = 0.0f;   //расстояние (в юнитах), через которое камера начинает двигаться за целью
-
     bool ConstX, ConstY;    //Камера вмещает карту целиком и не двигается по Х и/или У.
-    //DV}
 
     private void Start ()
-  {    
-    shadowMeshRenderer = GetComponentInChildren<MeshRenderer>();
+    {    
         //DV{
         //transform.parent = Target;
         Camera = GetComponent<Camera>();
@@ -40,11 +34,11 @@ public class CameraController : MonoBehaviour
         cameraWidth = Screen.width * 0.5f * UnitsPerPixel / CameraZoom;
         Camera.aspect = cameraWidth / cameraHeight;
 
-        shadowMeshRenderer.transform.localScale = new Vector3(0.2f*cameraWidth, 1, 0.2f*cameraHeight);
+        Animator = GetComponentInChildren<Animator>();
+        Animator.SetFloat("Speed", 0.5f/EffectTime);
         //DV}
     }
 
-    //DV{
     void LateUpdate()
     {
         if (!Target) return;
@@ -84,43 +78,11 @@ public class CameraController : MonoBehaviour
 
         transform.position = new Vector3(newX, newY, newZ);
     }
-    //DV}
 
-    private void Update()
-  {
-    if (isShadowEffect)
-      ShadowEffect();
-  }
 
   public void StartEffect()
   {
-    alfha = 0;
-    back = false;
-    isShadowEffect = true;
-  }
-
-  private void ShadowEffect()
-  {
-    if (back)
-    {
-      alfha -= Time.deltaTime / EffectTime;
-      if (alfha < 0)
-      {
-        alfha = 0;
-        shadowMeshRenderer.material.color = new Color(1, 1, 1, alfha);
-        isShadowEffect = false;
-      }
-    }
-    else
-    {
-      alfha += Time.deltaTime / EffectTime;
-      if (alfha > 1)
-      {
-        alfha = 1;
-        back = true;
-      }
-    }
-    shadowMeshRenderer.material.color = new Color(1, 1, 1, alfha);
+        Animator.SetTrigger("Play");
   }
 
     public void TuneMap()
