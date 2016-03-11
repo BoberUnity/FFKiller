@@ -660,7 +660,7 @@ Transform:
   m_LocalScale: {x: 0.8, y: 0.8601046, z: 0.8601046}
   m_Children: []
   m_Father: {fileID: 448320}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!4 &434682
 Transform:
   m_ObjectHideFlags: 1
@@ -760,8 +760,8 @@ Transform:
   - {fileID: 448078}
   - {fileID: 449708}
   - {fileID: 465684}
-  - {fileID: 471968}
   - {fileID: 433388}
+  - {fileID: 471968}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &449708
@@ -872,7 +872,7 @@ Transform:
   - {fileID: 497404}
   - {fileID: 437226}
   m_Father: {fileID: 448320}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!4 &484262
 Transform:
   m_ObjectHideFlags: 1
@@ -1421,7 +1421,7 @@ Animator:
   m_GameObject: {fileID: 106572}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 860c73eb73832ff489ed7eb1e3fe7c33, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3f154328baddbed4888dd4195f308b52, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2082,7 +2082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb53b47c5c387684bbca49239c0a4ac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 11457572}
+  trigger: {fileID: 11443864}
   numTrigger: 1
   paramName: GoAway
   newValue: 1
