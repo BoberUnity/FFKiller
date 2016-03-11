@@ -63,6 +63,10 @@ public class CharacterMoving : MonoBehaviour
         thisAnimator.SetFloat("SpeedX", -1);
         thisAnimator.SetFloat("SpeedY", 0);
       }
+
+        //DV{
+        thisAnimator.SetFloat("Speed", currentSpeed);
+        //DV}
     }
 
     if ((!Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.DownArrow)) || !CanMove)

@@ -140,8 +140,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Portrait: {fileID: 21300000, guid: 7f137e725883d4d4db79161756e370df, type: 3}
-  speedWalk: 3
-  speedRun: 5
+  speedWalk: 2
+  speedRun: 4
   CanMove: 1
   CharSpriteRenderer: {fileID: 21292654}
 --- !u!212 &21292654
