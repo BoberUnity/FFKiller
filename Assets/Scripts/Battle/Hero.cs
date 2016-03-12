@@ -2,6 +2,7 @@
 
 public class Hero : MonoBehaviour
 {
+  [SerializeField] private bool enabledOnStart = false;
   [SerializeField] private HeroUI heroUi = null;
   [SerializeField] private string thisName = "Hero";
   [SerializeField] private float mhp = 1000;
@@ -10,7 +11,7 @@ public class Hero : MonoBehaviour
   #region Propetries 
   public string Name
   {
-    get { return thisName; }
+    get { return gameObject.name; }
     set
     {
       thisName = value;
@@ -50,11 +51,13 @@ public class Hero : MonoBehaviour
 
   #endregion
 
-  void Start () {
-	
-	}
-	
-	void Update () {
-	
-	}
+  void Start ()
+  {
+    if (enabledOnStart)
+    {
+      HeroesPanel heroesPanel = FindObjectOfType<HeroesPanel>();
+      if (heroesPanel != null)
+        heroUi = FindObjectOfType<HeroesPanel>().AttachHero(this);
+    }
+  }	
 }
