@@ -43,14 +43,18 @@ public class TriggerNPC : TriggerBase
     base.Update();
     //DV{
     CharSpriteRenderer.sortingOrder = (int)(-transform.position.y*2);
-    //DV}
+    //DV}    
+  }
+
+  private void FixedUpdate()
+  {
     if (!isRotateToCharacter)
     {
       bodyAnimator.SetFloat("SpeedX", transform.position.x - previousPosition.x);
       bodyAnimator.SetFloat("SpeedY", transform.position.y - previousPosition.y);
     }
-    bodyAnimator.SetBool("Running", previousPosition != transform.position);    
-    previousPosition = transform.position;    
+    bodyAnimator.SetBool("Running", previousPosition != transform.position);
+    previousPosition = transform.position;
   }
 
   protected override void OnCharacterTriggerEnter()

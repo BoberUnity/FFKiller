@@ -21,6 +21,12 @@ public class OnTriggerActionConnectToParty : MonoBehaviour
     {
       GetComponent<Animator>().enabled = false;
       FindObjectOfType<Party>().Connect(transform);
+      BoxCollider2D[] boxColliders2D = GetComponents<BoxCollider2D>();
+      foreach (var boxCollider2D in boxColliders2D)
+      {
+        if (!boxCollider2D.isTrigger)
+          boxCollider2D.enabled = false;
+      }
     }
   }
 }
