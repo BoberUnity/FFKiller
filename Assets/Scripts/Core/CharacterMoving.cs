@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Hero))]
 
 public class CharacterMoving : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class CharacterMoving : MonoBehaviour
     private void Start ()
     {
         thisAnimator = GetComponent<Animator>();
+        GetComponent<Hero>().ConnectToPartyGui();    
         //DV{
         CharSpriteRenderer = GetComponent<SpriteRenderer>();
         //DV}

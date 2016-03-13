@@ -7,7 +7,7 @@ public class OnTriggerActionConnectToParty : MonoBehaviour
 
   private void Start ()
   {
-    trigger.OnTriggerAction += OnTriggerAction;  
+    trigger.OnTriggerAction += OnTriggerAction;    
   }
 
   private void OnDestroy()
@@ -19,14 +19,8 @@ public class OnTriggerActionConnectToParty : MonoBehaviour
   {
     if (currTrigger == numTrigger)
     {
-      GetComponent<Animator>().enabled = false;
-      FindObjectOfType<Party>().Connect(transform);
-      BoxCollider2D[] boxColliders2D = GetComponents<BoxCollider2D>();
-      foreach (var boxCollider2D in boxColliders2D)
-      {
-        if (!boxCollider2D.isTrigger)
-          boxCollider2D.enabled = false;
-      }
+      FindObjectOfType<Party>().Connect(gameObject.name);
+      Destroy(gameObject);    
     }
   }
 }

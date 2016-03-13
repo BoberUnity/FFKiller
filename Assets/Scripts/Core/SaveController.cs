@@ -33,7 +33,7 @@ public class SaveController : MonoBehaviour
     string filePath = Application.dataPath + "/StreamingAssets/Saves/" + sceneName + "Data.xml";
     if (File.Exists(filePath))
       Invoke("LoadScene", 0);
-    LoadHeroesParams();
+    Invoke("LoadHeroesParams", 0);
   }
 
   public void SaveScene()
@@ -57,7 +57,8 @@ public class SaveController : MonoBehaviour
     foreach (var triggerBase in triggersBase)
     {
       AddAtribute("trigger", (triggerBase.CurrentTrigger).ToString());
-      AddAtribute("automatic", triggerBase.automatic ? "1" : "0");
+      string triggerType = triggerBase.Type.ToString();
+      AddAtribute("type", triggerType);
       AddXmlElements(doc, rootNode, "Trigger" + triggerBase.gameObject.name);
     }
     //Save Character Position    
@@ -68,8 +69,8 @@ public class SaveController : MonoBehaviour
       AddAtribute("positionX", (pos.x).ToString());
       AddAtribute("positionY", (pos.y).ToString());
       AddXmlElements(doc, rootNode, "SavePosition" + savePositionOject.name);
-    }    
-    //  
+    }
+    //
     doc.Save(filePath);
 
     //  Save Hero Params
@@ -95,6 +96,14 @@ public class SaveController : MonoBehaviour
       AddAtribute("Agi", (hero.Agi).ToString());
       AddXmlElements(doc, rootNode, "Hero" + hero.name);
     }
+    // Save vagons
+    Party party = FindObjectOfType<Party>();
+    foreach (var vagon in party.Vagons)
+    {
+      AddAtribute("vagon", vagon.gameObject.name);
+      AddXmlElements(doc, rootNode, "Vagon"/* + vagon.gameObject.name*/);
+    }
+    // 
     doc.Save(filePath);    
   }
 
@@ -141,11 +150,21 @@ public class SaveController : MonoBehaviour
     TriggerBase[] triggersBase = FindObjectsOfType<TriggerBase>();
     foreach (var triggerBase in triggersBase)
     {
+      triggerBase.gameObject.SetActive(false);
       elemList = doc.GetElementsByTagName("Trigger" + triggerBase.gameObject.name);
       for (int i = 0; i < elemList.Count; i++)
       {
+        triggerBase.gameObject.SetActive(true);
         triggerBase.CurrentTrigger = Int32.Parse(elemList[i].Attributes["trigger"].Value);
-        triggerBase.automatic = elemList[i].Attributes["automatic"].Value == "1" ? true : false;
+
+        if (elemList[i].Attributes["type"].Value == "Disabled")
+          triggerBase.Type = TriggerType.Disabled;
+        if (elemList[i].Attributes["type"].Value == "OnPressSpace")
+          triggerBase.Type = TriggerType.OnPressSpace;
+        if (elemList[i].Attributes["type"].Value == "Automatic")
+          triggerBase.Type = TriggerType.Automatic;
+        if (elemList[i].Attributes["type"].Value == "Momental")
+          triggerBase.Type = TriggerType.Momental;
       }
     }
     //Load Save Position Objects position
@@ -199,6 +218,14 @@ public class SaveController : MonoBehaviour
           hero.Agi = Convert.ToSingle(elemList[i].Attributes["Agi"].Value, new CultureInfo("en-US"));
         }
       }
+      //Load vagons
+      Party party = FindObjectOfType<Party>();      
+      elemList = doc.GetElementsByTagName("Vagon");
+      for (int i = 0; i < elemList.Count; i++)
+      {
+        party.Connect(elemList[i].Attributes["vagon"].Value);         
+      }
+      //
     }
   }
   

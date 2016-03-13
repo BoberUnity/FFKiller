@@ -15,6 +15,6 @@ public class Vagon : TriggerNPC
   {
     isConnected = true;
     thisAnimator.enabled = false;
-    FindObjectOfType<Party>().Connect(transform);
+    FindObjectOfType<Party>().Connect(gameObject.name);
   }
 }

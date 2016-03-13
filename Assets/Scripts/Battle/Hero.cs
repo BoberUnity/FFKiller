@@ -2,12 +2,12 @@
 
 public class Hero : MonoBehaviour
 {
-  [SerializeField] private bool enabledOnStart = false;
-  [SerializeField] private HeroUI heroUi = null;
-  [SerializeField] private string thisName = "Hero";
+  [SerializeField] private Sprite portrait = null;
   [SerializeField] private float mhp = 1000;
   [SerializeField] private float hp = 500;
   [SerializeField] private float agi = 2;
+  private HeroUI heroUi = null;
+  private string thisName = "Hero";
   #region Propetries 
   public string Name
   {
@@ -18,46 +18,47 @@ public class Hero : MonoBehaviour
       heroUi.UpdateUI();
     }
   }
-
+  public Sprite Portrait
+  {
+    get { return portrait; }
+    set { portrait = value; }
+  }
   public float Mhp
   {
     get { return mhp; }
     set
     {
       mhp = value;
-      heroUi.UpdateUI();
+      if (heroUi != null)
+        heroUi.UpdateUI();
     }
   }
-
   public float Hp
   {
     get { return hp; }
     set
     {
       hp = value;
-      heroUi.UpdateUI();
+      if (heroUi != null)
+        heroUi.UpdateUI();
     }
   }
-
   public float Agi
   {
     get { return agi; }
     set
     {
       agi = value;
-      heroUi.UpdateUI();
+      if (heroUi != null)
+        heroUi.UpdateUI();
     }
   }
-
   #endregion
 
-  void Start ()
+  public void ConnectToPartyGui()
   {
-    if (enabledOnStart)
-    {
-      HeroesPanel heroesPanel = FindObjectOfType<HeroesPanel>();
-      if (heroesPanel != null)
-        heroUi = FindObjectOfType<HeroesPanel>().AttachHero(this);
-    }
-  }	
+    HeroesPanel heroesPanel = FindObjectOfType<HeroesPanel>();
+    if (heroesPanel != null)
+      heroUi = FindObjectOfType<HeroesPanel>().AttachHero(this);
+  }
 }

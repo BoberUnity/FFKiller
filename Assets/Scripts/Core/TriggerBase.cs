@@ -10,10 +10,19 @@ public class ChangeTrigger
   public TriggerBase OtherTrigger = null;
   public int OtherTriggerNewValue = 1;
 }
+
+public enum TriggerType
+{
+  Disabled,
+  OnPressSpace,
+  Automatic,
+  Momental
+}
+
 public class TriggerBase : MonoBehaviour
 {
+  public TriggerType Type = TriggerType.OnPressSpace;
   [SerializeField] private string textAssetName = "Klaus";
-  public bool automatic = false;
   [SerializeField] private ChangeTrigger[] changeTriggers = null;
   private string file = "";
   protected string[,] allBoxes;
@@ -49,7 +58,7 @@ public class TriggerBase : MonoBehaviour
     }
     else
     {
-      Debug.LogError("File:" + file + "do not found!");
+      Debug.LogWarning("File:" + file + "do not found!");
     }
   }
 
@@ -102,7 +111,7 @@ public class TriggerBase : MonoBehaviour
 
   protected virtual void Update()
   {
-    if (Input.GetKeyUp(KeyCode.Space))
+    if (Input.GetKeyUp(KeyCode.Space) && Type != TriggerType.Disabled)
     {
       if (hasStartSpeaking)
       {
@@ -131,8 +140,10 @@ public class TriggerBase : MonoBehaviour
       if (!hasStartSpeaking && !dialogFinished)
       {
         canSpeak = true;
-        if (automatic)
+        if (Type == TriggerType.Automatic)
           StartDialog();
+        if (Type == TriggerType.Momental)
+          EndDialog();
       }    
     }    
   }

@@ -4,13 +4,14 @@ using System.Collections.Generic;
 
 public class Party : MonoBehaviour
 {
-  public List<Transform> vagons = new List<Transform>();
+  public List<Transform> Vagons = new List<Transform>();
+  public List<GameObject> HeroPrefabs = new List<GameObject>();
   [SerializeField] private int distance = 40; //diistance = 40 - 1,3 sec
   private Vector3[] trace = new Vector3[0];
 
   private void Start ()
   {
-    Array.Resize(ref trace, vagons.Count * distance + 1);
+    Array.Resize(ref trace, Vagons.Count * distance + 1);
     for (var i = 0; i < trace.Length - 1; i++)
     {
       trace[i] = transform.position;
@@ -28,7 +29,7 @@ public class Party : MonoBehaviour
       trace[0] = transform.position;
 
       var n = 1;
-      foreach (var vagon in vagons)
+      foreach (var vagon in Vagons)
       {
         vagon.position = trace[n * distance];
         n += 1;
@@ -36,15 +37,24 @@ public class Party : MonoBehaviour
     }
   }
 
-  public void Connect(Transform newNPC)
+  public void Connect(string newNpcName)
   {
-    vagons.Add(newNPC);
-    Start();    
+    foreach (var heroPrefab in HeroPrefabs)
+    {
+      if (heroPrefab.name == newNpcName || heroPrefab.name == newNpcName + "Vagon")
+      {
+        GameObject vagon = Instantiate(heroPrefab, transform.position, Quaternion.identity) as GameObject;
+        vagon.name = heroPrefab.name;
+        Vagons.Add(vagon.transform);
+        Start();
+        vagon.GetComponent<Hero>().ConnectToPartyGui();
+      }
+    }    
   }
 
   public void Disconnect(Transform nPC)
   {
-    vagons.Remove(nPC);
+    Vagons.Remove(nPC);
     Start();    
   }  
 }
