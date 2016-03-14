@@ -1644,8 +1644,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367292982c02e274caebd4b3f1b91b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 1
   textAssetName: Peasant3
-  automatic: 0
   changeTriggers: []
   Portrait: {fileID: 21300008, guid: 22c79ca8fcc1bca48b57c58c9b2e5455, type: 3}
   bodyAnimator: {fileID: 9587594}
@@ -1676,8 +1676,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df79eaea827173541aa87a435f976046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 1
   textAssetName: Multidialog
-  automatic: 1
   changeTriggers: []
   Portrait:
   - {fileID: 21300000, guid: 7f137e725883d4d4db79161756e370df, type: 3}
@@ -1725,8 +1725,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367292982c02e274caebd4b3f1b91b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 1
   textAssetName: Peasant2
-  automatic: 0
   changeTriggers:
   - MyTrigger: 2
     OtherTrigger: {fileID: 11434358}
@@ -1760,8 +1760,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367292982c02e274caebd4b3f1b91b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 1
   textAssetName: Peasant1
-  automatic: 0
   changeTriggers:
   - MyTrigger: 1
     OtherTrigger: {fileID: 11419240}
@@ -1786,8 +1786,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367292982c02e274caebd4b3f1b91b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 1
   textAssetName: GrandDaughter
-  automatic: 0
   changeTriggers: []
   Portrait: {fileID: 21300008, guid: 1514b627d0276ce4194b4a5d3e5c6d60, type: 3}
   bodyAnimator: {fileID: 9598286}
@@ -1803,8 +1803,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367292982c02e274caebd4b3f1b91b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 1
   textAssetName: Warehouse/WarehouseKeeper
-  automatic: 0
   changeTriggers:
   - MyTrigger: 2
     OtherTrigger: {fileID: 11442556}
@@ -1823,8 +1823,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc453f204cb3c7a40840800e1d832e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 1
   textAssetName: Warehouse/BagPlace
-  automatic: 1
   changeTriggers:
   - MyTrigger: 1
     OtherTrigger: {fileID: 11442556}
@@ -1840,8 +1840,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df79eaea827173541aa87a435f976046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 3
   textAssetName: Klaus
-  automatic: 1
   changeTriggers:
   - MyTrigger: 1
     OtherTrigger: {fileID: 11457572}
@@ -1877,8 +1877,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc453f204cb3c7a40840800e1d832e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 2
   textAssetName: ToNextVillage
-  automatic: 0
   changeTriggers: []
 --- !u!114 &11457572
 MonoBehaviour:
@@ -1891,8 +1891,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367292982c02e274caebd4b3f1b91b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 1
   textAssetName: Klaus
-  automatic: 0
   changeTriggers: []
   Portrait: {fileID: 21300000, guid: 7c12c2433e1a5be4c9d44575b1ef52c2, type: 3}
   bodyAnimator: {fileID: 9526718}
@@ -1923,8 +1923,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc453f204cb3c7a40840800e1d832e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 2
   textAssetName: GehendMonologs/LadderMonolog
-  automatic: 1
   changeTriggers: []
 --- !u!114 &11464054
 MonoBehaviour:
@@ -1937,8 +1937,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367292982c02e274caebd4b3f1b91b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 1
   textAssetName: Peasant4
-  automatic: 0
   changeTriggers: []
   Portrait: {fileID: 21300008, guid: d955b6988db8f7947a784213bbf9eaea, type: 3}
   bodyAnimator: {fileID: 9581720}
@@ -1954,8 +1954,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367292982c02e274caebd4b3f1b91b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 1
   textAssetName: Pilgrim
-  automatic: 0
   changeTriggers:
   - MyTrigger: 1
     OtherTrigger: {fileID: 11464706}
@@ -1989,8 +1989,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367292982c02e274caebd4b3f1b91b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 1
   textAssetName: Peasant1
-  automatic: 0
   changeTriggers: []
   Portrait: {fileID: 21300008, guid: 792531d858344c14d86885fcfcc6aaa8, type: 3}
   bodyAnimator: {fileID: 9565562}
@@ -2006,8 +2006,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc453f204cb3c7a40840800e1d832e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 2
   textAssetName: GehendMonologs/HomeExit
-  automatic: 1
   changeTriggers: []
 --- !u!114 &11474094
 MonoBehaviour:
@@ -2033,8 +2033,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367292982c02e274caebd4b3f1b91b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 1
   textAssetName: Peasant2
-  automatic: 0
   changeTriggers: []
   Portrait: {fileID: 21300008, guid: a91e822c540672543a62185abb48876f, type: 3}
   bodyAnimator: {fileID: 9549750}
@@ -2050,8 +2050,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367292982c02e274caebd4b3f1b91b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 1
   textAssetName: Grandpa
-  automatic: 0
   changeTriggers: []
   Portrait: {fileID: 21300008, guid: d08c93b77e800a94aa70d14333e04700, type: 3}
   bodyAnimator: {fileID: 9538910}
@@ -2086,7 +2086,7 @@ MonoBehaviour:
   numTrigger: 1
   paramName: GoAway
   newValue: 1
-  time: 0
+  time: 1
 --- !u!114 &11497848
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2098,8 +2098,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc453f204cb3c7a40840800e1d832e72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 1
   textAssetName: Warehouse/BoxPlace
-  automatic: 1
   changeTriggers:
   - MyTrigger: 1
     OtherTrigger: {fileID: 11442556}
@@ -2490,7 +2490,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 103704465
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3405c76b75ed60c429f1e5990611f131, type: 3}
+  m_Sprite: {fileID: 21300008, guid: 3405c76b75ed60c429f1e5990611f131, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
