@@ -12,7 +12,6 @@ public class CameraController : MonoBehaviour
     Animator Animator;
     float fieldWidth, fieldHeight;      //размеры карты
     float cameraWidth, cameraHeight;    //половинные размеры камеры
-    float AvgVelocity;
     float UnitsPerPixel = 1f/32f;
     private Vector2 UpLeft;
 
