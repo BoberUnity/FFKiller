@@ -1,13 +1,18 @@
 fileFormatVersion: 2
 guid: 82fe446d671ba6941baf083e15acf892
-timeCreated: 1457967022
+timeCreated: 1457981802
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: tree01_0
+    21300002: tree01_1
+    21300004: tree01_2
+    21300006: tree01_3
+    21300008: tree01_Down
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -29,8 +34,8 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,18 +43,117 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: tree01_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40, y: 62}
+        - {x: -33, y: 62}
+        - {x: -64, y: 28}
+        - {x: -64, y: -33}
+        - {x: -62, y: -56}
+        - {x: -49, y: -64}
+        - {x: 61, y: -64}
+        - {x: 64, y: -58}
+        - {x: 64, y: 47}
+        - {x: 56, y: 59}
+    - name: tree01_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42, y: 61}
+        - {x: -64, y: 32}
+        - {x: -64, y: -62}
+        - {x: -57, y: -64}
+        - {x: 54, y: -64}
+        - {x: 63, y: -59}
+        - {x: 63, y: 30}
+        - {x: 36, y: 61}
+    - name: tree01_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40, y: 62}
+        - {x: -33, y: 62}
+        - {x: -64, y: 28}
+        - {x: -64, y: -33}
+        - {x: -62, y: -56}
+        - {x: -49, y: -64}
+        - {x: 61, y: -64}
+        - {x: 64, y: -58}
+        - {x: 64, y: 47}
+        - {x: 56, y: 59}
+    - name: tree01_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 32
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 62}
+        - {x: -63, y: 24}
+        - {x: -63, y: -39}
+        - {x: -57, y: -64}
+        - {x: 59, y: -64}
+        - {x: 64, y: -50}
+        - {x: 64, y: 56}
+        - {x: 62, y: 62}
+    - name: tree01_Down
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 0
+        width: 49
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.5, y: 16}
+        - {x: -24.5, y: 10}
+        - {x: -24.5, y: -14}
+        - {x: -20.5, y: -16}
+        - {x: 21.5, y: -16}
+        - {x: 24.5, y: -13}
+        - {x: 24.5, y: 6}
+        - {x: 16.5, y: 16}
     outline: []
   spritePackingTag: 
   userData: 
