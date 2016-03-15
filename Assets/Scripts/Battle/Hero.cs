@@ -3,8 +3,10 @@
 public class Hero : MonoBehaviour
 {
   [SerializeField] private Sprite portrait = null;
-  [SerializeField] private float mhp = 1000;
   [SerializeField] private float hp = 500;
+  [SerializeField] private float mhp = 1000;
+  [SerializeField] private float mp = 500;
+  [SerializeField] private float mmp = 1000;
   [SerializeField] private float agi = 2;
   private HeroUI heroUi = null;
   private string thisName = "Hero";
@@ -23,6 +25,16 @@ public class Hero : MonoBehaviour
     get { return portrait; }
     set { portrait = value; }
   }
+  public float Hp
+  {
+    get { return hp; }
+    set
+    {
+      hp = value;
+      if (heroUi != null)
+        heroUi.UpdateUI();
+    }
+  }
   public float Mhp
   {
     get { return mhp; }
@@ -33,12 +45,22 @@ public class Hero : MonoBehaviour
         heroUi.UpdateUI();
     }
   }
-  public float Hp
+  public float Mp
   {
-    get { return hp; }
+    get { return mp; }
     set
     {
-      hp = value;
+      mp = value;
+      if (heroUi != null)
+        heroUi.UpdateUI();
+    }
+  }
+  public float Mmp
+  {
+    get { return mmp; }
+    set
+    {
+      mmp = value;
       if (heroUi != null)
         heroUi.UpdateUI();
     }
