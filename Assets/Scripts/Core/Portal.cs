@@ -44,8 +44,7 @@ public class Portal : MonoBehaviour
     //  doorAnimator.SetTrigger("Open");
 
     //DV{
-    cameraController.Map = TargetMap;
-    cameraController.TuneMap();
+    cameraController.TuneMap(TargetMap);
     //DV}
   }
 

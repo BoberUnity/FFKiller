@@ -24,10 +24,7 @@ public class CameraController : MonoBehaviour
         //transform.parent = Target;
         Camera = GetComponent<Camera>();
 
-        Sprite Spr = Map.GetComponent<SpriteRenderer>().sprite;
-        UpLeft = Map.transform.position;
-
-        TuneMap();
+        TuneMap(Map);
 
         Camera.orthographicSize = Screen.height * 0.5f * UnitsPerPixel / CameraZoom;
         cameraHeight = Camera.orthographicSize;
@@ -93,14 +90,16 @@ public class CameraController : MonoBehaviour
         Animator.SetTrigger("Play");
   }
 
-    public void TuneMap()
+    public void TuneMap(GameObject Map)
     {
         Sprite Spr = Map.GetComponent<SpriteRenderer>().sprite;
-        UpLeft = Map.transform.position;
 
         //Ширину и длину поля считаем в юнитах
         fieldWidth = Spr.rect.width * UnitsPerPixel;
         fieldHeight = Spr.rect.height * UnitsPerPixel;
+
+        //Находим координаты левого верхнего угла карты
+        UpLeft = (Vector2)Map.transform.position + new Vector2(-Spr.pivot.x, Spr.rect.height - Spr.pivot.y) * UnitsPerPixel;
 
         ConstY = (2 * Camera.orthographicSize >= fieldHeight);
         ConstX = (2 * Camera.orthographicSize * Camera.aspect >= fieldHeight);
