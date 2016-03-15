@@ -7,7 +7,9 @@ public class HeroUI : MonoBehaviour
   [SerializeField] private Text nameIndicator = null;
   [SerializeField] private Image portraitImage = null;
   [SerializeField] private Text hpIndicator = null;
-  [SerializeField] private Text mhpIndicator = null;  
+  [SerializeField] private Image hpLine = null;
+  [SerializeField] private Image mpLine = null;
+  [SerializeField] private Text mpIndicator = null;
   [SerializeField] private Image aglImage = null;
 
   public Hero Hero
@@ -23,7 +25,9 @@ public class HeroUI : MonoBehaviour
   {
     nameIndicator.text = hero.Name;
     portraitImage.sprite = hero.Portrait;
-    hpIndicator.text = hero.Hp.ToString("f0");
-    mhpIndicator.text = hero.Mhp.ToString("f0");    
+    hpIndicator.text = hero.Hp.ToString("f0") + "/" + hero.Mhp.ToString("f0");
+    hpLine.fillAmount = hero.Hp / hero.Mhp;
+    mpIndicator.text = hero.Mp.ToString("f0") + "/" + hero.Mmp.ToString("f0");
+    mpLine.fillAmount = hero.Mp / hero.Mmp;
   }
 }
