@@ -23,8 +23,11 @@ public class Portal : MonoBehaviour
   {    
     characterMoving.CanMove = false;      
     cameraController.StartEffect();
-    Invoke("ChangePosition", cameraController.EffectTime);
-    if (doorAnimator != null)
+    Invoke("ChangePosition", 0.5f * cameraController.EffectTime);
+    //DV{
+    Invoke("SetMove", cameraController.EffectTime);
+    //DV}
+      if (doorAnimator != null)
       doorAnimator.SetTrigger("Open"); 
   }
 
@@ -36,7 +39,7 @@ public class Portal : MonoBehaviour
   private void ChangePosition()
   {
     characterMoving.transform.position = otherPortal.TargetPoint.transform.position;
-    characterMoving.CanMove = true;
+    //characterMoving.CanMove = true;
     //if (doorAnimator != null)
     //  doorAnimator.SetTrigger("Open");
 
@@ -45,4 +48,11 @@ public class Portal : MonoBehaviour
     cameraController.TuneMap();
     //DV}
   }
+
+    //DV{
+    private void SetMove()
+    {
+        characterMoving.CanMove = true;
+    }
+    //DV}
 }

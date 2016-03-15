@@ -9,6 +9,7 @@ public class CameraController : MonoBehaviour
     public float traction = 0.0f;   //расстояние (в юнитах), через которое камера начинает двигаться за целью
 
     Camera Camera;
+    GameObject PanelBeforeCamera;
     Animator Animator;
     float fieldWidth, fieldHeight;      //размеры карты
     float cameraWidth, cameraHeight;    //половинные размеры камеры
@@ -35,6 +36,8 @@ public class CameraController : MonoBehaviour
 
         Animator = GetComponentInChildren<Animator>();
         Animator.SetFloat("Speed", 0.5f/EffectTime);
+        PanelBeforeCamera = GameObject.Find("PanelBeforeCamera");
+        PanelBeforeCamera.SetActive(false);
         //DV}
     }
 
@@ -79,8 +82,14 @@ public class CameraController : MonoBehaviour
     }
 
 
-  public void StartEffect()
+  public void StartEffect(Color Color = new Color(), float EfTime = 0)
   {
+        if (EfTime == 0)
+            EfTime = EffectTime;
+
+        Animator.SetFloat("Speed", 1f / EfTime);
+        PanelBeforeCamera.GetComponent<UnityEngine.UI.Image>().color = Color;
+
         Animator.SetTrigger("Play");
   }
 
