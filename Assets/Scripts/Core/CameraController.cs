@@ -97,10 +97,12 @@ public class CameraController : MonoBehaviour
         ConstX = (2 * Camera.orthographicSize * Camera.aspect >= fieldHeight);
 
         //Если размер камеры больше размера карты, устанавливаем камеру в центр карты. Если камера меньше устанавливаем её на цель.
-        if(ConstX && ConstY)
-            transform.position = Map.transform.position + new Vector3(fieldWidth * 0.5f, -fieldHeight * 0.5f, transform.position.z);
-        else
-            transform.position = new Vector3(Target.position.x, Target.position.y, transform.position.z);
+        Vector3 NewCamPosition = new Vector3(Target.position.x, Target.position.y, transform.position.z);
+        if (ConstX)
+            NewCamPosition.x = Map.transform.position.x + fieldWidth * 0.5f;
+        if(ConstY)
+            NewCamPosition.y = Map.transform.position.y - fieldHeight * 0.5f;
 
+        transform.position = NewCamPosition;
     }
 }
