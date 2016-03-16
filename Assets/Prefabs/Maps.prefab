@@ -478,22 +478,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!1 &130728
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 441984}
-  - 61: {fileID: 6151124}
-  m_Layer: 0
-  m_Name: BoxCollider (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &130906
 GameObject:
   m_ObjectHideFlags: 1
@@ -1581,22 +1565,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &188548
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 445816}
-  - 61: {fileID: 6130878}
-  m_Layer: 0
-  m_Name: BoxCollider (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &188574
 GameObject:
   m_ObjectHideFlags: 1
@@ -2421,18 +2389,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 405624}
   m_RootOrder: 1
---- !u!4 &441984
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 130728}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.27, y: -7.16, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 452516}
-  m_RootOrder: 4
 --- !u!4 &443180
 Transform:
   m_ObjectHideFlags: 1
@@ -2497,18 +2453,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400304}
   m_RootOrder: 0
---- !u!4 &445816
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 188548}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.33, y: -7.35, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 452516}
-  m_RootOrder: 3
 --- !u!4 &447692
 Transform:
   m_ObjectHideFlags: 1
@@ -2658,8 +2602,6 @@ Transform:
   - {fileID: 414902}
   - {fileID: 495242}
   - {fileID: 418222}
-  - {fileID: 445816}
-  - {fileID: 441984}
   m_Father: {fileID: 410104}
   m_RootOrder: 2
 --- !u!4 &452622
@@ -3787,7 +3729,9 @@ PolygonCollider2D:
     - - {x: 4.79, y: -0.31}
       - {x: 4.48, y: -0.31}
       - {x: 4.48, y: -1.91}
-      - {x: 4.79, y: -1.91}
+      - {x: 4.6515136, y: -1.9056394}
+      - {x: 4.653114, y: -1.5861497}
+      - {x: 4.79, y: -1.5854198}
     - - {x: 5.11, y: -0.31}
       - {x: 4.8, y: -0.31}
       - {x: 4.8, y: -1.59}
@@ -3878,8 +3822,8 @@ PolygonCollider2D:
       - {x: 5.12, y: -2.55}
       - {x: 5.12, y: -3.83}
     - - {x: 0.63, y: -6.07}
-      - {x: 0.63000005, y: -2.2366405}
-      - {x: 0.31459725, y: -2.2312376}
+      - {x: 0.63000005, y: -2.5561826}
+      - {x: 0.31459725, y: -2.558973}
       - {x: 0.32, y: -6.07}
     - - {x: 0.95, y: -6.07}
       - {x: 0.95, y: -2.55}
@@ -6824,20 +6768,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
---- !u!61 &6130878
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 188548}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.2}
 --- !u!61 &6131318
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -6961,9 +6891,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.00000047683716, y: -0.05358839}
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.1}
+  m_Size: {x: 0.3, y: 0.20715629}
 --- !u!61 &6150844
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -6978,20 +6908,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
---- !u!61 &6151124
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 130728}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.2}
 --- !u!61 &6167846
 BoxCollider2D:
   m_ObjectHideFlags: 1
