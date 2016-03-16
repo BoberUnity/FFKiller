@@ -3,11 +3,12 @@ using System.Collections.Generic;
 
 public class HeroesPanel : MonoBehaviour
 {
-  [SerializeField] private GameObject[] menus = null;
+  [SerializeField] private GuiMenuBase[] menus = null;
   public List<HeroUI> HeroesUi = new List<HeroUI>(4);
   private int attachedHeroes = 0;
   private Animator thisAnimator = null;
-
+  private bool isChildMenuOpen = false;
+  
   public HeroUI AttachHero (Hero hero)
   {
     if (attachedHeroes < 4)
@@ -23,13 +24,21 @@ public class HeroesPanel : MonoBehaviour
 
   private void Start()
   {
-    thisAnimator = GetComponent<Animator>();
+    thisAnimator = GetComponent<Animator>();    
   }
 
   private void Update()
   {
     if (Input.GetKeyDown(KeyCode.Tab))
-      thisAnimator.SetBool("IsVisible", !thisAnimator.GetBool("IsVisible"));
+    {
+      if (thisAnimator.GetBool("IsVisible"))
+        Hide();
+      else
+      {
+        if (!isChildMenuOpen)
+          Show();
+      }
+    }
   }
 
   public void SelectMenu(int activeMenu)
@@ -37,8 +46,22 @@ public class HeroesPanel : MonoBehaviour
     int i = 0;
     foreach (var menu in menus)
     {
-      menu.SetActive(i == activeMenu);
+      if (i == activeMenu)
+        menu.Show();
       i++;
     }
+    isChildMenuOpen = true;
+    Hide();
+  }
+
+  public void Show()
+  {
+    thisAnimator.SetBool("IsVisible", true);
+    isChildMenuOpen = false;
+  }
+
+  public void Hide()
+  {
+    thisAnimator.SetBool("IsVisible", false);
   }
 }
