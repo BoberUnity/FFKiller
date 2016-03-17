@@ -5,7 +5,6 @@ public class OnTriggerActionChangeTriggerType : MonoBehaviour
   [SerializeField] private TriggerBase targetTrigger = null;
   [SerializeField] private TriggerType newType = TriggerType.Disabled;
   [SerializeField] private int numTrigger = 1;
-  [SerializeField] private bool newState = false;
   [SerializeField] private float time = 0;
   TriggerBase thisTrigger = null;
 
