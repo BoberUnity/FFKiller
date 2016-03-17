@@ -41,7 +41,10 @@ public class CharacterMoving : MonoBehaviour
         transform.position += Vector3.up * Time.fixedDeltaTime * currentSpeed;
         thisAnimator.SetBool("Running", true);
         thisAnimator.SetFloat("SpeedY", 1);
-        thisAnimator.SetFloat("SpeedX", 0);
+        if (!Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow))
+        {
+          thisAnimator.SetFloat("SpeedX", 0);
+        }
       }
 
       if (Input.GetKey(KeyCode.DownArrow))
@@ -49,25 +52,36 @@ public class CharacterMoving : MonoBehaviour
         transform.position -= Vector3.up * Time.fixedDeltaTime * currentSpeed;
         thisAnimator.SetBool("Running", true);
         thisAnimator.SetFloat("SpeedY", -1);
-        thisAnimator.SetFloat("SpeedX", 0);
-      }
+        if (!Input.GetKey(KeyCode.RightArrow) && !Input.GetKey(KeyCode.LeftArrow))
+        {
+          thisAnimator.SetFloat("SpeedX", 0);
+        }
+      }      
+
       if (Input.GetKey(KeyCode.RightArrow))
       {
         transform.position += Vector3.right * Time.fixedDeltaTime * currentSpeed;
         thisAnimator.SetBool("Running", true);
         thisAnimator.SetFloat("SpeedX", 1);
-        thisAnimator.SetFloat("SpeedY", 0);
-      }
+        if (!Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.DownArrow))
+        {
+          thisAnimator.SetFloat("SpeedY", 0);
+        }
+      }      
+
       if (Input.GetKey(KeyCode.LeftArrow))
       {
         transform.position -= Vector3.right * Time.fixedDeltaTime * currentSpeed;
         thisAnimator.SetBool("Running", true);
         thisAnimator.SetFloat("SpeedX", -1);
-        thisAnimator.SetFloat("SpeedY", 0);
-      }
+        if (!Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.DownArrow))
+        {
+          thisAnimator.SetFloat("SpeedY", 0);
+        }
+      } 
 
-        //DV{
-        thisAnimator.SetFloat("Speed", currentSpeed);
+      //DV{
+      thisAnimator.SetFloat("Speed", currentSpeed);
         //DV}
     }
 
