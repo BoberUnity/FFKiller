@@ -30,7 +30,7 @@ public class TriggerNPC : TriggerBase
     dialogPanel.PortraitImage.sprite = allBoxes[0, line] == "1" ? Portrait : otherPortrait;    
   }
 
-  protected override void StartDialog()
+  public override void StartDialog()
   {
     base.StartDialog();    
     bodyAnimator.SetBool("Running", false);    

@@ -158,7 +158,7 @@ public class TriggerBase : MonoBehaviour
     }
   }
 
-  protected virtual void StartDialog()
+  public virtual void StartDialog()
   {
     dialogPanel.Show();
     hasStartSpeaking = true;
