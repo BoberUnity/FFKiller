@@ -174,7 +174,10 @@ public class TriggerBase : MonoBehaviour
     foreach (var changeTrigger in changeTriggers)
     {
       if (changeTrigger.MyTrigger == CurrentTrigger)
+      {
         changeTrigger.OtherTrigger.CurrentTrigger = changeTrigger.OtherTriggerNewValue;
+        break;
+      }
     }
     var handler = OnTriggerAction;
     if (handler != null)
