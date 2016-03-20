@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class OnTriggerActionChangeHeroParams : MonoBehaviour
+public class OnTriggerActionChangeAddItemToInventar : MonoBehaviour
 {
   [SerializeField] private int numTrigger = 1;
   [SerializeField] private float time = 0;
@@ -24,17 +24,12 @@ public class OnTriggerActionChangeHeroParams : MonoBehaviour
   {
     if (currTrigger == numTrigger)
     {
-      Invoke("ChangeHeroParams", time);
+      Invoke("AddItem", time);
     }
   }
 
-  private void ChangeHeroParams()
+  private void AddItem()
   {
-    hero.HeroPropetries.Hp += heroPropetries.Hp;
-    hero.HeroPropetries.Mhp += heroPropetries.Mhp;
-    hero.HeroPropetries.Mp += heroPropetries.Mp;
-    hero.HeroPropetries.Mmp += heroPropetries.Mmp;
-    hero.HeroPropetries.Co += heroPropetries.Co;
-    hero.HeroPropetries.Mco += heroPropetries.Mco;
+    FindObjectOfType<Inventar>().AddItem(heroPropetries);    
   }
 }

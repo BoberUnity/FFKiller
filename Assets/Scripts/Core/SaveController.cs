@@ -91,9 +91,13 @@ public class SaveController : MonoBehaviour
     Hero[] heroes = FindObjectsOfType<Hero>();
     foreach (var hero in heroes)
     {
-      AddAtribute("Mhp", (hero.Mhp).ToString());
-      AddAtribute("Hp", (hero.Hp).ToString());
-      AddAtribute("Agi", (hero.Agi).ToString());
+      AddAtribute("Hp", (hero.HeroPropetries.Hp).ToString());//!!!!!!!!!!!!!!!!!!!!
+      AddAtribute("Mhp", (hero.HeroPropetries.Mhp).ToString());
+      AddAtribute("Mp", (hero.HeroPropetries.Mp).ToString());
+      AddAtribute("Mmp", (hero.HeroPropetries.Mmp).ToString());
+      AddAtribute("Co", (hero.HeroPropetries.Co).ToString());
+      AddAtribute("Mco", (hero.HeroPropetries.Mco).ToString());
+      AddAtribute("Agi", (hero.HeroPropetries.Agi).ToString());
       AddXmlElements(doc, rootNode, "Hero" + hero.name);
     }
     // Save vagons
@@ -213,9 +217,13 @@ public class SaveController : MonoBehaviour
         elemList = doc.GetElementsByTagName("Hero" + hero.name);
         for (int i = 0; i < elemList.Count; i++)
         {
-          hero.Mhp = Convert.ToSingle(elemList[i].Attributes["Mhp"].Value, new CultureInfo("en-US"));
-          hero.Hp = Convert.ToSingle(elemList[i].Attributes["Hp"].Value, new CultureInfo("en-US"));
-          hero.Agi = Convert.ToSingle(elemList[i].Attributes["Agi"].Value, new CultureInfo("en-US"));
+          hero.HeroPropetries.Hp = Convert.ToSingle(elemList[i].Attributes["Hp"].Value, new CultureInfo("en-US"));
+          hero.HeroPropetries.Mhp = Convert.ToSingle(elemList[i].Attributes["Mhp"].Value, new CultureInfo("en-US"));
+          hero.HeroPropetries.Mp = Convert.ToSingle(elemList[i].Attributes["Mp"].Value, new CultureInfo("en-US"));
+          hero.HeroPropetries.Mmp = Convert.ToSingle(elemList[i].Attributes["Mmp"].Value, new CultureInfo("en-US"));
+          hero.HeroPropetries.Co = Convert.ToSingle(elemList[i].Attributes["Co"].Value, new CultureInfo("en-US"));
+          hero.HeroPropetries.Mco = Convert.ToSingle(elemList[i].Attributes["Mco"].Value, new CultureInfo("en-US"));
+          hero.HeroPropetries.Agi = Convert.ToSingle(elemList[i].Attributes["Agi"].Value, new CultureInfo("en-US"));
         }
       }
       //Load vagons

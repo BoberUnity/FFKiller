@@ -102,12 +102,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 873c0791559e2c84590fb78f865a3eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portrait: {fileID: 21300000, guid: 1514b627d0276ce4194b4a5d3e5c6d60, type: 3}
-  hp: 200
-  mhp: 400
-  mp: 500
-  mmp: 1000
-  agi: 5
+  heroPropetries:
+    Name: Daughter
+    Portrait: {fileID: 21300000, guid: 1514b627d0276ce4194b4a5d3e5c6d60, type: 3}
+    Hp: 200
+    Mhp: 500
+    Mp: 20
+    Mmp: 150
+    Co: 60
+    Mco: 80
+    Agi: 2
 --- !u!114 &11465094
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -169,6 +173,39 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: heroPropetries.Portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 1514b627d0276ce4194b4a5d3e5c6d60,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: heroPropetries.Hp
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: heroPropetries.Mhp
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: heroPropetries.Mp
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: heroPropetries.Mmp
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: heroPropetries.Co
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: heroPropetries.Mco
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: heroPropetries.Name
+      value: Daughter
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
