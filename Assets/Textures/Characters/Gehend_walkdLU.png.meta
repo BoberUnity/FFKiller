@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: 9d4fa65e3ff1d914e91f76d259476233
-timeCreated: 1458244067
+guid: 6c388830475499a40abe59c387034b48
+timeCreated: 1458490598
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Gehend_walkdLU_0
-    21300002: Gehend_walkdLU_1
-    21300004: Gehend_walkdLU_2
-    21300006: Gehend_walkdLU_3
-    21300008: Gehend_walkdLU_4
-    21300010: Gehend_walkdLU_5
+    21300000: Gehend_walkd04_0
+    21300002: Gehend_walkd04_1
+    21300004: Gehend_walkd04_2
+    21300006: Gehend_walkd04_3
+    21300008: Gehend_walkd04_4
+    21300010: Gehend_walkd04_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -32,8 +32,8 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -3
-  maxTextureSize: 2048
+  textureFormat: -2
+  maxTextureSize: 256
   textureSettings:
     filterMode: 0
     aniso: 16
@@ -56,7 +56,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Gehend_walkdLU_0
+    - name: Gehend_walkd04_0
       rect:
         serializedVersion: 2
         x: 0
@@ -67,19 +67,15 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 9, y: 24}
-        - {x: -8, y: 24}
-        - {x: -12, y: 23}
-        - {x: -15, y: 20}
-        - {x: -15, y: -3}
-        - {x: -14, y: -10}
-        - {x: -13, y: -22}
-        - {x: -10, y: -24}
-        - {x: 8, y: -24}
-        - {x: 10, y: -23}
-        - {x: 14, y: 2}
-        - {x: 14, y: 21}
-    - name: Gehend_walkdLU_1
+      - - {x: -9, y: 24}
+        - {x: -14, y: 22}
+        - {x: -14, y: -18}
+        - {x: -11, y: -24}
+        - {x: 12, y: -24}
+        - {x: 15, y: 6}
+        - {x: 15, y: 20}
+        - {x: 12, y: 24}
+    - name: Gehend_walkd04_1
       rect:
         serializedVersion: 2
         x: 32
@@ -90,14 +86,14 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -14, y: 24}
-        - {x: -16, y: 22}
-        - {x: -16, y: -12}
-        - {x: -14, y: -24}
-        - {x: 14, y: -24}
-        - {x: 14, y: 20}
-        - {x: 10, y: 24}
-    - name: Gehend_walkdLU_2
+      - - {x: 12, y: 24}
+        - {x: -13, y: 24}
+        - {x: -15, y: 20}
+        - {x: -15, y: -24}
+        - {x: 13, y: -24}
+        - {x: 16, y: -14}
+        - {x: 16, y: 20}
+    - name: Gehend_walkd04_2
       rect:
         serializedVersion: 2
         x: 64
@@ -108,18 +104,13 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -9, y: 24}
-        - {x: -12, y: 23}
-        - {x: -15, y: 18}
-        - {x: -15, y: 12}
-        - {x: -14, y: 9}
-        - {x: -15, y: -13}
-        - {x: -15, y: -23}
-        - {x: -13, y: -24}
-        - {x: 13, y: -24}
-        - {x: 13, y: 20}
-        - {x: 8, y: 24}
-    - name: Gehend_walkdLU_3
+      - - {x: 10, y: 24}
+        - {x: -15, y: 24}
+        - {x: -15, y: -24}
+        - {x: 12, y: -24}
+        - {x: 14, y: -4}
+        - {x: 14, y: 21}
+    - name: Gehend_walkd04_3
       rect:
         serializedVersion: 2
         x: 96
@@ -130,15 +121,17 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 9, y: 24}
-        - {x: -14, y: 24}
-        - {x: -15, y: 21}
-        - {x: -15, y: -11}
-        - {x: -12, y: -24}
-        - {x: 10, y: -24}
-        - {x: 14, y: 5}
-        - {x: 14, y: 20}
-    - name: Gehend_walkdLU_4
+      - - {x: 14, y: 24}
+        - {x: -9, y: 24}
+        - {x: -14, y: 22}
+        - {x: -14, y: -18}
+        - {x: -13, y: -22}
+        - {x: -10, y: -24}
+        - {x: 8, y: -24}
+        - {x: 9, y: -19}
+        - {x: 15, y: 6}
+        - {x: 15, y: 22}
+    - name: Gehend_walkd04_4
       rect:
         serializedVersion: 2
         x: 128
@@ -149,15 +142,14 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -13, y: 24}
-        - {x: -16, y: 19}
-        - {x: -16, y: -11}
-        - {x: -13, y: -24}
+      - - {x: -15, y: 24}
+        - {x: -15, y: -15}
+        - {x: -13, y: -23}
+        - {x: -11, y: -24}
         - {x: 10, y: -24}
-        - {x: 14, y: 11}
-        - {x: 14, y: 22}
-        - {x: 11, y: 24}
-    - name: Gehend_walkdLU_5
+        - {x: 16, y: 0}
+        - {x: 16, y: 24}
+    - name: Gehend_walkd04_5
       rect:
         serializedVersion: 2
         x: 160
@@ -168,13 +160,18 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -15, y: 24}
-        - {x: -15, y: -19}
+      - - {x: -13, y: 24}
+        - {x: -15, y: 18}
+        - {x: -15, y: 16}
+        - {x: -13, y: 9}
+        - {x: -15, y: 3}
+        - {x: -15, y: -15}
+        - {x: -11, y: -22}
         - {x: -9, y: -24}
-        - {x: 12, y: -24}
-        - {x: 13, y: -15}
-        - {x: 13, y: 21}
-        - {x: 9, y: 24}
+        - {x: 13, y: -24}
+        - {x: 14, y: -6}
+        - {x: 14, y: 21}
+        - {x: 12, y: 24}
     outline: []
   spritePackingTag: 
   userData: 
