@@ -27,6 +27,7 @@ public class ItemButton : MonoBehaviour
   private void Use(Hero hero)
   {
     HeroPropetries newHprop = new HeroPropetries();
+    newHprop.Portrait = hero.HeroPropetries.Portrait;
     newHprop.Hp = hero.HeroPropetries.Hp + heroPropetries.Hp;
     newHprop.Mhp = hero.HeroPropetries.Mhp += heroPropetries.Mhp;
     newHprop.Mp = hero.HeroPropetries.Mp += heroPropetries.Mp;
