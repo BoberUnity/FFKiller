@@ -1,11 +1,12 @@
 fileFormatVersion: 2
-guid: 2abe77118c937dc41bb6feb7d8d47b52
-timeCreated: 1458577446
+guid: 89b673634c3a3534d80466ada1e7880f
+timeCreated: 1458583248
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: grass03_0
-    21300002: grass03_1
+    21300000: puddle_0
+    21300002: puddle_1
+    21300004: puddle_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -29,7 +30,7 @@ TextureImporter:
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 64
+  maxTextureSize: 512
   textureSettings:
     filterMode: 0
     aniso: 16
@@ -52,40 +53,57 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: grass03_0
+    - name: puddle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 124
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -16, y: 12}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 9}
-        - {x: 2, y: 12}
-    - name: grass03_1
+      - - {x: -27, y: 27}
+        - {x: -62, y: 12}
+        - {x: -62, y: -27}
+        - {x: 38, y: -27}
+        - {x: 62, y: -19}
+        - {x: 62, y: 27}
+    - name: puddle_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 128
         y: 0
-        width: 32
-        height: 32
+        width: 124
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -6, y: 12}
-        - {x: -14, y: 12}
-        - {x: -16, y: 2}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 4}
-        - {x: 7, y: 9}
+      - - {x: -27, y: 27}
+        - {x: -62, y: 12}
+        - {x: -62, y: -27}
+        - {x: 38, y: -27}
+        - {x: 62, y: -19}
+        - {x: 62, y: 27}
+    - name: puddle_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 124
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 27}
+        - {x: -62, y: 12}
+        - {x: -62, y: -27}
+        - {x: 38, y: -27}
+        - {x: 62, y: -19}
+        - {x: 62, y: 27}
     outline: []
   spritePackingTag: 
   userData: 
