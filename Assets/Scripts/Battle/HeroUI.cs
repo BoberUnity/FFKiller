@@ -20,6 +20,7 @@ public class HeroUI : MonoBehaviour
     set
     {
       hero = value;
+      gameObject.SetActive(true);
       UpdateUI();
     }
   }

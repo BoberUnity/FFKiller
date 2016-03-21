@@ -4,18 +4,34 @@ using UnityEngine.UI;
 public class ItemButton : MonoBehaviour
 {
   [SerializeField] private Text nameText = null;
+  [HideInInspector] public bool IsBusy = false;
   private HeroPropetries heroPropetries = null;
+  private Image thisImage = null;
 
   public void Show(HeroPropetries hP)
   {
     heroPropetries = hP;
     nameText.text = heroPropetries.Name;
-    GetComponent<Image>().sprite = heroPropetries.Portrait;
+    thisImage = GetComponent<Image>();
+    thisImage.sprite = heroPropetries.Portrait;
+    thisImage.color = Color.white;
+    IsBusy = true;
   }
 
   public void Hide()
   {
     nameText.text = "";
+    GetComponent<Image>().sprite = null;
+    heroPropetries = new HeroPropetries();
+    heroPropetries.Portrait = null;
+    heroPropetries.Hp = 0; ;
+    heroPropetries.Mhp = 0;
+    heroPropetries.Mp = 0;
+    heroPropetries.Mmp = 0;
+    heroPropetries.Co = 0;
+    heroPropetries.Mco = 0;
+    IsBusy = false;
+    thisImage.color = new Color(1, 1, 1, 10/255);
   }
 
   public void OnPress()
@@ -35,5 +51,6 @@ public class ItemButton : MonoBehaviour
     newHprop.Co = hero.HeroPropetries.Co += heroPropetries.Co;
     newHprop.Mco = hero.HeroPropetries.Mco += heroPropetries.Mco;
     hero.HeroPropetries = newHprop;
+    Hide();   
   }
 }

@@ -3,11 +3,28 @@ using System.Collections.Generic;
 
 public class Inventar : MonoBehaviour
 {
-  [SerializeField] private List<ItemButton> items = new List<ItemButton>();
-  private int itemsCount = 0;
+  [SerializeField] private List<ItemButton> itemButtons = new List<ItemButton>();
+  
 
   public void AddItem(HeroPropetries heroPropetries)
   {
-    items[itemsCount].Show(heroPropetries);
+    int buttonIndex = FirstFreeButton;
+    itemButtons[buttonIndex].Show(heroPropetries);    
+  }
+
+  private int FirstFreeButton
+  {
+    get
+    {
+      int i = 0;
+      foreach (var itemButton in itemButtons)
+      {
+        if (!itemButton.IsBusy)
+          return i;
+        i++;
+      }
+      Debug.LogError("Has no free buttons");
+      return 0;
+    }
   }
 }
