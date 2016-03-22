@@ -43,7 +43,7 @@ public class CharacterMoving : MonoBehaviour
   {
     if (CanMove)
     {
-      currentSpeed = Input.GetKey(KeyCode.RightShift) ? speedRun : speedWalk;
+      currentSpeed = Input.GetKey(KeyCode.LeftShift) ? speedRun : speedWalk;
       if (Input.GetKey(KeyCode.UpArrow))
       {
         transform.position += Vector3.up * Time.deltaTime * currentSpeed;
