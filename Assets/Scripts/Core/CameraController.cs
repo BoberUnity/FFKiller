@@ -7,6 +7,7 @@ public class CameraController : MonoBehaviour
     public GameObject Map;
     public float CameraZoom = 1;    //увеличение камеры
     public float traction = 0.0f;   //расстояние (в юнитах), через которое камера начинает двигаться за целью
+    public float SlideFactor = 0.5f;//параметр функции lerp для скольжения камеры
 
     Camera Camera;
     GameObject PanelBeforeCamera;
@@ -75,7 +76,7 @@ public class CameraController : MonoBehaviour
                 newY = UpLeft.y - fieldHeight + cameraHeight;
         }
 
-        transform.position = Vector3.Lerp(transform.position, new Vector3(newX, newY, newZ), 0.5f);
+        transform.position = Vector3.Lerp(transform.position, new Vector3(newX, newY, newZ), SlideFactor);
     }
 
 

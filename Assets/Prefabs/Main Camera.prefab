@@ -178,6 +178,7 @@ MonoBehaviour:
   Map: {fileID: 0}
   CameraZoom: 2
   traction: 0
+  SlideFactor: 0.5
 --- !u!114 &11458606
 MonoBehaviour:
   m_ObjectHideFlags: 1
