@@ -10,34 +10,34 @@ AnimatorController:
   m_AnimatorParameters:
   - m_Name: SpeedX
     m_Type: 1
-    m_DefaultFloat: 1
+    m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: SpeedY
     m_Type: 1
     m_DefaultFloat: 1
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Running
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Speed
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Coin
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -365,13 +365,13 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 110228986}
-    m_Position: {x: 24, y: 240, z: 0}
+    m_Position: {x: 444, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110255848}
-    m_Position: {x: 336, y: 240, z: 0}
+    m_Position: {x: 216, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110201714}
-    m_Position: {x: 336, y: 108, z: 0}
+    m_Position: {x: 216, y: 144, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -380,8 +380,8 @@ AnimatorStateMachine:
       first: {fileID: 110721506}
       second: []
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 624, y: 144, z: 0}
-  m_EntryPosition: {x: 624, y: 240, z: 0}
-  m_ExitPosition: {x: 624, y: 192, z: 0}
+  m_AnyStatePosition: {x: 24, y: 156, z: 0}
+  m_EntryPosition: {x: 24, y: 252, z: 0}
+  m_ExitPosition: {x: 24, y: 204, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 110255848}
