@@ -75,7 +75,7 @@ public class CameraController : MonoBehaviour
                 newY = UpLeft.y - fieldHeight + cameraHeight;
         }
 
-        transform.position = new Vector3(newX, newY, newZ);
+        transform.position = Vector3.Lerp(transform.position, new Vector3(newX, newY, newZ), 0.5f);
     }
 
 

@@ -4,8 +4,7 @@ public class OnTriggerActionChangeHeroParams : MonoBehaviour
 {
   [SerializeField] private int numTrigger = 1;
   [SerializeField] private float time = 0;
-  [SerializeField] private float hp = 0;
-  [SerializeField] private float mhp = 0;  
+  [SerializeField] private HeroPropetries heroPropetries = null;  
   
   private TriggerBase thisTrigger = null;
   private Hero hero = null;
@@ -31,7 +30,11 @@ public class OnTriggerActionChangeHeroParams : MonoBehaviour
 
   private void ChangeHeroParams()
   {
-    hero.Hp += hp;
-    hero.Mhp += mhp;
+    hero.HeroPropetries.Hp += heroPropetries.Hp;
+    hero.HeroPropetries.Mhp += heroPropetries.Mhp;
+    hero.HeroPropetries.Mp += heroPropetries.Mp;
+    hero.HeroPropetries.Mmp += heroPropetries.Mmp;
+    hero.HeroPropetries.Co += heroPropetries.Co;
+    hero.HeroPropetries.Mco += heroPropetries.Mco;
   }
 }

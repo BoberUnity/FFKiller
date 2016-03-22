@@ -16,7 +16,7 @@ AnimatorController:
     m_Controller: {fileID: 0}
   - m_Name: SpeedY
     m_Type: 1
-    m_DefaultFloat: 1
+    m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
@@ -90,10 +90,26 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 36435bf7a49380e46bdd28f478edbbde, type: 2}
+    m_Threshold: 4
+    m_Position: {x: -1, y: 1}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: SpeedX
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 3e45ea83675dc834494fd7ab6dfc14a2, type: 2}
+    m_Threshold: 5
+    m_Position: {x: 1, y: 1}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: SpeedX
+    m_Mirror: 0
   m_BlendParameter: SpeedX
   m_BlendParameterY: SpeedY
   m_MinThreshold: 0
-  m_MaxThreshold: 3
+  m_MaxThreshold: 5
   m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
   m_BlendType: 1
@@ -140,7 +156,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: 5afd15f6b1798804c9cf40aceea2dae7, type: 2}
     m_Threshold: 0.5714286
     m_Position: {x: -1, y: 1}
-    m_TimeScale: 1
+    m_TimeScale: 1.2
     m_CycleOffset: 0
     m_DirectBlendParameter: SpeedX
     m_Mirror: 0
@@ -148,7 +164,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: 0b681a16e045433479772bb1e15bef7d, type: 2}
     m_Threshold: 0.71428573
     m_Position: {x: 1, y: 1}
-    m_TimeScale: 1
+    m_TimeScale: 1.2
     m_CycleOffset: 0
     m_DirectBlendParameter: SpeedX
     m_Mirror: 0
@@ -156,7 +172,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: 3655a64cf39ffcc49a0ebb0598222bb3, type: 2}
     m_Threshold: 0.85714287
     m_Position: {x: -1, y: -1}
-    m_TimeScale: 1
+    m_TimeScale: 1.2
     m_CycleOffset: 0
     m_DirectBlendParameter: SpeedX
     m_Mirror: 0
@@ -164,7 +180,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: 629fb38ac76c3c14e822b7d05cbfcd76, type: 2}
     m_Threshold: 1
     m_Position: {x: 1, y: -1}
-    m_TimeScale: 1
+    m_TimeScale: 1.2
     m_CycleOffset: 0
     m_DirectBlendParameter: SpeedX
     m_Mirror: 0

@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-public class OnTriggerActionCharacterBlockControl : MonoBehaviour
+public class OnTriggerActionCharacterCanMove : MonoBehaviour
 {
-  [SerializeField] private float blockControlTime = 5;
+  [SerializeField] private bool canMove = false;
   [SerializeField] private int numTrigger = 1;
   [SerializeField] private float time = 0;
   TriggerBase thisTrigger = null;
@@ -30,12 +30,6 @@ public class OnTriggerActionCharacterBlockControl : MonoBehaviour
 
   private void BlockControl()
   {
-    characterMoving.CanMove = false;
-    Invoke("ReBlockControl", blockControlTime);
-  }
-
-  private void ReBlockControl()
-  {
-    characterMoving.CanMove = true;
-  }
+    characterMoving.CanMove = canMove;    
+  }  
 }

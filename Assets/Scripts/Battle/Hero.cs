@@ -1,81 +1,34 @@
 ﻿using UnityEngine;
+using System;
+
+[Serializable] public class HeroPropetries
+{
+  public string Name = "";
+  public Sprite Portrait = null;
+  public float Hp = 500;
+  public float Mhp = 1000;
+  public float Mp = 500;
+  public float Mmp = 1000;
+  public float Co = 10;
+  public float Mco = 100;
+  public float Agi = 2;
+}
 
 public class Hero : MonoBehaviour
 {
-  [SerializeField] private Sprite portrait = null;
-  [SerializeField] private float hp = 500;
-  [SerializeField] private float mhp = 1000;
-  [SerializeField] private float mp = 500;
-  [SerializeField] private float mmp = 1000;
-  [SerializeField] private float agi = 2;
+  [SerializeField] private HeroPropetries heroPropetries = null;
   private HeroUI heroUi = null;
-  private string thisName = "Hero";
-  #region Propetries 
-  public string Name
+
+  public HeroPropetries HeroPropetries
   {
-    get { return gameObject.name; }
+    get { return heroPropetries;}
     set
     {
-      thisName = value;
-      heroUi.UpdateUI();
-    }
-  }
-  public Sprite Portrait
-  {
-    get { return portrait; }
-    set { portrait = value; }
-  }
-  public float Hp
-  {
-    get { return hp; }
-    set
-    {
-      hp = value;
+      heroPropetries = value;
       if (heroUi != null)
-        heroUi.UpdateUI();
+        heroUi.UpdateUI();      
     }
   }
-  public float Mhp
-  {
-    get { return mhp; }
-    set
-    {
-      mhp = value;
-      if (heroUi != null)
-        heroUi.UpdateUI();
-    }
-  }
-  public float Mp
-  {
-    get { return mp; }
-    set
-    {
-      mp = value;
-      if (heroUi != null)
-        heroUi.UpdateUI();
-    }
-  }
-  public float Mmp
-  {
-    get { return mmp; }
-    set
-    {
-      mmp = value;
-      if (heroUi != null)
-        heroUi.UpdateUI();
-    }
-  }
-  public float Agi
-  {
-    get { return agi; }
-    set
-    {
-      agi = value;
-      if (heroUi != null)
-        heroUi.UpdateUI();
-    }
-  }
-  #endregion
 
   public void ConnectToPartyGui()
   {
