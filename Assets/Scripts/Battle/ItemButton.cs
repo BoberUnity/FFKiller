@@ -4,53 +4,92 @@ using UnityEngine.UI;
 public class ItemButton : MonoBehaviour
 {
   [SerializeField] private Text nameText = null;
+  [SerializeField] private Text countText = null;
   [HideInInspector] public bool IsBusy = false;
-  private HeroPropetries heroPropetries = null;
+  private Inventar inventar = null;
+  [HideInInspector] public ThingPropetries ThingPropetries = new ThingPropetries();
   private Image thisImage = null;
 
-  public void Show(HeroPropetries hP)
+  private void Start()
   {
-    heroPropetries = hP;
-    nameText.text = heroPropetries.Name;
+    inventar = FindObjectOfType<Inventar>();
+  }
+
+  public void Load(ThingPropetries tPropetries)
+  {
+    ThingPropetries.Name = tPropetries.Name;
+    ThingPropetries.Portrait = tPropetries.Portrait;
+    ThingPropetries.Description = tPropetries.Description;
+    ThingPropetries.Count = tPropetries.Count;
+    ThingPropetries.Hp = tPropetries.Hp;
+    ThingPropetries.Mhp = tPropetries.Mhp;
+    ThingPropetries.Mp = tPropetries.Mp;
+    ThingPropetries.Mmp = tPropetries.Mmp;
+    ThingPropetries.Cr = tPropetries.Cr;
+    ThingPropetries.Mcr = tPropetries.Mcr;
+    ThingPropetries.Atk = tPropetries.Atk;
+    ThingPropetries.Def = tPropetries.Def;
+    ThingPropetries.Mat = tPropetries.Mat;
+    ThingPropetries.Mdf = tPropetries.Mdf;
+    nameText.text = ThingPropetries.Name;
+    countText.text = ThingPropetries.Count.ToString();
     thisImage = GetComponent<Image>();
-    thisImage.sprite = heroPropetries.Portrait;
+    thisImage.sprite = ThingPropetries.Portrait;
     thisImage.color = Color.white;
     IsBusy = true;
   }
 
-  public void Hide()
+  public void UpdateCount(int count)
   {
-    nameText.text = "";
-    GetComponent<Image>().sprite = null;
-    heroPropetries = new HeroPropetries();
-    heroPropetries.Portrait = null;
-    heroPropetries.Hp = 0; ;
-    heroPropetries.Mhp = 0;
-    heroPropetries.Mp = 0;
-    heroPropetries.Mmp = 0;
-    heroPropetries.Co = 0;
-    heroPropetries.Mco = 0;
-    IsBusy = false;
-    thisImage.color = new Color(1, 1, 1, 10/255);
+    ThingPropetries.Count += count;
+    countText.text = ThingPropetries.Count.ToString();
   }
-
+  
   public void OnPress()
   {
-    Hero hero = GameObject.FindObjectOfType<CharacterMoving>().GetComponent<Hero>();
-    Use(hero);
+    inventar.ShowHeroes();
+    //Hero hero = GameObject.FindObjectOfType<CharacterMoving>().GetComponent<Hero>();
+    //Use(hero);
   }
 
   private void Use(Hero hero)
   {
-    HeroPropetries newHprop = new HeroPropetries();
-    newHprop.Portrait = hero.HeroPropetries.Portrait;
-    newHprop.Hp = hero.HeroPropetries.Hp + heroPropetries.Hp;
-    newHprop.Mhp = hero.HeroPropetries.Mhp += heroPropetries.Mhp;
-    newHprop.Mp = hero.HeroPropetries.Mp += heroPropetries.Mp;
-    newHprop.Mmp = hero.HeroPropetries.Mmp += heroPropetries.Mmp;
-    newHprop.Co = hero.HeroPropetries.Co += heroPropetries.Co;
-    newHprop.Mco = hero.HeroPropetries.Mco += heroPropetries.Mco;
-    hero.HeroPropetries = newHprop;
-    Hide();   
+    if (IsBusy)
+    {
+      HeroPropetries newHprop = new HeroPropetries();
+      newHprop.Portrait = hero.HeroPropetries.Portrait;
+      newHprop.Hp = hero.HeroPropetries.Hp + ThingPropetries.Hp;
+      newHprop.Mhp = hero.HeroPropetries.Mhp += ThingPropetries.Mhp;
+      newHprop.Mp = hero.HeroPropetries.Mp += ThingPropetries.Mp;
+      newHprop.Mmp = hero.HeroPropetries.Mmp += ThingPropetries.Mmp;
+      newHprop.Cr = hero.HeroPropetries.Cr += ThingPropetries.Cr;
+      newHprop.Mcr = hero.HeroPropetries.Mcr += ThingPropetries.Mcr;
+      newHprop.Atk = hero.HeroPropetries.Atk += ThingPropetries.Atk;
+      newHprop.Def = hero.HeroPropetries.Def += ThingPropetries.Def;
+      newHprop.Mat = hero.HeroPropetries.Mat += ThingPropetries.Mat;
+      newHprop.Mdf = hero.HeroPropetries.Mdf += ThingPropetries.Mdf;
+      hero.HeroPropetries = newHprop;
+      UpdateCount(-1);
+      if (ThingPropetries.Count == 0)
+      {        
+        ThingPropetries = null;
+        nameText.text = "";
+        countText.text = "";
+        thisImage.sprite = null;
+        IsBusy = false;
+        thisImage.color = new Color(1, 1, 1, 0.04f);
+      }      
+    }
+  }
+
+  public void ShowDescription()
+  {
+    if (IsBusy)
+      inventar.DescriptionField.text = ThingPropetries.Description;
+  }
+
+  public void HideDescription()
+  {
+    inventar.DescriptionField.text = "";
   }
 }

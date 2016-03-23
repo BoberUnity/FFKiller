@@ -29,5 +29,6 @@ public class OnTriggerActionStartDialog : MonoBehaviour
   private void StartDialog()
   {
     targetTrigger.StartDialog();
+    targetTrigger.SetAutoNextDialog();
   }
 }

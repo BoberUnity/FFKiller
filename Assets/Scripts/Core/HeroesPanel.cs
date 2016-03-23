@@ -64,4 +64,9 @@ public class HeroesPanel : MonoBehaviour
   {
     thisAnimator.SetBool("IsVisible", false);
   }
+
+  public void OnPressHero(int num)
+  {
+
+  }
 }
