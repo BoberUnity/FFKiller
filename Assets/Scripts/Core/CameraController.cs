@@ -32,7 +32,8 @@ public class CameraController : MonoBehaviour
         cameraWidth = Screen.width * 0.5f * UnitsPerPixel / CameraZoom;
         Camera.aspect = cameraWidth / cameraHeight;
 
-        Animator = GetComponentInChildren<Animator>();
+        //Animator = GetComponentInChildren<Animator>();
+        Animator = transform.Find("ShadowEffect").GetComponent<Animator>();
         Animator.SetFloat("Speed", 0.5f/EffectTime);
         PanelBeforeCamera = GameObject.Find("PanelBeforeCamera");
         PanelBeforeCamera.SetActive(false);
