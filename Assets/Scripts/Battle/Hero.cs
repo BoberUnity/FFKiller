@@ -9,8 +9,12 @@ using System;
   public float Mhp = 1000;
   public float Mp = 500;
   public float Mmp = 1000;
-  public float Co = 10;
-  public float Mco = 100;
+  public float Cr = 10;
+  public float Mcr = 100;
+  public float Atk = 0;
+  public float Def = 0;
+  public float Mat = 0;
+  public float Mdf = 0;
   public float Agi = 2;
 }
 
@@ -24,8 +28,12 @@ using System;
   public float Mhp = 0;
   public float Mp = 0;
   public float Mmp = 0;
-  public float Co = 0;
-  public float Mco = 0;
+  public float Cr = 0;
+  public float Mcr = 0;
+  public float Atk = 0;
+  public float Def = 0;
+  public float Mat = 0;
+  public float Mdf = 0;
   public float Agi = 0;
 }
 

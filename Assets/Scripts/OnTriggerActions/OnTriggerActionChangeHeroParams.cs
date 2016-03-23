@@ -34,7 +34,7 @@ public class OnTriggerActionChangeHeroParams : MonoBehaviour
     hero.HeroPropetries.Mhp += heroPropetries.Mhp;
     hero.HeroPropetries.Mp += heroPropetries.Mp;
     hero.HeroPropetries.Mmp += heroPropetries.Mmp;
-    hero.HeroPropetries.Co += heroPropetries.Co;
-    hero.HeroPropetries.Mco += heroPropetries.Mco;
+    hero.HeroPropetries.Cr += heroPropetries.Cr;
+    hero.HeroPropetries.Mcr += heroPropetries.Mcr;
   }
 }
