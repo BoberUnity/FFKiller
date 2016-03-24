@@ -28,15 +28,11 @@ public class TriggerBase : MonoBehaviour
   protected string[,] allBoxes;
   protected DialogPanel dialogPanel = null;
   private int currentLine = 2;
-  [SerializeField]
   private bool hasStartSpeaking = false;
-  [SerializeField]
   private bool dialogFinished = false;
-  [SerializeField]
   private bool canSpeak = false;
   protected CharacterMoving characterMoving = null;
   private int[] triggerNumLines = new int[1];//номера строк с которых начинаются триггеры в .csv таблице
-  [SerializeField]
   private int currentTrigger = 1;
   public Action<int> OnTriggerAction;
   protected bool isCharacterRight = false;
@@ -171,7 +167,7 @@ public class TriggerBase : MonoBehaviour
     SetDialog(currentLine);
   }
 
-  protected virtual void EndDialog()
+  public virtual void EndDialog()
   {
     dialogPanel.Hide();
     hasStartSpeaking = false;
@@ -200,6 +196,6 @@ public class TriggerBase : MonoBehaviour
 
   public void SetAutoNextDialog()
   {
-    autoNextDialog = false; ;
+    autoNextDialog = true; 
   } 
 }

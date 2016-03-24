@@ -9,9 +9,9 @@ public class HeroUI : MonoBehaviour
   [SerializeField] private Text hpIndicator = null;
   [SerializeField] private Image hpLine = null;
   [SerializeField] private Image mpLine = null;
-  [SerializeField] private Image coLine = null;
+  [SerializeField] private Image crLine = null;
   [SerializeField] private Text mpIndicator = null;
-  [SerializeField] private Text coIndicator = null;
+  [SerializeField] private Text crIndicator = null;
   [SerializeField] private Image aglImage = null;
 
   public Hero Hero
@@ -33,7 +33,7 @@ public class HeroUI : MonoBehaviour
     hpLine.fillAmount = hero.HeroPropetries.Hp / hero.HeroPropetries.Mhp;
     mpIndicator.text = hero.HeroPropetries.Mp.ToString("f0") + "/" + hero.HeroPropetries.Mmp.ToString("f0");
     mpLine.fillAmount = hero.HeroPropetries.Mp / hero.HeroPropetries.Mmp;
-    coIndicator.text = hero.HeroPropetries.Co.ToString("f0") + "/" + hero.HeroPropetries.Mco.ToString("f0");
-    coLine.fillAmount = hero.HeroPropetries.Co / hero.HeroPropetries.Mco;
+    crIndicator.text = hero.HeroPropetries.Cr.ToString("f0") + "/" + hero.HeroPropetries.Mcr.ToString("f0");
+    crLine.fillAmount = hero.HeroPropetries.Cr / hero.HeroPropetries.Mcr;
   }
 }

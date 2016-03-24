@@ -95,8 +95,8 @@ public class SaveController : MonoBehaviour
       AddAtribute("Mhp", (hero.HeroPropetries.Mhp).ToString());
       AddAtribute("Mp", (hero.HeroPropetries.Mp).ToString());
       AddAtribute("Mmp", (hero.HeroPropetries.Mmp).ToString());
-      AddAtribute("Co", (hero.HeroPropetries.Co).ToString());
-      AddAtribute("Mco", (hero.HeroPropetries.Mco).ToString());
+      AddAtribute("Co", (hero.HeroPropetries.Cr).ToString());
+      AddAtribute("Mco", (hero.HeroPropetries.Mcr).ToString());
       AddAtribute("Agi", (hero.HeroPropetries.Agi).ToString());
       AddXmlElements(doc, rootNode, "Hero" + hero.name);
     }
@@ -221,8 +221,8 @@ public class SaveController : MonoBehaviour
           hero.HeroPropetries.Mhp = Convert.ToSingle(elemList[i].Attributes["Mhp"].Value, new CultureInfo("en-US"));
           hero.HeroPropetries.Mp = Convert.ToSingle(elemList[i].Attributes["Mp"].Value, new CultureInfo("en-US"));
           hero.HeroPropetries.Mmp = Convert.ToSingle(elemList[i].Attributes["Mmp"].Value, new CultureInfo("en-US"));
-          hero.HeroPropetries.Co = Convert.ToSingle(elemList[i].Attributes["Co"].Value, new CultureInfo("en-US"));
-          hero.HeroPropetries.Mco = Convert.ToSingle(elemList[i].Attributes["Mco"].Value, new CultureInfo("en-US"));
+          hero.HeroPropetries.Cr = Convert.ToSingle(elemList[i].Attributes["Co"].Value, new CultureInfo("en-US"));
+          hero.HeroPropetries.Mcr = Convert.ToSingle(elemList[i].Attributes["Mco"].Value, new CultureInfo("en-US"));
           hero.HeroPropetries.Agi = Convert.ToSingle(elemList[i].Attributes["Agi"].Value, new CultureInfo("en-US"));
         }
       }

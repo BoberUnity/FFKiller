@@ -45,10 +45,9 @@ GameObject:
   - 92: {fileID: 9240074}
   - 124: {fileID: 12412546}
   - 81: {fileID: 8195620}
-  - 95: {fileID: 9587710}
+  - 95: {fileID: 9588558}
   - 114: {fileID: 11407534}
-  - 114: {fileID: 11441744}
-  - 114: {fileID: 11422874}
+  - 114: {fileID: 11460204}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -165,14 +164,14 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &9587710
+--- !u!95 &9588558
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141510}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: fc157d361cd8b7c4298f1204a37c3065, type: 2}
   m_CullingMode: 0
@@ -199,38 +198,6 @@ MonoBehaviour:
   CameraZoom: 2
   traction: 0
   SlideFactor: 0.5
---- !u!114 &11422874
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 141510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb53b47c5c387684bbca49239c0a4ac0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
-  numTrigger: 6
-  paramName: Test
-  newValue: 0
-  time: 0
---- !u!114 &11441744
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 141510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb53b47c5c387684bbca49239c0a4ac0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
-  numTrigger: 4
-  paramName: Test
-  newValue: 1
-  time: 0
 --- !u!114 &11458606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -258,6 +225,22 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11460204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb53b47c5c387684bbca49239c0a4ac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: {fileID: 0}
+  numTrigger: 4
+  paramName: Test
+  newValue: 1
+  time: 0
 --- !u!114 &11460882
 MonoBehaviour:
   m_ObjectHideFlags: 1
