@@ -4,7 +4,7 @@ public class Vagon : TriggerNPC
 {
   private bool isConnected = false;
 
-  protected override void EndDialog()
+  public override void EndDialog()
   {
     base.EndDialog();    
     if (!isConnected)
