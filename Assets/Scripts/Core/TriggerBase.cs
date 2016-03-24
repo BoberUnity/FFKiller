@@ -33,7 +33,7 @@ public class TriggerBase : MonoBehaviour
   private bool canSpeak = false;
   protected CharacterMoving characterMoving = null;
   private int[] triggerNumLines = new int[1];//номера строк с которых начинаются триггеры в .csv таблице
-  private int currentTrigger = 1;
+  [SerializeField] private int currentTrigger = 1;
   public Action<int> OnTriggerAction;
   protected bool isCharacterRight = false;
   private bool autoNextDialog = false;
@@ -196,6 +196,6 @@ public class TriggerBase : MonoBehaviour
 
   public void SetAutoNextDialog()
   {
-    autoNextDialog = true; 
+    autoNextDialog = false; 
   } 
 }

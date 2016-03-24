@@ -10,7 +10,8 @@ public class CharacterMoving : MonoBehaviour
   [SerializeField] private float speedRun = 1;
   private float currentSpeed = 0;
   private Animator thisAnimator = null;
-  [HideInInspector] public bool CanMove = true;
+    //[HideInInspector]
+   public bool CanMove = true;
   public float HandlingDelay;
   private float TimeToHandle;
 

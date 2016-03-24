@@ -1,5 +1,25 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &102350
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 420022}
+  - 61: {fileID: 6190628}
+  - 114: {fileID: 11439152}
+  - 114: {fileID: 11408876}
+  - 114: {fileID: 11469910}
+  - 114: {fileID: 11430806}
+  m_Layer: 0
+  m_Name: NewTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &103270
 GameObject:
   m_ObjectHideFlags: 1
@@ -72,6 +92,27 @@ GameObject:
   - 114: {fileID: 11464054}
   m_Layer: 0
   m_Name: Peasant4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &111528
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 429782}
+  - 61: {fileID: 6105892}
+  - 114: {fileID: 11403306}
+  - 114: {fileID: 11409132}
+  - 114: {fileID: 11451422}
+  - 114: {fileID: 11480200}
+  - 114: {fileID: 11471608}
+  m_Layer: 0
+  m_Name: TriggerVillageExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -390,6 +431,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &164314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 483372}
+  m_Layer: 0
+  m_Name: ExitCutScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &171160
 GameObject:
   m_ObjectHideFlags: 1
@@ -443,6 +499,23 @@ GameObject:
   - 114: {fileID: 11400212}
   m_Layer: 0
   m_Name: Peasant3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &174306
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 453132}
+  - 95: {fileID: 9566044}
+  - 114: {fileID: 11455768}
+  m_Layer: 0
+  m_Name: Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -583,6 +656,18 @@ Transform:
   - {fileID: 469530}
   m_Father: {fileID: 452468}
   m_RootOrder: 0
+--- !u!4 &420022
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102350}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 30.86, y: -54.76, z: 0}
+  m_LocalScale: {x: 1.5881267, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 483372}
+  m_RootOrder: 0
 --- !u!4 &422198
 Transform:
   m_ObjectHideFlags: 1
@@ -607,6 +692,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 471968}
   m_RootOrder: 1
+--- !u!4 &429782
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111528}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 30.86, y: -54.76, z: 0}
+  m_LocalScale: {x: 1.5881267, y: 1, z: 1}
+  m_Children:
+  - {fileID: 453132}
+  m_Father: {fileID: 483372}
+  m_RootOrder: 1
 --- !u!4 &432024
 Transform:
   m_ObjectHideFlags: 1
@@ -630,7 +728,7 @@ Transform:
   m_LocalScale: {x: 0.8, y: 0.8601046, z: 0.8601046}
   m_Children: []
   m_Father: {fileID: 448320}
-  m_RootOrder: 3
+  m_RootOrder: 5
 --- !u!4 &434682
 Transform:
   m_ObjectHideFlags: 1
@@ -716,7 +814,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 448320}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!4 &448320
 Transform:
   m_ObjectHideFlags: 1
@@ -727,11 +825,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 483372}
+  - {fileID: 471968}
   - {fileID: 448078}
   - {fileID: 449708}
   - {fileID: 465684}
   - {fileID: 433388}
-  - {fileID: 471968}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &449708
@@ -745,7 +844,7 @@ Transform:
   m_LocalScale: {x: 1.0943636, y: 1.0943632, z: 1.0943632}
   m_Children: []
   m_Father: {fileID: 448320}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!4 &452468
 Transform:
   m_ObjectHideFlags: 1
@@ -761,6 +860,18 @@ Transform:
   - {fileID: 457398}
   m_Father: {fileID: 484262}
   m_RootOrder: 2
+--- !u!4 &453132
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174306}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 429782}
+  m_RootOrder: 0
 --- !u!4 &457398
 Transform:
   m_ObjectHideFlags: 1
@@ -796,7 +907,7 @@ Transform:
   m_LocalScale: {x: 3.7207627, y: 0.8601046, z: 0.8601046}
   m_Children: []
   m_Father: {fileID: 448320}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!4 &467152
 Transform:
   m_ObjectHideFlags: 1
@@ -841,7 +952,21 @@ Transform:
   - {fileID: 497404}
   - {fileID: 437226}
   m_Father: {fileID: 448320}
-  m_RootOrder: 4
+  m_RootOrder: 1
+--- !u!4 &483372
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164314}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 420022}
+  - {fileID: 429782}
+  m_Father: {fileID: 448320}
+  m_RootOrder: 0
 --- !u!4 &484262
 Transform:
   m_ObjectHideFlags: 1
@@ -896,6 +1021,20 @@ Transform:
   - {fileID: 497154}
   m_Father: {fileID: 471968}
   m_RootOrder: 7
+--- !u!61 &6105892
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111528}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!61 &6110376
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -1288,6 +1427,20 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -0.35}
   serializedVersion: 2
   m_Size: {x: 0.85, y: 0.7}
+--- !u!61 &6190628
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102350}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!61 &6193914
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -1414,6 +1567,23 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 22100000, guid: 24824e6e5a5a5014f9ee2d8bc55f378f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &9566044
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174306}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 54886033014637d43995d37038ccf183, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1571,13 +1741,33 @@ MonoBehaviour:
   Type: 1
   textAssetName: Peasant3
   changeTriggers: []
-  hasStartSpeaking: 0
-  dialogFinished: 0
-  canSpeak: 0
   currentTrigger: 1
   Portrait: {fileID: 21300008, guid: 22c79ca8fcc1bca48b57c58c9b2e5455, type: 3}
   bodyAnimator: {fileID: 9587594}
   CharSpriteRenderer: {fileID: 21267650}
+--- !u!114 &11403306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df79eaea827173541aa87a435f976046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 2
+  textAssetName: GehendMonologs/VillageExit
+  changeTriggers:
+  - MyTrigger: 3
+    OtherTrigger: {fileID: 11403306}
+    OtherTriggerNewValue: 4
+  - MyTrigger: 2
+    OtherTrigger: {fileID: 11403306}
+    OtherTriggerNewValue: 3
+  currentTrigger: 1
+  Portrait:
+  - {fileID: 21300000, guid: 7f137e725883d4d4db79161756e370df, type: 3}
 --- !u!114 &11408762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1593,6 +1783,34 @@ MonoBehaviour:
   numTrigger: 1
   newState: 0
   time: 0
+--- !u!114 &11408876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c06edc1083378f47a13c89e0686bb8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTrigger: {fileID: 11439152}
+  numTrigger: 4
+  time: 0
+--- !u!114 &11409132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c06edc1083378f47a13c89e0686bb8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTrigger: {fileID: 11403306}
+  numTrigger: 3
+  time: 7.5
 --- !u!114 &11413908
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1607,9 +1825,6 @@ MonoBehaviour:
   Type: 1
   textAssetName: Multidialog
   changeTriggers: []
-  hasStartSpeaking: 0
-  dialogFinished: 0
-  canSpeak: 0
   currentTrigger: 1
   Portrait:
   - {fileID: 21300000, guid: 7f137e725883d4d4db79161756e370df, type: 3}
@@ -1663,13 +1878,25 @@ MonoBehaviour:
   - MyTrigger: 2
     OtherTrigger: {fileID: 11434358}
     OtherTriggerNewValue: 2
-  hasStartSpeaking: 0
-  dialogFinished: 0
-  canSpeak: 0
   currentTrigger: 1
   Portrait: {fileID: 21300000, guid: a91e822c540672543a62185abb48876f, type: 3}
   bodyAnimator: {fileID: 9572096}
   CharSpriteRenderer: {fileID: 21295408}
+--- !u!114 &11430806
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f692e063916a5f4b9e207c9003e0e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 164314}
+  numTrigger: 5
+  newState: 0
+  time: 4
 --- !u!114 &11431508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1708,13 +1935,36 @@ MonoBehaviour:
   - MyTrigger: 2
     OtherTrigger: {fileID: 11434358}
     OtherTriggerNewValue: 3
-  hasStartSpeaking: 0
-  dialogFinished: 0
-  canSpeak: 0
   currentTrigger: 1
   Portrait: {fileID: 21300000, guid: 792531d858344c14d86885fcfcc6aaa8, type: 3}
   bodyAnimator: {fileID: 9524286}
   CharSpriteRenderer: {fileID: 21261666}
+--- !u!114 &11439152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df79eaea827173541aa87a435f976046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 2
+  textAssetName: GehendMonologs/VillageExit
+  changeTriggers:
+  - MyTrigger: 4
+    OtherTrigger: {fileID: 11439152}
+    OtherTriggerNewValue: 5
+  - MyTrigger: 5
+    OtherTrigger: {fileID: 11439152}
+    OtherTriggerNewValue: 6
+  currentTrigger: 4
+  Portrait:
+  - {fileID: 21300008, guid: 792531d858344c14d86885fcfcc6aaa8, type: 3}
+  - {fileID: 21300008, guid: a91e822c540672543a62185abb48876f, type: 3}
+  - {fileID: 21300008, guid: 22c79ca8fcc1bca48b57c58c9b2e5455, type: 3}
+  - {fileID: 21300008, guid: d955b6988db8f7947a784213bbf9eaea, type: 3}
 --- !u!114 &11442256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1729,9 +1979,6 @@ MonoBehaviour:
   Type: 1
   textAssetName: GrandDaughter
   changeTriggers: []
-  hasStartSpeaking: 0
-  dialogFinished: 0
-  canSpeak: 0
   currentTrigger: 1
   Portrait: {fileID: 21300008, guid: 1514b627d0276ce4194b4a5d3e5c6d60, type: 3}
   bodyAnimator: {fileID: 9598286}
@@ -1753,9 +2000,6 @@ MonoBehaviour:
   - MyTrigger: 2
     OtherTrigger: {fileID: 11442556}
     OtherTriggerNewValue: 3
-  hasStartSpeaking: 0
-  dialogFinished: 0
-  canSpeak: 0
   currentTrigger: 1
   Portrait: {fileID: 21300008, guid: 22c79ca8fcc1bca48b57c58c9b2e5455, type: 3}
   bodyAnimator: {fileID: 9579502}
@@ -1775,11 +2019,8 @@ MonoBehaviour:
   textAssetName: Klaus
   changeTriggers:
   - MyTrigger: 1
-    OtherTrigger: {fileID: 0}
+    OtherTrigger: {fileID: 11403306}
     OtherTriggerNewValue: 2
-  hasStartSpeaking: 0
-  dialogFinished: 0
-  canSpeak: 0
   currentTrigger: 1
 --- !u!114 &11443564
 MonoBehaviour:
@@ -1798,9 +2039,6 @@ MonoBehaviour:
   - MyTrigger: 1
     OtherTrigger: {fileID: 11442556}
     OtherTriggerNewValue: 4
-  hasStartSpeaking: 0
-  dialogFinished: 0
-  canSpeak: 0
   currentTrigger: 1
 --- !u!114 &11443864
 MonoBehaviour:
@@ -1819,15 +2057,27 @@ MonoBehaviour:
   - MyTrigger: 1
     OtherTrigger: {fileID: 11457572}
     OtherTriggerNewValue: 2
-  hasStartSpeaking: 0
-  dialogFinished: 0
-  canSpeak: 0
   currentTrigger: 1
   Portrait:
   - {fileID: 21300000, guid: 7f137e725883d4d4db79161756e370df, type: 3}
   - {fileID: 21300000, guid: 7c12c2433e1a5be4c9d44575b1ef52c2, type: 3}
   - {fileID: 21300002, guid: 7f137e725883d4d4db79161756e370df, type: 3}
   - {fileID: 21300006, guid: 7c12c2433e1a5be4c9d44575b1ef52c2, type: 3}
+--- !u!114 &11451422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f692e063916a5f4b9e207c9003e0e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 160148}
+  numTrigger: 4
+  newState: 0
+  time: 0
 --- !u!114 &11451520
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1843,6 +2093,22 @@ MonoBehaviour:
   numTrigger: 3
   newState: 1
   time: 0
+--- !u!114 &11455768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb53b47c5c387684bbca49239c0a4ac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: {fileID: 11403306}
+  numTrigger: 4
+  paramName: Test
+  newValue: 1
+  time: 1
 --- !u!114 &11456608
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1857,9 +2123,6 @@ MonoBehaviour:
   Type: 2
   textAssetName: ToNextVillage
   changeTriggers: []
-  hasStartSpeaking: 0
-  dialogFinished: 0
-  canSpeak: 0
   currentTrigger: 1
 --- !u!114 &11457572
 MonoBehaviour:
@@ -1890,9 +2153,6 @@ MonoBehaviour:
   - MyTrigger: 0
     OtherTrigger: {fileID: 0}
     OtherTriggerNewValue: 0
-  hasStartSpeaking: 0
-  dialogFinished: 0
-  canSpeak: 0
   currentTrigger: 1
   Portrait: {fileID: 21300000, guid: 7c12c2433e1a5be4c9d44575b1ef52c2, type: 3}
   bodyAnimator: {fileID: 9526718}
@@ -1926,9 +2186,6 @@ MonoBehaviour:
   Type: 2
   textAssetName: GehendMonologs/LadderMonolog
   changeTriggers: []
-  hasStartSpeaking: 0
-  dialogFinished: 0
-  canSpeak: 0
   currentTrigger: 1
 --- !u!114 &11464054
 MonoBehaviour:
@@ -1944,9 +2201,6 @@ MonoBehaviour:
   Type: 1
   textAssetName: Peasant4
   changeTriggers: []
-  hasStartSpeaking: 0
-  dialogFinished: 0
-  canSpeak: 0
   currentTrigger: 1
   Portrait: {fileID: 21300008, guid: d955b6988db8f7947a784213bbf9eaea, type: 3}
   bodyAnimator: {fileID: 9581720}
@@ -1968,9 +2222,6 @@ MonoBehaviour:
   - MyTrigger: 1
     OtherTrigger: {fileID: 11464706}
     OtherTriggerNewValue: 2
-  hasStartSpeaking: 0
-  dialogFinished: 0
-  canSpeak: 0
   currentTrigger: 1
   Portrait: {fileID: 21300008, guid: 5a81276de80f0d045894a3207aa6567e, type: 3}
   bodyAnimator: {fileID: 9538658}
@@ -2004,9 +2255,6 @@ MonoBehaviour:
   Type: 1
   textAssetName: Peasant1
   changeTriggers: []
-  hasStartSpeaking: 0
-  dialogFinished: 0
-  canSpeak: 0
   currentTrigger: 1
   Portrait: {fileID: 21300008, guid: 792531d858344c14d86885fcfcc6aaa8, type: 3}
   bodyAnimator: {fileID: 9565562}
@@ -2025,10 +2273,36 @@ MonoBehaviour:
   Type: 2
   textAssetName: GehendMonologs/HomeExit
   changeTriggers: []
-  hasStartSpeaking: 0
-  dialogFinished: 0
-  canSpeak: 0
   currentTrigger: 1
+--- !u!114 &11469910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6325ed5d3f1684f893fa97b31a0bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectColor: {r: 0, g: 0, b: 0, a: 1}
+  effectTime: 5
+  numTrigger: 5
+  time: 0
+--- !u!114 &11471608
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22c3d4b6345a074e86244d5ca033849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canMove: 0
+  numTrigger: 2
+  time: 0
 --- !u!114 &11474094
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2042,6 +2316,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numTrigger: 1
   sceneIndex: 2
+--- !u!114 &11480200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f692e063916a5f4b9e207c9003e0e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 102350}
+  numTrigger: 4
+  newState: 1
+  time: 7
 --- !u!114 &11488552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2056,9 +2345,6 @@ MonoBehaviour:
   Type: 1
   textAssetName: Peasant2
   changeTriggers: []
-  hasStartSpeaking: 0
-  dialogFinished: 0
-  canSpeak: 0
   currentTrigger: 1
   Portrait: {fileID: 21300008, guid: a91e822c540672543a62185abb48876f, type: 3}
   bodyAnimator: {fileID: 9549750}
@@ -2077,9 +2363,6 @@ MonoBehaviour:
   Type: 1
   textAssetName: Grandpa
   changeTriggers: []
-  hasStartSpeaking: 0
-  dialogFinished: 0
-  canSpeak: 0
   currentTrigger: 1
   Portrait: {fileID: 21300008, guid: d08c93b77e800a94aa70d14333e04700, type: 3}
   bodyAnimator: {fileID: 9538910}
@@ -2132,9 +2415,6 @@ MonoBehaviour:
   - MyTrigger: 1
     OtherTrigger: {fileID: 11442556}
     OtherTriggerNewValue: 2
-  hasStartSpeaking: 0
-  dialogFinished: 0
-  canSpeak: 0
   currentTrigger: 1
 --- !u!212 &21215414
 SpriteRenderer:

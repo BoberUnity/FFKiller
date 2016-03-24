@@ -216,11 +216,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 11419026, guid: f64748629cc6d034ba35c9d86b3aa4a8, type: 2}
+    - target: {fileID: 11494190, guid: f64748629cc6d034ba35c9d86b3aa4a8, type: 2}
       propertyPath: trigger
       value: 
       objectReference: {fileID: 1109227186}
-    - target: {fileID: 11494190, guid: f64748629cc6d034ba35c9d86b3aa4a8, type: 2}
+    - target: {fileID: 11419026, guid: f64748629cc6d034ba35c9d86b3aa4a8, type: 2}
       propertyPath: trigger
       value: 
       objectReference: {fileID: 1109227186}
@@ -701,8 +701,8 @@ Transform:
   m_LocalPosition: {x: -34.5, y: 52.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1401931960}
-  m_RootOrder: 3
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
 --- !u!95 &914801404
 Animator:
   serializedVersion: 3
@@ -732,7 +732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 1646317437}
-  numTrigger: 6
+  numTrigger: 5
   paramName: IsPlay
   newValue: 1
   time: 1.5
@@ -795,6 +795,26 @@ Prefab:
       propertyPath: changeTriggers.Array.data[0].OtherTrigger
       value: 
       objectReference: {fileID: 1109227186}
+    - target: {fileID: 471968, guid: 4825f08e52ea9c9418ce309d173590a3, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 433388, guid: 4825f08e52ea9c9418ce309d173590a3, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 465684, guid: 4825f08e52ea9c9418ce309d173590a3, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 449708, guid: 4825f08e52ea9c9418ce309d173590a3, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 448078, guid: 4825f08e52ea9c9418ce309d173590a3, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4825f08e52ea9c9418ce309d173590a3, type: 2}
   m_IsPrefabParent: 0
@@ -850,10 +870,10 @@ GameObject:
   - 4: {fileID: 1109227185}
   - 61: {fileID: 1109227184}
   - 114: {fileID: 1109227186}
-  - 114: {fileID: 1109227183}
   - 114: {fileID: 1109227182}
   - 114: {fileID: 1109227189}
   - 114: {fileID: 1109227187}
+  - 114: {fileID: 1109227183}
   m_Layer: 0
   m_Name: TriggerVillageExit
   m_TagString: Untagged
@@ -878,18 +898,16 @@ MonoBehaviour:
 --- !u!114 &1109227183
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11457966, guid: 4825f08e52ea9c9418ce309d173590a3,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1109227181}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f692e063916a5f4b9e207c9003e0e1c, type: 3}
+  m_Script: {fileID: 11500000, guid: d22c3d4b6345a074e86244d5ca033849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObject: {fileID: 1646317436}
-  numTrigger: 6
-  newState: 0
+  canMove: 0
+  numTrigger: 2
   time: 0
 --- !u!61 &1109227184
 BoxCollider2D:
@@ -939,9 +957,6 @@ MonoBehaviour:
   - MyTrigger: 2
     OtherTrigger: {fileID: 1109227186}
     OtherTriggerNewValue: 3
-  hasStartSpeaking: 0
-  dialogFinished: 0
-  canSpeak: 1
   currentTrigger: 1
   Portrait:
   - {fileID: 21300000, guid: 7f137e725883d4d4db79161756e370df, type: 3}
@@ -959,7 +974,7 @@ MonoBehaviour:
   targetObject: {fileID: 1646317436}
   numTrigger: 4
   newState: 1
-  time: 8
+  time: 7
 --- !u!114 &1109227189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1106,11 +1121,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11422874, guid: 26425cd0ba5875345b009b64a01c08fc, type: 2}
+    - target: {fileID: 11402140, guid: 26425cd0ba5875345b009b64a01c08fc, type: 2}
       propertyPath: trigger
       value: 
       objectReference: {fileID: 1646317437}
-    - target: {fileID: 11441744, guid: 26425cd0ba5875345b009b64a01c08fc, type: 2}
+    - target: {fileID: 11460204, guid: 26425cd0ba5875345b009b64a01c08fc, type: 2}
       propertyPath: trigger
       value: 
       objectReference: {fileID: 1109227186}
@@ -1492,10 +1507,8 @@ Transform:
   m_Children:
   - {fileID: 1646317438}
   - {fileID: 1109227185}
-  - {fileID: 1535125971}
-  - {fileID: 914801403}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1804121242}
+  m_RootOrder: 0
 --- !u!1 &1535125968
 GameObject:
   m_ObjectHideFlags: 0
@@ -1616,8 +1629,8 @@ Transform:
   m_LocalPosition: {x: -34.5, y: 52.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1401931960}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
 --- !u!114 &1535125972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1646,7 +1659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 1646317437}
-  numTrigger: 6
+  numTrigger: 5
   paramName: IsPlay
   newValue: 0
   time: 0
@@ -1661,6 +1674,8 @@ GameObject:
   - 61: {fileID: 1646317440}
   - 114: {fileID: 1646317437}
   - 114: {fileID: 1646317439}
+  - 114: {fileID: 1646317441}
+  - 114: {fileID: 1646317442}
   m_Layer: 0
   m_Name: NewTrigger
   m_TagString: Untagged
@@ -1682,13 +1697,13 @@ MonoBehaviour:
   Type: 2
   textAssetName: GehendMonologs/VillageExit
   changeTriggers:
+  - MyTrigger: 4
+    OtherTrigger: {fileID: 1646317437}
+    OtherTriggerNewValue: 5
   - MyTrigger: 5
     OtherTrigger: {fileID: 1646317437}
     OtherTriggerNewValue: 6
-  hasStartSpeaking: 0
-  dialogFinished: 0
-  canSpeak: 0
-  currentTrigger: 5
+  currentTrigger: 4
   Portrait:
   - {fileID: 21300008, guid: 792531d858344c14d86885fcfcc6aaa8, type: 3}
   - {fileID: 21300008, guid: a91e822c540672543a62185abb48876f, type: 3}
@@ -1718,7 +1733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTrigger: {fileID: 1646317437}
-  numTrigger: 5
+  numTrigger: 4
   time: 0
 --- !u!61 &1646317440
 BoxCollider2D:
@@ -1734,6 +1749,40 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &1646317441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1646317436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6325ed5d3f1684f893fa97b31a0bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectColor: {r: 0, g: 0, b: 0, a: 1}
+  effectTime: 5
+  numTrigger: 5
+  time: 0
+--- !u!114 &1646317442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1646317436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f692e063916a5f4b9e207c9003e0e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 1401931959}
+  numTrigger: 5
+  newState: 0
+  time: 4
+--- !u!4 &1804121242 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 448320, guid: 4825f08e52ea9c9418ce309d173590a3, type: 2}
+  m_PrefabInternal: {fileID: 964783761}
 --- !u!1 &1809881056
 GameObject:
   m_ObjectHideFlags: 0

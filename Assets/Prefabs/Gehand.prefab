@@ -141,8 +141,12 @@ MonoBehaviour:
     Mhp: 1000
     Mp: 500
     Mmp: 1000
-    Co: 10
-    Mco: 100
+    Cr: 10
+    Mcr: 100
+    Atk: 0
+    Def: 0
+    Mat: 0
+    Mdf: 0
     Agi: 2
 --- !u!114 &11494190
 MonoBehaviour:
