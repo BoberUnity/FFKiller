@@ -178,12 +178,12 @@ public class TriggerBase : MonoBehaviour
       if (changeTrigger.MyTrigger == CurrentTrigger)
       {
         changeTrigger.OtherTrigger.CurrentTrigger = changeTrigger.OtherTriggerNewValue;
+        var handler = OnTriggerAction;
+        if (handler != null)
+          handler(CurrentTrigger);
         break;
       }
-    }
-    var handler = OnTriggerAction;
-    if (handler != null)
-      handler(CurrentTrigger);
+    }    
   }
 
   protected virtual void OnCharacterTriggerEnter()

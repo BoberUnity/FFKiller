@@ -2,7 +2,7 @@
 
 public class OnTriggerActionCharacterCanMove : MonoBehaviour
 {
-  [SerializeField] private bool canMove = false;
+  [SerializeField] [Tooltip("block = true - блокировать управление персонажем, false - восстановить")] private bool block = false;
   [SerializeField] private int numTrigger = 1;
   [SerializeField] private float time = 0;
   TriggerBase thisTrigger = null;
@@ -30,6 +30,6 @@ public class OnTriggerActionCharacterCanMove : MonoBehaviour
 
   private void BlockControl()
   {
-    characterMoving.CanMove = canMove;    
+    characterMoving.IsBlocked = block;
   }  
 }

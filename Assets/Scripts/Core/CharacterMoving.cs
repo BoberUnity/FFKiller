@@ -10,8 +10,8 @@ public class CharacterMoving : MonoBehaviour
   [SerializeField] private float speedRun = 1;
   private float currentSpeed = 0;
   private Animator thisAnimator = null;
-    //[HideInInspector]
-   public bool CanMove = true;
+  [HideInInspector] public bool CanMove = true;
+  [HideInInspector] public bool IsBlocked = true;
   public float HandlingDelay;
   private float TimeToHandle;
 
@@ -42,7 +42,7 @@ public class CharacterMoving : MonoBehaviour
 
     private void MovingHandling()
   {
-    if (CanMove)
+    if (CanMove && !IsBlocked)
     {
       currentSpeed = Input.GetKey(KeyCode.LeftShift) ? speedRun : speedWalk;
       if (Input.GetKey(KeyCode.UpArrow))
