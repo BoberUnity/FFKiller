@@ -200,6 +200,6 @@ public class TriggerBase : MonoBehaviour
 
   public void SetAutoNextDialog()
   {
-    autoNextDialog = true; ;
+    autoNextDialog = false; ;
   } 
 }
