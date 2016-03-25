@@ -47,41 +47,36 @@ public class ItemButton : MonoBehaviour
   
   public void OnPress()
   {
-    inventar.ShowHeroes();
-    //Hero hero = GameObject.FindObjectOfType<CharacterMoving>().GetComponent<Hero>();
-    //Use(hero);
-  }
-
-  private void Use(Hero hero)
-  {
-    if (IsBusy)
+    if (IsBusy && !inventar.IsReadyAddPower)
     {
-      HeroPropetries newHprop = new HeroPropetries();
-      newHprop.Portrait = hero.HeroPropetries.Portrait;
-      newHprop.Hp = hero.HeroPropetries.Hp + ThingPropetries.Hp;
-      newHprop.Mhp = hero.HeroPropetries.Mhp += ThingPropetries.Mhp;
-      newHprop.Mp = hero.HeroPropetries.Mp += ThingPropetries.Mp;
-      newHprop.Mmp = hero.HeroPropetries.Mmp += ThingPropetries.Mmp;
-      newHprop.Cr = hero.HeroPropetries.Cr += ThingPropetries.Cr;
-      newHprop.Mcr = hero.HeroPropetries.Mcr += ThingPropetries.Mcr;
-      newHprop.Atk = hero.HeroPropetries.Atk += ThingPropetries.Atk;
-      newHprop.Def = hero.HeroPropetries.Def += ThingPropetries.Def;
-      newHprop.Mat = hero.HeroPropetries.Mat += ThingPropetries.Mat;
-      newHprop.Mdf = hero.HeroPropetries.Mdf += ThingPropetries.Mdf;
-      hero.HeroPropetries = newHprop;
+      HeroPropetries newHprop = new HeroPropetries();      
+      newHprop.Hp = ThingPropetries.Hp;
+      newHprop.Mhp = ThingPropetries.Mhp;
+      newHprop.Mp = ThingPropetries.Mp;
+      newHprop.Mmp = ThingPropetries.Mmp;
+      newHprop.Cr = ThingPropetries.Cr;
+      newHprop.Mcr = ThingPropetries.Mcr;
+      newHprop.Atk = ThingPropetries.Atk;
+      newHprop.Def = ThingPropetries.Def;
+      newHprop.Mat = ThingPropetries.Mat;
+      newHprop.Mdf = ThingPropetries.Mdf;
+      inventar.HeroPropetries = newHprop;
+      inventar.HeroesPanel.IsBlock = true;
       UpdateCount(-1);
       if (ThingPropetries.Count == 0)
-      {        
+      {
         ThingPropetries = null;
         nameText.text = "";
         countText.text = "";
         thisImage.sprite = null;
         IsBusy = false;
-        thisImage.color = new Color(1, 1, 1, 0.04f);
-      }      
+        thisImage.color = new Color(1, 1, 1, 0.04f);//!
+      }
     }
+    inventar.IsReadyAddPower = true;
+    inventar.ShowHeroes();    
   }
-
+  
   public void ShowDescription()
   {
     if (IsBusy)

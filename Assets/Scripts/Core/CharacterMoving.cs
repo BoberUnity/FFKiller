@@ -11,7 +11,7 @@ public class CharacterMoving : MonoBehaviour
   private float currentSpeed = 0;
   private Animator thisAnimator = null;
   [HideInInspector] public bool CanMove = true;
-  [HideInInspector] public bool IsBlocked = true;
+  [HideInInspector] public bool IsBlocked = false;
   public float HandlingDelay;
   private float TimeToHandle;
 
