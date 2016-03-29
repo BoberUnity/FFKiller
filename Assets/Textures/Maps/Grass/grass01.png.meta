@@ -48,7 +48,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 1
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -87,18 +87,18 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 1, y: 7}
-        - {x: -1, y: 6}
-        - {x: -2, y: 3}
-        - {x: 0, y: 0}
-        - {x: 2, y: 1}
-        - {x: -2, y: -1}
-        - {x: -13, y: -16}
-        - {x: -16, y: -25}
+      - - {x: -2, y: 5}
+        - {x: -5, y: 4}
+        - {x: -16, y: -16}
         - {x: -16, y: -32}
-        - {x: 15, y: -32}
-        - {x: 15, y: -3}
-        - {x: 8, y: 7}
+        - {x: 14, y: -32}
+        - {x: 16, y: -30}
+        - {x: 16, y: -6}
+        - {x: 3, y: 5}
+      - - {x: -13, y: -2}
+        - {x: -13, y: 1}
+        - {x: -16, y: 2}
+        - {x: -16, y: -3}
     - name: grass01_2
       rect:
         serializedVersion: 2
@@ -110,17 +110,19 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 3, y: 7}
-        - {x: -2, y: 3}
-        - {x: 1, y: 0}
-        - {x: 3, y: 1}
-        - {x: -1, y: -1}
-        - {x: -7, y: -9}
-        - {x: -16, y: -26}
+      - - {x: 12, y: -7}
+        - {x: 2, y: 5}
+        - {x: 0, y: 5}
+        - {x: -2, y: 4}
+        - {x: -16, y: -11}
         - {x: -16, y: -32}
-        - {x: 15, y: -32}
-        - {x: 15, y: 0}
-        - {x: 14, y: 7}
+        - {x: 16, y: -32}
+        - {x: 16, y: -4}
+        - {x: 15, y: -4}
+      - - {x: -13, y: -2}
+        - {x: -13, y: 1}
+        - {x: -16, y: 2}
+        - {x: -16, y: -3}
     - name: grass01_3
       rect:
         serializedVersion: 2
@@ -132,19 +134,21 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 7, y: 7}
-        - {x: 1, y: 7}
-        - {x: -4, y: 4}
-        - {x: -4, y: 1}
-        - {x: -1, y: 0}
-        - {x: -2, y: 0}
-        - {x: -5, y: -1}
-        - {x: -9, y: -9}
-        - {x: -16, y: -24}
+      - - {x: 0, y: 2}
+        - {x: -13, y: -5}
+        - {x: -16, y: -22}
         - {x: -16, y: -32}
-        - {x: 15, y: -32}
-        - {x: 15, y: -21}
-        - {x: 14, y: -8}
+        - {x: 16, y: -32}
+        - {x: 16, y: 2}
+      - - {x: -13, y: -2}
+        - {x: -13, y: 1}
+        - {x: -16, y: 2}
+        - {x: -16, y: -3}
+      - - {x: 3, y: 2}
+        - {x: 6, y: 3}
+        - {x: 6, y: 6}
+        - {x: 3, y: 7}
+        - {x: 1, y: 5}
     outline: []
   spritePackingTag: 
   userData: 

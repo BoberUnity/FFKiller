@@ -14,7 +14,7 @@ public class CameraController : MonoBehaviour
     Animator Animator;
     float fieldWidth, fieldHeight;      //размеры карты
     float cameraWidth, cameraHeight;    //половинные размеры камеры
-    float UnitsPerPixel = 1f/32f;
+    float UnitsPerPixel = 1f;
     private Vector2 UpLeft;
 
     bool ConstX, ConstY;    //Камера вмещает карту целиком и не двигается по Х и/или У.

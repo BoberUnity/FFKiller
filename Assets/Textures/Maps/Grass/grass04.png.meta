@@ -1,11 +1,13 @@
 fileFormatVersion: 2
 guid: 45beb01a4e45a16409d06ddab9f846f3
-timeCreated: 1458577463
+timeCreated: 1458933253
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: grass04_0
     21300002: grass04_1
+    21300004: grass04_2
+    21300006: grass04_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -29,7 +31,7 @@ TextureImporter:
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 64
+  maxTextureSize: 128
   textureSettings:
     filterMode: 0
     aniso: 16
@@ -46,7 +48,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 1
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -66,8 +68,8 @@ TextureImporter:
       - - {x: -16, y: 12}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
-        - {x: 16, y: 9}
-        - {x: 2, y: 12}
+        - {x: 16, y: 8}
+        - {x: 3, y: 12}
     - name: grass04_1
       rect:
         serializedVersion: 2
@@ -79,14 +81,45 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -4, y: 12}
-        - {x: -12, y: 12}
-        - {x: -13, y: 9}
-        - {x: -16, y: 2}
+      - - {x: -10, y: 12}
+        - {x: -13, y: 11}
+        - {x: -16, y: 7}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
-        - {x: 16, y: 5}
-        - {x: 6, y: 11}
+        - {x: 16, y: 8}
+    - name: grass04_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 12}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 8}
+        - {x: 3, y: 12}
+    - name: grass04_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 14}
+        - {x: -16, y: 8}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 12}
+        - {x: 13, y: 14}
     outline: []
   spritePackingTag: 
   userData: 
