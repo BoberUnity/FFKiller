@@ -7,15 +7,17 @@ public class Inventar : MonoBehaviour
   [SerializeField] private List<ItemButton> itemButtons = new List<ItemButton>();  
   public Text DescriptionField = null;
   [SerializeField] private Animator heroesAnimaator = null;
+  public HeroesPanel HeroesPanel = null;
+  [HideInInspector] public bool IsReadyAddPower = false;
+  [HideInInspector] public HeroPropetries HeroPropetries = null;
 
-  public void AddItem(ThingPropetries thingPropetries)
+ public void AddItem(ThingPropetries thingPropetries)
   {
     bool addToExistButton = false;
     foreach (var itemButton in itemButtons)
     {
       if (itemButton.ThingPropetries.Name == thingPropetries.Name)
       {
-        Debug.LogWarning("Update count " + thingPropetries.Count);
         itemButton.UpdateCount(thingPropetries.Count);
         addToExistButton = true;
       }

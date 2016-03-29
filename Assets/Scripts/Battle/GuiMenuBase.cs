@@ -16,16 +16,16 @@ public class GuiMenuBase : MonoBehaviour
     thisAnimator.SetBool("IsVisible", true);
   }
 
-  public void Hide()
+  public virtual void Hide()
   {
     thisAnimator.SetBool("IsVisible", false);
+    heroesPanel.Show();    
   }
 
-	private void Update ()
+  private void Update ()
   {
     if (Input.GetKeyDown(KeyCode.Backspace))
-    {
-      heroesPanel.Show();
+    {      
       Hide();
     }
 	}

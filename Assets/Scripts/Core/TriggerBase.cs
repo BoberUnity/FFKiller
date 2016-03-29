@@ -173,17 +173,17 @@ public class TriggerBase : MonoBehaviour
     hasStartSpeaking = false;
     dialogFinished = autoNextDialog ? false : true;
     autoNextDialog = false;
+    var handler = OnTriggerAction;
+    if (handler != null)
+      handler(CurrentTrigger);
     foreach (var changeTrigger in changeTriggers)
     {
       if (changeTrigger.MyTrigger == CurrentTrigger)
       {
-        changeTrigger.OtherTrigger.CurrentTrigger = changeTrigger.OtherTriggerNewValue;
+        changeTrigger.OtherTrigger.CurrentTrigger = changeTrigger.OtherTriggerNewValue;        
         break;
       }
-    }
-    var handler = OnTriggerAction;
-    if (handler != null)
-      handler(CurrentTrigger);
+    }    
   }
 
   protected virtual void OnCharacterTriggerEnter()

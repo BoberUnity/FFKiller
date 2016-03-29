@@ -8,6 +8,7 @@ public class HeroesPanel : MonoBehaviour
   private int attachedHeroes = 0;
   private Animator thisAnimator = null;
   private bool isChildMenuOpen = false;
+  [HideInInspector] public bool IsBlock = false;
   
   public HeroUI AttachHero (Hero hero)
   {
@@ -56,8 +57,11 @@ public class HeroesPanel : MonoBehaviour
 
   public void Show()
   {
-    thisAnimator.SetBool("IsVisible", true);
-    isChildMenuOpen = false;
+    if (!IsBlock)
+    {
+      thisAnimator.SetBool("IsVisible", true);
+      isChildMenuOpen = false;
+    }
   }
 
   public void Hide()
