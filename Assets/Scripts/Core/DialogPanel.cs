@@ -21,7 +21,7 @@ public class DialogPanel : MonoBehaviour
   public void Show()
   {
     thisAnimator.SetBool("IsVisible", true);
-    characterMoving.CanMove = false;
+    //characterMoving.CanMove = false;
     NameText.text = "";
     PortraitImage.enabled = false;
   }
@@ -29,7 +29,7 @@ public class DialogPanel : MonoBehaviour
   public void Hide()
   {
     thisAnimator.SetBool("IsVisible", false);
-    characterMoving.CanMove = true;
+    //characterMoving.CanMove = true;
   }
 
   public void SetLanguage(int lang)

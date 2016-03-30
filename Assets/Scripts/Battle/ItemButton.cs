@@ -65,16 +65,16 @@ public class ItemButton : MonoBehaviour
       UpdateCount(-1);
       if (ThingPropetries.Count == 0)
       {
-        ThingPropetries = null;
+        ThingPropetries = new ThingPropetries(); 
         nameText.text = "";
         countText.text = "";
         thisImage.sprite = null;
         IsBusy = false;
         thisImage.color = new Color(1, 1, 1, 0.04f);//!
       }
-    }
-    inventar.IsReadyAddPower = true;
-    inventar.ShowHeroes();    
+      inventar.IsReadyAddPower = true;
+      inventar.ShowHeroes();
+    }        
   }
   
   public void ShowDescription()

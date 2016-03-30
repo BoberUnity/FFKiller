@@ -33,7 +33,9 @@ public class HeroesPanel : MonoBehaviour
     if (Input.GetKeyDown(KeyCode.Tab))
     {
       if (thisAnimator.GetBool("IsVisible"))
-        Hide();
+      {
+        Hide();        
+      }
       else
       {
         if (!isChildMenuOpen)
@@ -61,12 +63,14 @@ public class HeroesPanel : MonoBehaviour
     {
       thisAnimator.SetBool("IsVisible", true);
       isChildMenuOpen = false;
+      FindObjectOfType<CharacterMoving>().KeyboardControl = false;
     }
   }
 
   public void Hide()
   {
     thisAnimator.SetBool("IsVisible", false);
+    FindObjectOfType<CharacterMoving>().KeyboardControl = true;
   }
 
   public void OnPressHero(int num)

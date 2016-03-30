@@ -56,10 +56,17 @@ public class SaveController : MonoBehaviour
     TriggerBase[] triggersBase = FindObjectsOfType<TriggerBase>();
     foreach (var triggerBase in triggersBase)
     {
-      AddAtribute("trigger", (triggerBase.CurrentTrigger).ToString());
+      AddAtribute("trigger", (triggerBase.CurrentStep).ToString());
       string triggerType = triggerBase.Type.ToString();
       AddAtribute("type", triggerType);
       AddXmlElements(doc, rootNode, "Trigger" + triggerBase.gameObject.name);
+    }
+    //SaveQuests
+    Quest[] quests = FindObjectsOfType<Quest>();
+    foreach (var quest in quests)
+    {
+      AddAtribute("CurrentStep", (quest.CurrentStep).ToString());      
+      AddXmlElements(doc, rootNode, "Quest" + quest.gameObject.name);
     }
     //Save Character Position    
     GameObject[] savePositionOjects = GameObject.FindGameObjectsWithTag("SavePosition");
@@ -159,7 +166,7 @@ public class SaveController : MonoBehaviour
       for (int i = 0; i < elemList.Count; i++)
       {
         triggerBase.gameObject.SetActive(true);
-        triggerBase.CurrentTrigger = Int32.Parse(elemList[i].Attributes["trigger"].Value);
+        triggerBase.CurrentStep = Int32.Parse(elemList[i].Attributes["trigger"].Value);
 
         if (elemList[i].Attributes["type"].Value == "Disabled")
           triggerBase.Type = TriggerType.Disabled;
@@ -169,6 +176,18 @@ public class SaveController : MonoBehaviour
           triggerBase.Type = TriggerType.Automatic;
         if (elemList[i].Attributes["type"].Value == "Momental")
           triggerBase.Type = TriggerType.Momental;
+      }
+    }
+    //Load quests
+    Quest[] quests = FindObjectsOfType<Quest>();
+    {
+      foreach (var quest in quests)
+      {
+        elemList = doc.GetElementsByTagName("Quest" + quest.gameObject.name);
+        for (int i = 0; i < elemList.Count; i++)
+        {
+          quest.CurrentStep = Int32.Parse(elemList[i].Attributes["CurrentStep"].Value);
+        }
       }
     }
     //Load Save Position Objects position
