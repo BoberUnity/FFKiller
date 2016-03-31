@@ -15,8 +15,7 @@ public enum TriggerType
   Disabled,
   OnPressSpace,
   Automatic,
-  Momental,
-  OnEvent
+  Momental
 }
 
 public class TriggerBase : MonoBehaviour

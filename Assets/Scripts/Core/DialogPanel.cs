@@ -9,19 +9,16 @@ public class DialogPanel : MonoBehaviour
   public Text NameText = null;
   public Image PortraitImage = null;
   public int CurrentLanguage = 0;//0-russian, 1-english
-  private Animator thisAnimator = null;
-  private CharacterMoving characterMoving = null;
+  private Animator thisAnimator = null;  
 
   private void Start()
   {
-    thisAnimator = GetComponent<Animator>();
-    characterMoving = FindObjectOfType<CharacterMoving>();
+    thisAnimator = GetComponent<Animator>();    
   }
 
   public void Show()
   {
     thisAnimator.SetBool("IsVisible", true);
-    //characterMoving.CanMove = false;
     NameText.text = "";
     PortraitImage.enabled = false;
   }
@@ -29,7 +26,6 @@ public class DialogPanel : MonoBehaviour
   public void Hide()
   {
     thisAnimator.SetBool("IsVisible", false);
-    //characterMoving.CanMove = true;
   }
 
   public void SetLanguage(int lang)
