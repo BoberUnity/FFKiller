@@ -25,12 +25,12 @@ public class CameraController : MonoBehaviour
         //transform.parent = Target;
         Camera = GetComponent<Camera>();
 
-        TuneMap(Map);
-
         Camera.orthographicSize = Screen.height * 0.5f * UnitsPerPixel / CameraZoom;
         cameraHeight = Camera.orthographicSize;
         cameraWidth = Screen.width * 0.5f * UnitsPerPixel / CameraZoom;
         Camera.aspect = cameraWidth / cameraHeight;
+
+        TuneMap(Map);
 
         //Animator = GetComponentInChildren<Animator>();
         Animator = transform.Find("ShadowEffect").GetComponent<Animator>();
