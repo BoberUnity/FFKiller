@@ -32,10 +32,21 @@ public class TriggerNPC : TriggerBase
 
   public override void StartDialog()
   {
-    base.StartDialog();    
+    base.StartDialog();
+    dialogPanel.Show();
+    currentLine = triggerNumLines[currentStep];
+    SetDialog(currentLine);
     bodyAnimator.SetBool("Running", false);    
     if (thisAnimator != null)
       thisAnimator.speed = 0;
+    characterMoving.KeyboardControl = false;
+  }
+
+  public override void EndDialog()
+  {
+    base.EndDialog();
+    dialogPanel.Hide();
+    characterMoving.KeyboardControl = true;
   }
 
   protected override void Update()

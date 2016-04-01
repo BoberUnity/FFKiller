@@ -3,12 +3,11 @@ using System;
 
 [RequireComponent(typeof(BoxCollider2D))]
 
-[Serializable]
-public class ChangeTrigger
+[Serializable] public class ChangeTrigger
 {
   public int MyTrigger = 1;
-  public TriggerBase OtherTrigger = null;
-  public int OtherTriggerNewValue = 1;
+  public Quest Quest = null;
+  public int NewCurrentStep = 1;
 }
 
 public enum TriggerType
@@ -22,29 +21,29 @@ public enum TriggerType
 public class TriggerBase : MonoBehaviour
 {
   public TriggerType Type = TriggerType.OnPressSpace;
-  [SerializeField] private string textAssetName = "Klaus";
-  [SerializeField] private ChangeTrigger[] changeTriggers = null;
+  [SerializeField] protected int currentStep = 1;
+  [SerializeField] private string textAssetName = "Path";
+  [SerializeField] protected ChangeTrigger[] changeTriggers = null;
   private string file = "";
   protected string[,] allBoxes;
   protected DialogPanel dialogPanel = null;
-  private int currentLine = 2;
+  protected int currentLine = 2;
   private bool hasStartSpeaking = false;
   private bool dialogFinished = false;
   private bool canSpeak = false;
   protected CharacterMoving characterMoving = null;
-  private int[] triggerNumLines = new int[1];//номера строк с которых начинаются триггеры в .csv таблице
-  [SerializeField] private int currentTrigger = 1;
+  protected int[] triggerNumLines = new int[1];//номера строк с которых начинаются триггеры в .csv таблице
+  
   public Action<int> OnTriggerAction;
-  protected bool isCharacterRight = false;
-  private bool autoNextDialog = false;
+  protected bool isCharacterRight = false;  
 
-  public int CurrentTrigger
+  public int CurrentStep
   {
-    get { return currentTrigger;}
+    get { return currentStep;}
     set
     {
-      currentTrigger = value;
-      currentLine = triggerNumLines[currentTrigger];
+      currentStep = value;
+      currentLine = triggerNumLines[currentStep];
     }
   }
 
@@ -117,7 +116,7 @@ public class TriggerBase : MonoBehaviour
       if (hasStartSpeaking)
       {
         currentLine += 1;
-        if (currentLine == allBoxes.GetLength(1) || currentLine == triggerNumLines[currentTrigger + 1] - 1)//
+        if (currentLine == allBoxes.GetLength(1) || currentLine == triggerNumLines[currentStep + 1] - 1)//
         {
           EndDialog(); 
         }
@@ -160,27 +159,19 @@ public class TriggerBase : MonoBehaviour
   }
 
   public virtual void StartDialog()
-  {
-    dialogPanel.Show();
-    hasStartSpeaking = true;
-    currentLine = triggerNumLines[currentTrigger];
-    SetDialog(currentLine);
+  {    
+    hasStartSpeaking = true;    
   }
 
   public virtual void EndDialog()
-  {
-    dialogPanel.Hide();
+  {    
     hasStartSpeaking = false;
-    dialogFinished = autoNextDialog ? false : true;
-    autoNextDialog = false;
-    var handler = OnTriggerAction;
-    if (handler != null)
-      handler(CurrentTrigger);
+    dialogFinished = true;    
     foreach (var changeTrigger in changeTriggers)
     {
-      if (changeTrigger.MyTrigger == CurrentTrigger)
+      if (changeTrigger.MyTrigger == CurrentStep)
       {
-        changeTrigger.OtherTrigger.CurrentTrigger = changeTrigger.OtherTriggerNewValue;        
+        changeTrigger.Quest.CurrentStep = changeTrigger.NewCurrentStep;        
         break;
       }
     }    
@@ -192,10 +183,5 @@ public class TriggerBase : MonoBehaviour
 
   protected virtual void OnCharacterTriggerExit()
   {
-  }
-
-  public void SetAutoNextDialog()
-  {
-    autoNextDialog = false; 
-  } 
+  }    
 }

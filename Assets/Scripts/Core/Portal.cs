@@ -21,7 +21,7 @@ public class Portal : MonoBehaviour
 	
 	private void OnTriggerEnter2D(Collider2D other)
   {    
-    characterMoving.CanMove = false;      
+    characterMoving.KeyboardControl = false;      
     cameraController.StartEffect();
     Invoke("ChangePosition", 0.5f * cameraController.EffectTime);
     //DV{
@@ -51,7 +51,7 @@ public class Portal : MonoBehaviour
     //DV{
     private void SetMove()
     {
-        characterMoving.CanMove = true;
+        characterMoving.KeyboardControl = true;
     }
     //DV}
 }

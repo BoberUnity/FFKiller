@@ -105,12 +105,16 @@ MonoBehaviour:
   heroPropetries:
     Name: Daughter
     Portrait: {fileID: 21300000, guid: 1514b627d0276ce4194b4a5d3e5c6d60, type: 3}
-    Hp: 200
-    Mhp: 500
-    Mp: 20
-    Mmp: 150
-    Co: 60
-    Mco: 80
+    Hp: 20
+    Mhp: 50
+    Mp: 3
+    Mmp: 18
+    Cr: 0
+    Mcr: 0
+    Atk: 0
+    Def: 0
+    Mat: 0
+    Mdf: 0
     Agi: 2
 --- !u!114 &11465094
 MonoBehaviour:
@@ -126,6 +130,7 @@ MonoBehaviour:
   Type: 0
   textAssetName: GrandDaughter
   changeTriggers: []
+  currentTrigger: 1
   Portrait: {fileID: 21300008, guid: 1514b627d0276ce4194b4a5d3e5c6d60, type: 3}
   bodyAnimator: {fileID: 9545834}
   CharSpriteRenderer: {fileID: 21272752}
@@ -181,19 +186,19 @@ Prefab:
         type: 3}
     - target: {fileID: 0}
       propertyPath: heroPropetries.Hp
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: heroPropetries.Mhp
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: heroPropetries.Mp
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 0}
+      propertyPath: heroPropetries.Mhp
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: heroPropetries.Mp
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: heroPropetries.Mmp
-      value: 150
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: heroPropetries.Co
