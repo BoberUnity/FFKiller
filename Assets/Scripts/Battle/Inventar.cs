@@ -4,14 +4,21 @@ using System.Collections.Generic;
 
 public class Inventar : MonoBehaviour
 {
-  [SerializeField] private List<ItemButton> itemButtons = new List<ItemButton>();  
+  [SerializeField] private List<ItemButton> itemButtons = new List<ItemButton>();
+  [SerializeField] private GameObject baseOfInventar = null;
   public Text DescriptionField = null;
   [SerializeField] private Animator heroesAnimaator = null;
   public HeroesPanel HeroesPanel = null;
   [HideInInspector] public bool IsReadyAddPower = false;
   [HideInInspector] public HeroPropetries HeroPropetries = null;
 
- public void AddItem(ThingPropetries thingPropetries)
+  private void Awake()
+  {
+    if (FindObjectOfType<BaseOfInventar>() == null)
+      Instantiate(baseOfInventar, Vector3.zero, Quaternion.identity);
+  }
+
+  public void AddItem(ThingPropetries thingPropetries)
   {
     bool addToExistButton = false;
     foreach (var itemButton in itemButtons)

@@ -7715,6 +7715,7 @@ MonoBehaviour:
   - {fileID: 11415052}
   - {fileID: 11422984}
   - {fileID: 11444370}
+  baseOfInventar: {fileID: 158376, guid: 671427f9ce4a37243bbcb1b96085c591, type: 2}
   DescriptionField: {fileID: 11436880}
   heroesAnimaator: {fileID: 9584916}
   HeroesPanel: {fileID: 11491162}
