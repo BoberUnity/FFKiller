@@ -1,10 +1,17 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System;
+
+[Serializable] public class ItemsGroup
+{
+  public GameObject ItemButtonsParent = null;
+  public List<ItemButton> itemButtons = new List<ItemButton>();
+}
 
 public class Inventar : MonoBehaviour
 {
-  [SerializeField] private List<ItemButton> itemButtons = new List<ItemButton>();
+  [SerializeField] private ItemsGroup[] itemGroups = new ItemsGroup[4];  
   [SerializeField] private GameObject baseOfInventar = null;
   public Text DescriptionField = null;
   [SerializeField] private Animator heroesAnimaator = null;
@@ -16,12 +23,19 @@ public class Inventar : MonoBehaviour
   {
     if (FindObjectOfType<BaseOfInventar>() == null)
       Instantiate(baseOfInventar, Vector3.zero, Quaternion.identity);
+    int i = 0;
+    foreach (var itemGroup in itemGroups)
+    {
+      itemGroup.itemButtons = new List<ItemButton>(itemGroup.ItemButtonsParent.GetComponentsInChildren<ItemButton>());
+      itemGroup.ItemButtonsParent.SetActive(i == 0);
+      i++;
+    }
   }
 
   public void AddItem(ThingPropetries thingPropetries)
   {
     bool addToExistButton = false;
-    foreach (var itemButton in itemButtons)
+    foreach (var itemButton in itemGroups[0].itemButtons)
     {
       if (itemButton.ThingPropetries.Name == thingPropetries.Name)
       {
@@ -32,7 +46,7 @@ public class Inventar : MonoBehaviour
     if (!addToExistButton)
     {
       int buttonIndex = FirstFreeButton;
-      itemButtons[buttonIndex].Load(thingPropetries);
+      itemGroups[0].itemButtons[buttonIndex].Load(thingPropetries);
     }    
   }
 
@@ -41,7 +55,7 @@ public class Inventar : MonoBehaviour
     get
     {
       int i = 0;
-      foreach (var itemButton in itemButtons)
+      foreach (var itemButton in itemGroups[0].itemButtons)
       {
         if (!itemButton.IsBusy)
           return i;

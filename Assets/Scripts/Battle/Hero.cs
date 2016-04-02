@@ -18,10 +18,19 @@ using System;
   public float Agi = 0;
 }
 
+public enum ThingType
+{
+  Thing,
+  Armor,
+  Material,
+  Key
+}
+
 [Serializable] public class ThingPropetries
 {
   public string Name = "Name";
   public Sprite Portrait = null;
+  public ThingType Type = ThingType.Thing;
   public string Description = "Description";
   public int Count = 1;
   public float Hp = 0;
