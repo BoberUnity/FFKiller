@@ -6,7 +6,7 @@ public class AddToInventar: MonoBehaviour
   [SerializeField] private int count = 1;
   private Inventar inventar = null;
   private BaseOfInventar baseOfInventar = null;
-
+  private bool searchIsSeccessfull = false;
   private void Start()
   {
     inventar = FindObjectOfType<Inventar>();
@@ -23,12 +23,16 @@ public class AddToInventar: MonoBehaviour
         {
           item.Count = count;
           inventar.AddItem(item);
+          searchIsSeccessfull = true;
+          break;          
         }
       }
+      if (!searchIsSeccessfull)
+        Debug.LogWarning("Предмет " + itemName + " не найден в базе инвентаря!");
     }
     else
     {
-      Debug.LogWarning("База инвентаря не загружена! Необходимо загрузить игру из сцены StartMenu");
+      Debug.LogWarning("База инвентаря не загружена!");
     }
   }  
 }

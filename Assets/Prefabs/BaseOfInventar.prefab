@@ -42,6 +42,7 @@ MonoBehaviour:
   Items:
   - Name: Medicine
     Portrait: {fileID: 21300002, guid: 50e9d2a29e8d540408322cdec33f3d2b, type: 3}
+    Type: 0
     Description: add 2 hp
     Count: 0
     Hp: 2
@@ -57,6 +58,7 @@ MonoBehaviour:
     Agi: 0
   - Name: Mushroom
     Portrait: {fileID: 21300000, guid: d8670c8631bb98d42b1c439c9b27887f, type: 3}
+    Type: 0
     Description: Add 1 mp
     Count: 0
     Hp: 0
@@ -72,6 +74,7 @@ MonoBehaviour:
     Agi: 0
   - Name: Cow
     Portrait: {fileID: 21300000, guid: f43a81d205acf8343abfc9aebf4b0a39, type: 3}
+    Type: 0
     Description: Add 5 hp
     Count: 0
     Hp: 5
@@ -81,6 +84,38 @@ MonoBehaviour:
     Cr: 0
     Mcr: 0
     Atk: 0
+    Def: 0
+    Mat: 0
+    Mdf: 0
+    Agi: 0
+  - Name: GoldenKey
+    Portrait: {fileID: 21300000, guid: 45e5afbd6a67aad4fae440385a09113c, type: 3}
+    Type: 3
+    Description: Open doors
+    Count: 0
+    Hp: 0
+    Mhp: 0
+    Mp: 0
+    Mmp: 0
+    Cr: 0
+    Mcr: 0
+    Atk: 0
+    Def: 0
+    Mat: 0
+    Mdf: 0
+    Agi: 0
+  - Name: SilverAxe
+    Portrait: {fileID: 21300000, guid: 9cb877ba59c833143a6916ced4bdec6d, type: 3}
+    Type: 1
+    Description: Add 20 Atk
+    Count: 0
+    Hp: 0
+    Mhp: 0
+    Mp: 0
+    Mmp: 0
+    Cr: 0
+    Mcr: 0
+    Atk: 20
     Def: 0
     Mat: 0
     Mdf: 0

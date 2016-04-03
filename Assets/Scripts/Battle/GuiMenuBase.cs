@@ -24,7 +24,7 @@ public class GuiMenuBase : MonoBehaviour
 
   private void Update ()
   {
-    if (Input.GetKeyDown(KeyCode.Backspace))
+    if (Input.GetKeyDown(KeyCode.Backspace) && !heroesPanel.IsBlock)
     {      
       Hide();
     }

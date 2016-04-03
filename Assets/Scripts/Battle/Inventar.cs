@@ -17,7 +17,8 @@ public class Inventar : MonoBehaviour
   [SerializeField] private Animator heroesAnimaator = null;
   public HeroesPanel HeroesPanel = null;
   [HideInInspector] public bool IsReadyAddPower = false;
-  [HideInInspector] public HeroPropetries HeroPropetries = null;
+  /*[HideInInspector]*/ public HeroPropetries HeroPropetries = null;
+  private int groupNum = 0;
 
   private void Awake()
   {
@@ -35,7 +36,22 @@ public class Inventar : MonoBehaviour
   public void AddItem(ThingPropetries thingPropetries)
   {
     bool addToExistButton = false;
-    foreach (var itemButton in itemGroups[0].itemButtons)
+    switch (thingPropetries.Type)
+    {
+      case ThingType.Thing:
+        groupNum = 0;
+        break;
+      case ThingType.Armor:
+        groupNum = 1;
+        break;
+      case ThingType.Material:
+        groupNum = 2;
+        break;
+      case ThingType.Key:
+        groupNum = 3;
+        break;
+    }
+    foreach (var itemButton in itemGroups[groupNum].itemButtons)
     {
       if (itemButton.ThingPropetries.Name == thingPropetries.Name)
       {
@@ -46,7 +62,7 @@ public class Inventar : MonoBehaviour
     if (!addToExistButton)
     {
       int buttonIndex = FirstFreeButton;
-      itemGroups[0].itemButtons[buttonIndex].Load(thingPropetries);
+      itemGroups[groupNum].itemButtons[buttonIndex].Load(thingPropetries);
     }    
   }
 
@@ -55,7 +71,7 @@ public class Inventar : MonoBehaviour
     get
     {
       int i = 0;
-      foreach (var itemButton in itemGroups[0].itemButtons)
+      foreach (var itemButton in itemGroups[groupNum].itemButtons)
       {
         if (!itemButton.IsBusy)
           return i;
