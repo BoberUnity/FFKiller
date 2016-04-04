@@ -34,81 +34,79 @@ public class CharacterMoving : MonoBehaviour
     
     void Update()
     {
-    //DV{
         CharSpriteRenderer.sortingOrder = (int)(-transform.position.y * 2);
+
+        if (KeyboardControl)
+        {
+          left = Input.GetKey(KeyCode.LeftArrow);
+          right = Input.GetKey(KeyCode.RightArrow);
+          up = Input.GetKey(KeyCode.UpArrow);
+          down = Input.GetKey(KeyCode.DownArrow);
+        }
+        else
+        {
+          left = AutoMoveDirection == Direction.Left;
+          right = AutoMoveDirection == Direction.Right;
+          up = AutoMoveDirection == Direction.Up;
+          down = AutoMoveDirection == Direction.Down;
+        }
+
         TimeToHandle -= Time.deltaTime;
         if (TimeToHandle < 0f)
         {
             MovingHandling();
             TimeToHandle = HandlingDelay;
         }
-    //DV}
-    if (KeyboardControl)
-    {
-      left = Input.GetKey(KeyCode.LeftArrow);
-      right = Input.GetKey(KeyCode.RightArrow);
-      up = Input.GetKey(KeyCode.UpArrow);
-      down = Input.GetKey(KeyCode.DownArrow);
     }
-    else
-    {
-      left = AutoMoveDirection == Direction.Left;
-      right = AutoMoveDirection == Direction.Right;
-      up = AutoMoveDirection == Direction.Up;
-      down = AutoMoveDirection == Direction.Down;
-    }
-  }
 
 
-  private void MovingHandling()
+    private void MovingHandling()
   {
-    currentSpeed = Input.GetKey(KeyCode.LeftShift) ? speedRun : speedWalk;
-    if (up)
-    {
-      transform.position += Vector3.up * Time.deltaTime * currentSpeed;
-      thisAnimator.SetBool("Running", true);
-      thisAnimator.SetFloat("SpeedY", 1);
-      if (!right && !left)       
-        thisAnimator.SetFloat("SpeedX", 0);
-      
-    }
+        float SpeedX = 0f, SpeedY = 0f;
+        Vector3 deltaMove = new Vector3();
 
-    if (down)
-    {
-      transform.position -= Vector3.up * Time.deltaTime * currentSpeed;
-      thisAnimator.SetBool("Running", true);
-      thisAnimator.SetFloat("SpeedY", -1);
-      if (!right && !left)      
-        thisAnimator.SetFloat("SpeedX", 0);
-      
-    }      
+        currentSpeed = Input.GetKey(KeyCode.LeftShift) ? speedRun : speedWalk;
 
-    if (right)
-    {
-      transform.position += Vector3.right * Time.deltaTime * currentSpeed;
-      thisAnimator.SetBool("Running", true);
-      thisAnimator.SetFloat("SpeedX", 1);
-      if (!up && !down)      
-        thisAnimator.SetFloat("SpeedY", 0);
-      
-    }      
-      
-    if (left)
-    {
-      transform.position -= Vector3.right * Time.deltaTime * currentSpeed;
-      thisAnimator.SetBool("Running", true);
-      thisAnimator.SetFloat("SpeedX", -1);
-      if (!up && !down)      
-        thisAnimator.SetFloat("SpeedY", 0);
-      
-    } 
+        if (up)
+        {
+            deltaMove += Vector3.up * Time.deltaTime * currentSpeed;
+            SpeedY = 1;
+        }
 
-      //DV{
-    thisAnimator.SetFloat("Speed", currentSpeed);
+        if (down)
+        {
+            deltaMove -= Vector3.up * Time.deltaTime * currentSpeed;
+            SpeedY = -1;
+        }
+
+        if (right)
+        {
+            deltaMove += Vector3.right * Time.deltaTime * currentSpeed;
+            SpeedX = 1;
+        }
+
+        if (left)
+        {
+            deltaMove -= Vector3.right * Time.deltaTime * currentSpeed;
+            SpeedX = -1;
+        }
+
+        //DV{
+        if ((left || right) && (up || down)) //движение по диагонали
+            deltaMove *= 0.7f;
+
+        if (left || right || up || down)
+        {
+            transform.position += deltaMove;
+
+            thisAnimator.SetBool("Running", true);
+            thisAnimator.SetFloat("SpeedX", SpeedX);
+            thisAnimator.SetFloat("SpeedY", SpeedY);
+            thisAnimator.SetFloat("Speed", currentSpeed);
+        }
+        else
+            thisAnimator.SetBool("Running", false);
         //DV}
-    
 
-    if (!left && !right && !up && !down)
-        thisAnimator.SetBool("Running", false);    
-  }
+    }
 }
