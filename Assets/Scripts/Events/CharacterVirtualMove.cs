@@ -30,7 +30,6 @@ public class CharacterVirtualMove : MonoBehaviour
 
   public void OnEventAction()
   {
-    Debug.LogWarning("Done! CharacterVirtualMove");
     SetDirection();
   }
 

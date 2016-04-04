@@ -62,12 +62,12 @@ public class SaveController : MonoBehaviour
       AddXmlElements(doc, rootNode, "Trigger" + triggerBase.gameObject.name);
     }
     //SaveQuests
-    Quest[] quests = FindObjectsOfType<Quest>();
+    /*Quest[] quests = FindObjectsOfType<Quest>();
     foreach (var quest in quests)
     {
       AddAtribute("CurrentStep", (quest.CurrentStep).ToString());      
       AddXmlElements(doc, rootNode, "Quest" + quest.gameObject.name);
-    }
+    }*/
     //Save Character Position    
     GameObject[] savePositionOjects = GameObject.FindGameObjectsWithTag("SavePosition");
     foreach (var savePositionOject in savePositionOjects)
@@ -179,7 +179,7 @@ public class SaveController : MonoBehaviour
       }
     }
     //Load quests
-    Quest[] quests = FindObjectsOfType<Quest>();
+    /*Quest[] quests = FindObjectsOfType<Quest>();
     {
       foreach (var quest in quests)
       {
@@ -189,7 +189,7 @@ public class SaveController : MonoBehaviour
           quest.CurrentStep = Int32.Parse(elemList[i].Attributes["CurrentStep"].Value);
         }
       }
-    }
+    }*/
     //Load Save Position Objects position
     GameObject[] savePositionOjects = GameObject.FindGameObjectsWithTag("SavePosition");
     foreach (var savePositionOject in savePositionOjects)
