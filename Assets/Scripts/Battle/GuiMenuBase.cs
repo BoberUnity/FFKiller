@@ -2,16 +2,16 @@
 
 public class GuiMenuBase : MonoBehaviour
 {
-  private HeroesPanel heroesPanel = null;
+  protected HeroesPanel heroesPanel = null;
   private Animator thisAnimator = null;
 
-  private void Start()
+  public virtual void Start()
   {
     heroesPanel = FindObjectOfType<HeroesPanel>();
     thisAnimator = GetComponent<Animator>();
   }
 
-  public void Show()
+  public virtual void Show()
   {
     thisAnimator.SetBool("IsVisible", true);
   }

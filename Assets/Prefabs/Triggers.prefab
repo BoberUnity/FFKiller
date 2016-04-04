@@ -1412,6 +1412,7 @@ MonoBehaviour:
     Mat: 0
     Mdf: 0
     Agi: 0
+    Armors: []
 --- !u!114 &11442256
 MonoBehaviour:
   m_ObjectHideFlags: 1

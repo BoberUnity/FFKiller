@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class HeroUI : MonoBehaviour
 {
-  [SerializeField] private Hero hero = null;
+  [SerializeField] protected Hero hero = null;
   [SerializeField] private Text nameIndicator = null;
   [SerializeField] private Image portraitImage = null;
   [SerializeField] private Text hpIndicator = null;
@@ -26,7 +26,7 @@ public class HeroUI : MonoBehaviour
     }
   }
 
-  public void UpdateUI ()
+  public virtual void UpdateUI ()
   {
     nameIndicator.text = hero.HeroPropetries.Name;
     portraitImage.sprite = hero.HeroPropetries.Portrait;
