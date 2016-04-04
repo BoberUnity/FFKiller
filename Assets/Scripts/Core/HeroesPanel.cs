@@ -8,8 +8,9 @@ public class HeroesPanel : MonoBehaviour
   private int attachedHeroes = 0;
   private Animator thisAnimator = null;
   private bool isChildMenuOpen = false;
-  [HideInInspector] public bool IsBlock = false;
-  
+  [HideInInspector] public bool IsBlock = true;
+  private CharacterMoving characterMoving = null;
+
   public HeroUI AttachHero (Hero hero)
   {
     if (attachedHeroes < 4)
@@ -25,7 +26,8 @@ public class HeroesPanel : MonoBehaviour
 
   private void Start()
   {
-    thisAnimator = GetComponent<Animator>();    
+    thisAnimator = GetComponent<Animator>();
+    characterMoving = FindObjectOfType<CharacterMoving>();
   }
 
   private void Update()
@@ -34,12 +36,16 @@ public class HeroesPanel : MonoBehaviour
     {
       if (thisAnimator.GetBool("IsVisible"))
       {
-        Hide();        
+        Hide();
+        IsBlock = true;
       }
       else
       {
-        if (!isChildMenuOpen)
+        if (!isChildMenuOpen && characterMoving.KeyboardControl)
+        {
+          IsBlock = false;
           Show();
+        }
       }
     }
   }
@@ -63,14 +69,14 @@ public class HeroesPanel : MonoBehaviour
     {
       thisAnimator.SetBool("IsVisible", true);
       isChildMenuOpen = false;
-      FindObjectOfType<CharacterMoving>().KeyboardControl = false;
+      characterMoving.KeyboardControl = false;
     }
   }
 
   public void Hide()
   {
     thisAnimator.SetBool("IsVisible", false);
-    FindObjectOfType<CharacterMoving>().KeyboardControl = true;
+    characterMoving.KeyboardControl = !isChildMenuOpen;
   }
 
   public void OnPressHero(int num)

@@ -18,6 +18,7 @@ public class ItemButton : MonoBehaviour
   public void Load(ThingPropetries tPropetries)
   {
     ThingPropetries.Name = tPropetries.Name;
+    ThingPropetries.Type = tPropetries.Type;
     ThingPropetries.Portrait = tPropetries.Portrait;
     ThingPropetries.Description = tPropetries.Description;
     ThingPropetries.Count = tPropetries.Count;
@@ -49,32 +50,44 @@ public class ItemButton : MonoBehaviour
   {
     if (IsBusy && !inventar.IsReadyAddPower)
     {
-      HeroPropetries newHprop = new HeroPropetries();      
-      newHprop.Hp = ThingPropetries.Hp;
-      newHprop.Mhp = ThingPropetries.Mhp;
-      newHprop.Mp = ThingPropetries.Mp;
-      newHprop.Mmp = ThingPropetries.Mmp;
-      newHprop.Cr = ThingPropetries.Cr;
-      newHprop.Mcr = ThingPropetries.Mcr;
-      newHprop.Atk = ThingPropetries.Atk;
-      newHprop.Def = ThingPropetries.Def;
-      newHprop.Mat = ThingPropetries.Mat;
-      newHprop.Mdf = ThingPropetries.Mdf;
-      inventar.HeroPropetries = newHprop;
-      inventar.HeroesPanel.IsBlock = true;
-      UpdateCount(-1);
-      if (ThingPropetries.Count == 0)
+      if (ThingPropetries.Type == ThingType.Thing)
+        AddPropetriesOnHero();
+      if (ThingPropetries.Type == ThingType.Armor)
       {
-        ThingPropetries = new ThingPropetries(); 
-        nameText.text = "";
-        countText.text = "";
-        thisImage.sprite = null;
-        IsBusy = false;
-        thisImage.color = new Color(1, 1, 1, 0.04f);//!
+        AddPropetriesOnHero();
       }
-      inventar.IsReadyAddPower = true;
-      inventar.ShowHeroes();
     }        
+  }
+
+  private void AddPropetriesOnHero()
+  {
+    HeroPropetries newHprop = new HeroPropetries();
+    newHprop.Hp = ThingPropetries.Hp;
+    newHprop.Mhp = ThingPropetries.Mhp;
+    newHprop.Mp = ThingPropetries.Mp;
+    newHprop.Mmp = ThingPropetries.Mmp;
+    newHprop.Cr = ThingPropetries.Cr;
+    newHprop.Mcr = ThingPropetries.Mcr;
+    newHprop.Atk = ThingPropetries.Atk;
+    newHprop.Def = ThingPropetries.Def;
+    newHprop.Mat = ThingPropetries.Mat;
+    newHprop.Mdf = ThingPropetries.Mdf;
+    if (ThingPropetries.Type == ThingType.Armor)
+      newHprop.Armors.Add(ThingPropetries.Name); 
+    inventar.HeroPropetries = newHprop;    
+    inventar.HeroesPanel.IsBlock = true;
+    UpdateCount(-1);
+    if (ThingPropetries.Count == 0)
+    {
+      ThingPropetries = new ThingPropetries();
+      nameText.text = "";
+      countText.text = "";
+      thisImage.sprite = null;
+      IsBusy = false;
+      thisImage.color = new Color(1, 1, 1, 0.04f);//!
+    }
+    inventar.IsReadyAddPower = true;
+    inventar.ShowHeroes();
   }
   
   public void ShowDescription()

@@ -3,8 +3,8 @@ using System;
 
 [Serializable] public class Step
 {
-  public int ValueOfAction = 1;
-  public string Description = "Action1...";  
+  public string Description = "Action1...";
+  public int ValueOfAction = 1;  
   public GameObject TargetObject = null;  
 }
 

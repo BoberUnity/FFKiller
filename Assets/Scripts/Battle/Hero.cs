@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using System.Collections.Generic;
 
 [Serializable] public class HeroPropetries
 {
@@ -16,12 +17,22 @@ using System;
   public float Mat = 0;
   public float Mdf = 0;
   public float Agi = 0;
+  [HideInInspector] public List<string> Armors = new List<string>();
+}
+
+public enum ThingType
+{
+  Thing,
+  Armor,
+  Material,
+  Key
 }
 
 [Serializable] public class ThingPropetries
 {
   public string Name = "Name";
   public Sprite Portrait = null;
+  public ThingType Type = ThingType.Thing;
   public string Description = "Description";
   public int Count = 1;
   public float Hp = 0;
@@ -73,6 +84,9 @@ public class Hero : MonoBehaviour
     heroPropetries.Mat += hps.Mat;
     heroPropetries.Mdf += hps.Mdf;
     heroPropetries.Agi += hps.Agi;
+    if (hps.Armors.Count > 0)
+      heroPropetries.Armors.Add(hps.Armors[0]);    
+    
     if (heroUi != null)
       heroUi.UpdateUI();
   }

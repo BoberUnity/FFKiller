@@ -24,10 +24,13 @@ public class TriggerNPC : TriggerBase
   protected override void SetDialog(int line)
   {
     base.SetDialog(line);
-    dialogPanel.NameText.text = allBoxes[1 + dialogPanel.CurrentLanguage, line];
-    Sprite otherPortrait = characterMoving.Portrait;
-    dialogPanel.PortraitImage.enabled = true;
-    dialogPanel.PortraitImage.sprite = allBoxes[0, line] == "1" ? Portrait : otherPortrait;    
+    if (allBoxes[0, line] != "")
+    {
+      Sprite otherPortrait = characterMoving.Portrait;
+      dialogPanel.PortraitImage.enabled = true;
+      dialogPanel.PortraitBackground.enabled = true;
+      dialogPanel.PortraitImage.sprite = allBoxes[0, line] == "1" ? Portrait : otherPortrait;
+    }  
   }
 
   public override void StartDialog()
