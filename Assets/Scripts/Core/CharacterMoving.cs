@@ -19,15 +19,19 @@ public class CharacterMoving : MonoBehaviour
   private bool up = false;
   private bool down = false;
 
+
   //DV{
   public SpriteRenderer CharSpriteRenderer;
-    //DV}
+  private CircleCollider2D selfCollider;
+  //DV}
+
     private void Start ()
     {
         thisAnimator = GetComponent<Animator>();
         GetComponent<Hero>().ConnectToPartyGui();    
         //DV{
         CharSpriteRenderer = GetComponent<SpriteRenderer>();
+        selfCollider = GetComponent<CircleCollider2D>();
         //DV}
     }
 
@@ -97,12 +101,19 @@ public class CharacterMoving : MonoBehaviour
 
         if (left || right || up || down)
         {
-            transform.position += deltaMove;
-
-            thisAnimator.SetBool("Running", true);
             thisAnimator.SetFloat("SpeedX", SpeedX);
             thisAnimator.SetFloat("SpeedY", SpeedY);
-            thisAnimator.SetFloat("Speed", currentSpeed);
+
+            //Если проход есть, проигрываем анимацию ходьбы и передвигаем ГГ, иначе - не двигаемся.
+            if (Physics2D.OverlapPoint((Vector2)transform.position + selfCollider.offset + new Vector2(SpeedX, SpeedY) * (selfCollider.radius + 2f)) == null)
+            {
+                transform.position += deltaMove;
+
+                thisAnimator.SetBool("Running", true);
+                thisAnimator.SetFloat("Speed", currentSpeed);
+            }
+            else
+                thisAnimator.SetBool("Running", false);
         }
         else
             thisAnimator.SetBool("Running", false);
