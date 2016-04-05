@@ -77,6 +77,11 @@ public class SaveController : MonoBehaviour
       AddAtribute("positionY", (pos.y).ToString());
       AddXmlElements(doc, rootNode, "SavePosition" + savePositionOject.name);
     }
+    //Save background map
+    CameraController cameraController = FindObjectOfType<CameraController>();
+    string mapName = cameraController.Map.name;
+    AddAtribute("MapName", mapName);
+    AddXmlElements(doc, rootNode, "MapBackgroundName");
     //
     doc.Save(filePath);
 
@@ -201,7 +206,16 @@ public class SaveController : MonoBehaviour
         float y = Convert.ToSingle(elemList[i].Attributes["positionY"].Value, new CultureInfo("en-US"));
         savePositionOject.transform.position = new Vector3(x, y, 0);
       }
-    }    
+    }
+    //Load Map Background
+    CameraController cameraController = FindObjectOfType<CameraController>();
+    elemList = doc.GetElementsByTagName("MapBackgroundName");
+    for (int i = 0; i < elemList.Count; i++)
+    {
+      string mapName = elemList[i].Attributes["MapName"].Value;
+      cameraController.Map = GameObject.Find(mapName);
+      cameraController.TuneMap(cameraController.Map);
+    }
     ///////////////////////Save current Scene
     doc = new XmlDocument();
     XmlNode rootNode = null;

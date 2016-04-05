@@ -92,16 +92,17 @@ public class CameraController : MonoBehaviour
         Animator.SetTrigger("Play");
   }
 
-    public void TuneMap(GameObject Map)
+    public void TuneMap(GameObject map)//Boris Map -> map
     {
-        Sprite Spr = Map.GetComponent<SpriteRenderer>().sprite;
+        Map = map;//Boris будем хранить фон в ссылке Map
+        Sprite Spr = map.GetComponent<SpriteRenderer>().sprite;
 
         //Ширину и длину поля считаем в юнитах
         fieldWidth = Spr.rect.width * UnitsPerPixel;
         fieldHeight = Spr.rect.height * UnitsPerPixel;
 
         //Находим координаты левого верхнего угла карты
-        UpLeft = (Vector2)Map.transform.position + new Vector2(-Spr.pivot.x, Spr.rect.height - Spr.pivot.y) * UnitsPerPixel;
+        UpLeft = (Vector2)map.transform.position + new Vector2(-Spr.pivot.x, Spr.rect.height - Spr.pivot.y) * UnitsPerPixel;
 
         ConstY = (2 * Camera.orthographicSize >= fieldHeight);
         ConstX = (2 * Camera.orthographicSize * Camera.aspect >= fieldHeight);
@@ -109,9 +110,9 @@ public class CameraController : MonoBehaviour
         //Если размер камеры больше размера карты, устанавливаем камеру в центр карты. Если камера меньше устанавливаем её на цель.
         Vector3 NewCamPosition = new Vector3(Target.position.x, Target.position.y, transform.position.z);
         if (ConstX)
-            NewCamPosition.x = Map.transform.position.x + fieldWidth * 0.5f;
+            NewCamPosition.x = map.transform.position.x + fieldWidth * 0.5f;
         if(ConstY)
-            NewCamPosition.y = Map.transform.position.y - fieldHeight * 0.5f;
+            NewCamPosition.y = map.transform.position.y - fieldHeight * 0.5f;
 
         transform.position = NewCamPosition;
     }

@@ -5,8 +5,14 @@ public class GoToScene : MonoBehaviour
 {
   [SerializeField] [Tooltip("Имя сцены которую следует загрузить")] private string sceneName = "scene name";
   [SerializeField] [Tooltip("Где окажется Герой, когда снова придёт в эту сцену")] private Transform returnPosition = null;
+  [SerializeField] [Tooltip("Интервал в секундах до загрузки новой сцены")] private float interval = 0;
 
   public void OnEventAction()
+  {
+    Invoke("LoadNewScene", interval);
+  }
+
+  private void LoadNewScene()
   {
     if (returnPosition != null)
       FindObjectOfType<CharacterMoving>().transform.position = returnPosition.position;
