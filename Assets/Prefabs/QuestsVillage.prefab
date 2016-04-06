@@ -2601,7 +2601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3579ad1aab8b0a488e079f43fbaba65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 11405314}
+  trigger: {fileID: 11484248}
   triggerType: 0
 --- !u!114 &11463824
 MonoBehaviour:

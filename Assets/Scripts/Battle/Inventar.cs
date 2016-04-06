@@ -11,7 +11,7 @@ using System;
 
 public class Inventar : MonoBehaviour
 {
-  [SerializeField] private ItemsGroup[] itemGroups = new ItemsGroup[4];  
+  public ItemsGroup[] ItemGroups = new ItemsGroup[4];  
   [SerializeField] private GameObject baseOfInventar = null;
   public Text DescriptionField = null;
   [SerializeField] private Animator heroesAnimaator = null;
@@ -25,7 +25,7 @@ public class Inventar : MonoBehaviour
     if (FindObjectOfType<BaseOfInventar>() == null)
       Instantiate(baseOfInventar, Vector3.zero, Quaternion.identity);
     int i = 0;
-    foreach (var itemGroup in itemGroups)
+    foreach (var itemGroup in ItemGroups)
     {
       itemGroup.itemButtons = new List<ItemButton>(itemGroup.ItemButtonsParent.GetComponentsInChildren<ItemButton>());
       itemGroup.ItemButtonsParent.SetActive(i == 0);
@@ -51,7 +51,7 @@ public class Inventar : MonoBehaviour
         groupNum = 3;
         break;
     }
-    foreach (var itemButton in itemGroups[groupNum].itemButtons)
+    foreach (var itemButton in ItemGroups[groupNum].itemButtons)
     {
       if (itemButton.ThingPropetries.Name == thingPropetries.Name)
       {
@@ -62,7 +62,7 @@ public class Inventar : MonoBehaviour
     if (!addToExistButton)
     {
       int buttonIndex = FirstFreeButton;
-      itemGroups[groupNum].itemButtons[buttonIndex].Load(thingPropetries);
+      ItemGroups[groupNum].itemButtons[buttonIndex].Load(thingPropetries);
     }    
   }
 
@@ -71,7 +71,7 @@ public class Inventar : MonoBehaviour
     get
     {
       int i = 0;
-      foreach (var itemButton in itemGroups[groupNum].itemButtons)
+      foreach (var itemButton in ItemGroups[groupNum].itemButtons)
       {
         if (!itemButton.IsBusy)
           return i;

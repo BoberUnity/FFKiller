@@ -60,14 +60,7 @@ public class SaveController : MonoBehaviour
       string triggerType = triggerBase.Type.ToString();
       AddAtribute("type", triggerType);
       AddXmlElements(doc, rootNode, "Trigger" + triggerBase.gameObject.name);
-    }
-    //SaveQuests
-    /*Quest[] quests = FindObjectsOfType<Quest>();
-    foreach (var quest in quests)
-    {
-      AddAtribute("CurrentStep", (quest.CurrentStep).ToString());      
-      AddXmlElements(doc, rootNode, "Quest" + quest.gameObject.name);
-    }*/
+    }    
     //Save Character Position    
     GameObject[] savePositionOjects = GameObject.FindGameObjectsWithTag("SavePosition");
     foreach (var savePositionOject in savePositionOjects)
@@ -120,7 +113,37 @@ public class SaveController : MonoBehaviour
       AddXmlElements(doc, rootNode, "Vagon"/* + vagon.gameObject.name*/);
     }
     // 
-    doc.Save(filePath);    
+    doc.Save(filePath);
+    //Save Inventar    
+    doc = new XmlDocument();
+    rootNode = null;
+    filePath = Application.dataPath + "/StreamingAssets/Saves/InventarData.xml";
+    if (!File.Exists(filePath))
+    {
+      rootNode = doc.CreateElement("InventarData");
+      doc.AppendChild(rootNode);
+    }
+    else
+    {
+      doc.Load(filePath);
+      rootNode = doc.DocumentElement;
+    }
+    rootNode.RemoveAll();
+    Inventar inventar = FindObjectOfType<Inventar>();
+    foreach (var itemGroup in inventar.ItemGroups)
+    {
+      foreach (var itemButton in itemGroup.itemButtons)
+      {
+        if (itemButton.ThingPropetries.Name != "" && itemButton.ThingPropetries.Name != "Name")
+        {
+          AddAtribute("Name", (itemButton.ThingPropetries.Name).ToString());
+          AddAtribute("Count", (itemButton.ThingPropetries.Count).ToString());
+          AddXmlElements(doc, rootNode, "Item");
+        }
+      }      
+    }     
+    doc.Save(filePath);
+    //
   }
 
   private void AddXmlElements(XmlDocument d, XmlNode node, string name)
@@ -182,19 +205,7 @@ public class SaveController : MonoBehaviour
         if (elemList[i].Attributes["type"].Value == "Momental")
           triggerBase.Type = TriggerType.Momental;
       }
-    }
-    //Load quests
-    /*Quest[] quests = FindObjectsOfType<Quest>();
-    {
-      foreach (var quest in quests)
-      {
-        elemList = doc.GetElementsByTagName("Quest" + quest.gameObject.name);
-        for (int i = 0; i < elemList.Count; i++)
-        {
-          quest.CurrentStep = Int32.Parse(elemList[i].Attributes["CurrentStep"].Value);
-        }
-      }
-    }*/
+    }    
     //Load Save Position Objects position
     GameObject[] savePositionOjects = GameObject.FindGameObjectsWithTag("SavePosition");
     foreach (var savePositionOject in savePositionOjects)
@@ -215,7 +226,7 @@ public class SaveController : MonoBehaviour
       string mapName = elemList[i].Attributes["MapName"].Value;
       cameraController.Map = GameObject.Find(mapName);
       cameraController.TuneMap(cameraController.Map);
-    }
+    }       
     ///////////////////////Save current Scene
     doc = new XmlDocument();
     XmlNode rootNode = null;
@@ -257,6 +268,7 @@ public class SaveController : MonoBehaviour
           hero.HeroPropetries.Cr = Convert.ToSingle(elemList[i].Attributes["Co"].Value, new CultureInfo("en-US"));
           hero.HeroPropetries.Mcr = Convert.ToSingle(elemList[i].Attributes["Mco"].Value, new CultureInfo("en-US"));
           hero.HeroPropetries.Agi = Convert.ToSingle(elemList[i].Attributes["Agi"].Value, new CultureInfo("en-US"));
+          hero.HeroUi.UpdateUI();          
         }
       }
       //Load vagons
@@ -268,8 +280,35 @@ public class SaveController : MonoBehaviour
       }
       //
     }
+    //Load Inventar
+    LoadInventar();
   }
-  
+
+  private void LoadInventar()
+  {
+    Inventar inventar = FindObjectOfType<Inventar>();
+    BaseOfInventar baseOfInventar = FindObjectOfType<BaseOfInventar>();
+    string filePath = Application.dataPath + "/StreamingAssets/Saves/InventarData.xml";
+    if (File.Exists(filePath))
+    {
+      XmlDocument doc = new XmlDocument();
+      XmlNodeList elemList = null;
+      doc.Load(filePath);
+      elemList = doc.GetElementsByTagName("Item");
+      for (int i = 0; i < elemList.Count; i++)
+      {
+        foreach (var item in baseOfInventar.Items)
+        {
+          if (elemList[i].Attributes["Name"].Value == item.Name)
+          {            
+            item.Count = Int32.Parse(elemList[i].Attributes["Count"].Value); 
+            inventar.AddItem(item);
+          }
+        }
+      }
+    }
+  }
+
   public void PressButtonNewGame()
   {
     DirectoryInfo dirInfo = new DirectoryInfo(Application.dataPath + "/StreamingAssets/Saves/");

@@ -3609,7 +3609,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 224: {fileID: 22459076}
-  - 114: {fileID: 11481768}
   m_Layer: 5
   m_Name: Hero
   m_TagString: Untagged
@@ -5464,6 +5463,7 @@ GameObject:
   - 224: {fileID: 22490388}
   - 95: {fileID: 9510586}
   - 114: {fileID: 11410868}
+  - 114: {fileID: 11437784}
   m_Layer: 5
   m_Name: Status
   m_TagString: Untagged
@@ -8524,7 +8524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11446044}
+  NameText: {fileID: 11446044}
   countText: {fileID: 11424764}
   IsBusy: 0
   ThingPropetries:
@@ -8817,7 +8817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11486958}
+  NameText: {fileID: 11486958}
   countText: {fileID: 11474578}
   IsBusy: 0
   ThingPropetries:
@@ -8937,7 +8937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11487974}
+  NameText: {fileID: 11487974}
   countText: {fileID: 11415956}
   IsBusy: 0
   ThingPropetries:
@@ -9201,7 +9201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11425380}
+  NameText: {fileID: 11425380}
   countText: {fileID: 11494858}
   IsBusy: 0
   ThingPropetries:
@@ -10798,7 +10798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11482672}
+  NameText: {fileID: 11482672}
   countText: {fileID: 11447794}
   IsBusy: 0
   ThingPropetries:
@@ -10862,7 +10862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11428202}
+  NameText: {fileID: 11428202}
   countText: {fileID: 11454408}
   IsBusy: 0
   ThingPropetries:
@@ -10940,7 +10940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11481374}
+  NameText: {fileID: 11481374}
   countText: {fileID: 11423212}
   IsBusy: 0
   ThingPropetries:
@@ -11019,7 +11019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventar: {fileID: 11479224}
-  status: {fileID: 11481768}
+  status: {fileID: 11437784}
 --- !u!114 &11410896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11680,7 +11680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11492040}
+  NameText: {fileID: 11492040}
   countText: {fileID: 11423508}
   IsBusy: 0
   ThingPropetries:
@@ -11864,7 +11864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11450938}
+  NameText: {fileID: 11450938}
   countText: {fileID: 11438018}
   IsBusy: 0
   ThingPropetries:
@@ -11909,7 +11909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11474448}
+  NameText: {fileID: 11474448}
   countText: {fileID: 11441438}
   IsBusy: 0
   ThingPropetries:
@@ -12006,7 +12006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11438866}
+  NameText: {fileID: 11438866}
   countText: {fileID: 11408616}
   IsBusy: 0
   ThingPropetries:
@@ -12237,7 +12237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11434610}
+  NameText: {fileID: 11434610}
   countText: {fileID: 11409272}
   IsBusy: 0
   ThingPropetries:
@@ -12315,7 +12315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11483870}
+  NameText: {fileID: 11483870}
   countText: {fileID: 11408758}
   IsBusy: 0
   ThingPropetries:
@@ -12373,7 +12373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11462072}
+  NameText: {fileID: 11462072}
   countText: {fileID: 11400274}
   IsBusy: 0
   ThingPropetries:
@@ -12404,7 +12404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11495360}
+  NameText: {fileID: 11495360}
   countText: {fileID: 11409648}
   IsBusy: 0
   ThingPropetries:
@@ -12671,7 +12671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11456358}
+  NameText: {fileID: 11456358}
   countText: {fileID: 11429686}
   IsBusy: 0
   ThingPropetries:
@@ -12735,7 +12735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11452998}
+  NameText: {fileID: 11452998}
   countText: {fileID: 11438264}
   IsBusy: 0
   ThingPropetries:
@@ -13224,7 +13224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11438404}
+  NameText: {fileID: 11438404}
   countText: {fileID: 11459370}
   IsBusy: 0
   ThingPropetries:
@@ -13255,7 +13255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11420864}
+  NameText: {fileID: 11420864}
   countText: {fileID: 11452474}
   IsBusy: 0
   ThingPropetries:
@@ -13592,7 +13592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11460574}
+  NameText: {fileID: 11460574}
   countText: {fileID: 11412144}
   IsBusy: 0
   ThingPropetries:
@@ -13955,7 +13955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11403876}
+  NameText: {fileID: 11403876}
   countText: {fileID: 11447496}
   IsBusy: 0
   ThingPropetries:
@@ -14565,7 +14565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11448324}
+  NameText: {fileID: 11448324}
   countText: {fileID: 11421660}
   IsBusy: 0
   ThingPropetries:
@@ -14988,7 +14988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11435272}
+  NameText: {fileID: 11435272}
   countText: {fileID: 11487416}
   IsBusy: 0
   ThingPropetries:
@@ -15164,7 +15164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11494058}
+  NameText: {fileID: 11494058}
   countText: {fileID: 11406774}
   IsBusy: 0
   ThingPropetries:
@@ -15297,7 +15297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11420550}
+  NameText: {fileID: 11420550}
   countText: {fileID: 11456980}
   IsBusy: 0
   ThingPropetries:
@@ -15835,7 +15835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11400052}
+  NameText: {fileID: 11400052}
   countText: {fileID: 11417274}
   IsBusy: 0
   ThingPropetries:
@@ -15866,7 +15866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11407794}
+  NameText: {fileID: 11407794}
   countText: {fileID: 11402860}
   IsBusy: 0
   ThingPropetries:
@@ -15924,7 +15924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11425924}
+  NameText: {fileID: 11425924}
   countText: {fileID: 11425022}
   IsBusy: 0
   ThingPropetries:
@@ -16299,7 +16299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11429556}
+  NameText: {fileID: 11429556}
   countText: {fileID: 11482562}
   IsBusy: 0
   ThingPropetries:
@@ -16613,7 +16613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11442118}
+  NameText: {fileID: 11442118}
   countText: {fileID: 11430246}
   IsBusy: 0
   ThingPropetries:
@@ -17523,7 +17523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11490784}
+  NameText: {fileID: 11490784}
   countText: {fileID: 11413306}
   IsBusy: 0
   ThingPropetries:
@@ -17807,7 +17807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11493934}
+  NameText: {fileID: 11493934}
   countText: {fileID: 11423630}
   IsBusy: 0
   ThingPropetries:
@@ -17838,7 +17838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11407206}
+  NameText: {fileID: 11407206}
   countText: {fileID: 11448514}
   IsBusy: 0
   ThingPropetries:
@@ -18018,7 +18018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11493912}
+  NameText: {fileID: 11493912}
   countText: {fileID: 11417862}
   IsBusy: 0
   ThingPropetries:
@@ -18338,6 +18338,33 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &11437784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d952cc150271e2c4ebefedb68458e51e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hero: {fileID: 0}
+  nameIndicator: {fileID: 11451804}
+  portraitImage: {fileID: 11451854}
+  hpIndicator: {fileID: 11495766}
+  hpLine: {fileID: 11450896}
+  mpLine: {fileID: 11446660}
+  crLine: {fileID: 11440022}
+  mpIndicator: {fileID: 11411546}
+  crIndicator: {fileID: 11466074}
+  aglImage: {fileID: 0}
+  heroButton: {fileID: 0}
+  atkIndicator: {fileID: 11450132}
+  defIndicator: {fileID: 11453662}
+  matIndicator: {fileID: 11402272}
+  mdfIndicator: {fileID: 11475242}
+  agiIndicator: {fileID: 11435726}
 --- !u!114 &11437940
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18754,7 +18781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11486814}
+  NameText: {fileID: 11486814}
   countText: {fileID: 11410628}
   IsBusy: 0
   ThingPropetries:
@@ -19280,7 +19307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11475182}
+  NameText: {fileID: 11475182}
   countText: {fileID: 11463318}
   IsBusy: 0
   ThingPropetries:
@@ -20216,7 +20243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11477418}
+  NameText: {fileID: 11477418}
   countText: {fileID: 11495074}
   IsBusy: 0
   ThingPropetries:
@@ -20814,7 +20841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11419774}
+  NameText: {fileID: 11419774}
   countText: {fileID: 11478574}
   IsBusy: 0
   ThingPropetries:
@@ -21034,7 +21061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11407968}
+  NameText: {fileID: 11407968}
   countText: {fileID: 11430020}
   IsBusy: 0
   ThingPropetries:
@@ -21568,7 +21595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11476354}
+  NameText: {fileID: 11476354}
   countText: {fileID: 11478038}
   IsBusy: 0
   ThingPropetries:
@@ -21599,7 +21626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11405472}
+  NameText: {fileID: 11405472}
   countText: {fileID: 11477746}
   IsBusy: 0
   ThingPropetries:
@@ -21808,7 +21835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11436306}
+  NameText: {fileID: 11436306}
   countText: {fileID: 11451570}
   IsBusy: 0
   ThingPropetries:
@@ -21839,7 +21866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11400458}
+  NameText: {fileID: 11400458}
   countText: {fileID: 11405762}
   IsBusy: 0
   ThingPropetries:
@@ -22131,7 +22158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11497672}
+  NameText: {fileID: 11497672}
   countText: {fileID: 11467486}
   IsBusy: 0
   ThingPropetries:
@@ -22340,7 +22367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11487612}
+  NameText: {fileID: 11487612}
   countText: {fileID: 11455570}
   IsBusy: 0
   ThingPropetries:
@@ -22848,7 +22875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11487798}
+  NameText: {fileID: 11487798}
   countText: {fileID: 11420422}
   IsBusy: 0
   ThingPropetries:
@@ -23399,7 +23426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11491446}
+  NameText: {fileID: 11491446}
   countText: {fileID: 11458188}
   IsBusy: 0
   ThingPropetries:
@@ -23482,7 +23509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11405738}
+  NameText: {fileID: 11405738}
   countText: {fileID: 11406766}
   IsBusy: 0
   ThingPropetries:
@@ -24420,7 +24447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11489348}
+  NameText: {fileID: 11489348}
   countText: {fileID: 11489322}
   IsBusy: 0
   ThingPropetries:
@@ -24545,7 +24572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11403144}
+  NameText: {fileID: 11403144}
   countText: {fileID: 11422410}
   IsBusy: 0
   ThingPropetries:
@@ -24623,7 +24650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11438854}
+  NameText: {fileID: 11438854}
   countText: {fileID: 11423174}
   IsBusy: 0
   ThingPropetries:
@@ -24668,7 +24695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11464846}
+  NameText: {fileID: 11464846}
   countText: {fileID: 11475790}
   IsBusy: 0
   ThingPropetries:
@@ -24740,7 +24767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11452174}
+  NameText: {fileID: 11452174}
   countText: {fileID: 11490948}
   IsBusy: 0
   ThingPropetries:
@@ -24818,7 +24845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11402552}
+  NameText: {fileID: 11402552}
   countText: {fileID: 11442584}
   IsBusy: 0
   ThingPropetries:
@@ -24876,7 +24903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11493244}
+  NameText: {fileID: 11493244}
   countText: {fileID: 11447826}
   IsBusy: 0
   ThingPropetries:
@@ -25222,7 +25249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11446680}
+  NameText: {fileID: 11446680}
   countText: {fileID: 11457910}
   IsBusy: 0
   ThingPropetries:
@@ -25418,7 +25445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11423750}
+  NameText: {fileID: 11423750}
   countText: {fileID: 11442998}
   IsBusy: 0
   ThingPropetries:
@@ -25724,7 +25751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11432020}
+  NameText: {fileID: 11432020}
   countText: {fileID: 11481470}
   IsBusy: 0
   ThingPropetries:
@@ -25910,7 +25937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11483706}
+  NameText: {fileID: 11483706}
   countText: {fileID: 11469178}
   IsBusy: 0
   ThingPropetries:
@@ -26115,7 +26142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11456292}
+  NameText: {fileID: 11456292}
   countText: {fileID: 11466552}
   IsBusy: 0
   ThingPropetries:
@@ -26360,7 +26387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11495718}
+  NameText: {fileID: 11495718}
   countText: {fileID: 11446000}
   IsBusy: 0
   ThingPropetries:
@@ -26789,7 +26816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11405402}
+  NameText: {fileID: 11405402}
   countText: {fileID: 11401206}
   IsBusy: 0
   ThingPropetries:
@@ -27251,7 +27278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11489098}
+  NameText: {fileID: 11489098}
   countText: {fileID: 11408358}
   IsBusy: 0
   ThingPropetries:
@@ -27304,7 +27331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11439270}
+  NameText: {fileID: 11439270}
   countText: {fileID: 11456396}
   IsBusy: 0
   ThingPropetries:
@@ -28293,7 +28320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11490502}
+  NameText: {fileID: 11490502}
   countText: {fileID: 11470316}
   IsBusy: 0
   ThingPropetries:
@@ -28724,7 +28751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d37030a333f1b954284320cb1a5a51bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemGroups:
+  ItemGroups:
   - ItemButtonsParent: {fileID: 178140}
     itemButtons: []
   - ItemButtonsParent: {fileID: 105162}
@@ -28866,7 +28893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11412316}
+  NameText: {fileID: 11412316}
   countText: {fileID: 11486354}
   IsBusy: 0
   ThingPropetries:
@@ -28985,7 +29012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11451594}
+  NameText: {fileID: 11451594}
   countText: {fileID: 11405242}
   IsBusy: 0
   ThingPropetries:
@@ -29057,7 +29084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11471232}
+  NameText: {fileID: 11471232}
   countText: {fileID: 11481980}
   IsBusy: 0
   ThingPropetries:
@@ -29325,7 +29352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11403532}
+  NameText: {fileID: 11403532}
   countText: {fileID: 11417232}
   IsBusy: 0
   ThingPropetries:
@@ -29345,33 +29372,6 @@ MonoBehaviour:
     Mat: 0
     Mdf: 0
     Agi: 0
---- !u!114 &11481768
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 145746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d952cc150271e2c4ebefedb68458e51e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hero: {fileID: 0}
-  nameIndicator: {fileID: 11451804}
-  portraitImage: {fileID: 11451854}
-  hpIndicator: {fileID: 11495766}
-  hpLine: {fileID: 11450896}
-  mpLine: {fileID: 11446660}
-  crLine: {fileID: 11440022}
-  mpIndicator: {fileID: 11411546}
-  crIndicator: {fileID: 11466074}
-  aglImage: {fileID: 0}
-  heroButton: {fileID: 0}
-  atkIndicator: {fileID: 11450132}
-  defIndicator: {fileID: 11453662}
-  matIndicator: {fileID: 11402272}
-  mdfIndicator: {fileID: 11475242}
-  agiIndicator: {fileID: 11435726}
 --- !u!114 &11481980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -29711,7 +29711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11446192}
+  NameText: {fileID: 11446192}
   countText: {fileID: 11467316}
   IsBusy: 0
   ThingPropetries:
@@ -30885,7 +30885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11475300}
+  NameText: {fileID: 11475300}
   countText: {fileID: 11439814}
   IsBusy: 0
   ThingPropetries:
@@ -30949,7 +30949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11472046}
+  NameText: {fileID: 11472046}
   countText: {fileID: 11407844}
   IsBusy: 0
   ThingPropetries:
@@ -31027,7 +31027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11458606}
+  NameText: {fileID: 11458606}
   countText: {fileID: 11471314}
   IsBusy: 0
   ThingPropetries:
@@ -31258,7 +31258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11430354}
+  NameText: {fileID: 11430354}
   countText: {fileID: 11458888}
   IsBusy: 0
   ThingPropetries:
@@ -31597,7 +31597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11434796}
+  NameText: {fileID: 11434796}
   countText: {fileID: 11466412}
   IsBusy: 0
   ThingPropetries:
@@ -32420,7 +32420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11421096}
+  NameText: {fileID: 11421096}
   countText: {fileID: 11448704}
   IsBusy: 0
   ThingPropetries:
@@ -32498,7 +32498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11486912}
+  NameText: {fileID: 11486912}
   countText: {fileID: 11493010}
   IsBusy: 0
   ThingPropetries:
@@ -32849,7 +32849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11472810}
+  NameText: {fileID: 11472810}
   countText: {fileID: 11449602}
   IsBusy: 0
   ThingPropetries:
@@ -32974,7 +32974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11467286}
+  NameText: {fileID: 11467286}
   countText: {fileID: 11495024}
   IsBusy: 0
   ThingPropetries:
@@ -33325,7 +33325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b84766edd269894992b0c03182b0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 11407074}
+  NameText: {fileID: 11407074}
   countText: {fileID: 11428806}
   IsBusy: 0
   ThingPropetries:

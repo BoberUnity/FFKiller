@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ItemButton : MonoBehaviour
 {
-  [SerializeField] private Text nameText = null;
+  public Text NameText = null;
   [SerializeField] private Text countText = null;
   [HideInInspector] public bool IsBusy = false;
   private Inventar inventar = null;
@@ -32,7 +32,7 @@ public class ItemButton : MonoBehaviour
     ThingPropetries.Def = tPropetries.Def;
     ThingPropetries.Mat = tPropetries.Mat;
     ThingPropetries.Mdf = tPropetries.Mdf;
-    nameText.text = ThingPropetries.Name;
+    NameText.text = ThingPropetries.Name;
     countText.text = ThingPropetries.Count.ToString();
     thisImage = GetComponent<Image>();
     thisImage.sprite = ThingPropetries.Portrait;
@@ -80,7 +80,7 @@ public class ItemButton : MonoBehaviour
     if (ThingPropetries.Count == 0)
     {
       ThingPropetries = new ThingPropetries();
-      nameText.text = "";
+      NameText.text = "";
       countText.text = "";
       thisImage.sprite = null;
       IsBusy = false;
