@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class Party : MonoBehaviour
 {
+  [SerializeField] private bool isLevelMap = false; 
   public List<Transform> Vagons = new List<Transform>();
   public List<GameObject> HeroPrefabs = new List<GameObject>();
   [SerializeField] private int distance = 40; //diistance = 40 - 1,3 sec
@@ -48,6 +49,8 @@ public class Party : MonoBehaviour
         Vagons.Add(vagon.transform);
         Start();
         vagon.GetComponent<Hero>().ConnectToPartyGui();
+        if (isLevelMap)
+          vagon.GetComponentInChildren<SpriteRenderer>().enabled = false;
       }
     }    
   }

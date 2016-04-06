@@ -652,9 +652,10 @@ GameObject:
   - 61: {fileID: 6184944}
   - 61: {fileID: 6156600}
   - 95: {fileID: 9575018}
+  - 114: {fileID: 11494834}
   m_Layer: 0
   m_Name: Klaus
-  m_TagString: Untagged
+  m_TagString: SavePosition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2376,7 +2377,8 @@ MonoBehaviour:
       \u041A\u043B\u0430\u0443\u0441\u0430"
     ValueOfAction: 2
     TargetObject: {fileID: 171752}
-  - Description: "\u041E\u0442\u043A\u043B\u044E\u0447\u0430\u0435\u043C \u041A\u043B\u0430\u0443\u0441\u0430"
+  - Description: "\u0414\u0435\u0430\u043A\u0442\u0438\u0432\u0438\u0440\u0443\u0435\u043C
+      \u041A\u043B\u0430\u0443\u0441\u0430"
     ValueOfAction: 3
     TargetObject: {fileID: 161466}
   currentStep: 0
@@ -2827,6 +2829,21 @@ MonoBehaviour:
   ActionTime: 1
   TargetQuest: {fileID: 11435350}
   StepOnEndAction: 4
+--- !u!114 &11494834
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc453f204cb3c7a40840800e1d832e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  currentStep: 1
+  textAssetName: Klaus
+  changeTriggers: []
 --- !u!114 &11496928
 MonoBehaviour:
   m_ObjectHideFlags: 1
