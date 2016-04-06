@@ -169,7 +169,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 441128}
-  - 114: {fileID: 11455820}
+  - 114: {fileID: 11463824}
   m_Layer: 0
   m_Name: 15_EnablePerehod
   m_TagString: Untagged
@@ -226,7 +226,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &132606
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,7 +1697,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 30, y: 40}
 --- !u!61 &6121600
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -2514,19 +2514,6 @@ MonoBehaviour:
   actionTime: 6
   targetQuest: {fileID: 11435350}
   stepOnEndAction: 10
---- !u!114 &11455820
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 127850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee55c90acfa767a4891aff22a493b7ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetObject: {fileID: 130940}
-  newValue: 1
 --- !u!114 &11457454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2592,7 +2579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df79eaea827173541aa87a435f976046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 2
+  Type: 0
   currentStep: 1
   textAssetName: ToMap
   changeTriggers:
@@ -2614,6 +2601,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trigger: {fileID: 11405314}
   triggerType: 0
+--- !u!114 &11463824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3579ad1aab8b0a488e079f43fbaba65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: {fileID: 11460288}
+  triggerType: 2
 --- !u!114 &11466100
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2653,6 +2653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: Map
   returnPosition: {fileID: 476482}
+  interval: 0
 --- !u!114 &11467934
 MonoBehaviour:
   m_ObjectHideFlags: 1
