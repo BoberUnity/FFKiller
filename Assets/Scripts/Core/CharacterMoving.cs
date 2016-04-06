@@ -105,7 +105,8 @@ public class CharacterMoving : MonoBehaviour
             thisAnimator.SetFloat("SpeedY", SpeedY);
 
             //Если проход есть, проигрываем анимацию ходьбы и передвигаем ГГ, иначе - не двигаемся.
-            if (Physics2D.OverlapPoint((Vector2)transform.position + selfCollider.offset + new Vector2(SpeedX, SpeedY) * (selfCollider.radius + 2f)) == null)
+            Collider2D Obstacle = Physics2D.OverlapPoint((Vector2)transform.position + selfCollider.offset + new Vector2(SpeedX, SpeedY) * (selfCollider.radius + 2f));
+            if (Obstacle == null || Obstacle.isTrigger)
             {
                 transform.position += deltaMove;
 
