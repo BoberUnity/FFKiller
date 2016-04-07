@@ -8,6 +8,15 @@ public class Status : HeroUI
   [SerializeField] private Text matIndicator = null;
   [SerializeField] private Text mdfIndicator = null;
   [SerializeField] private Text agiIndicator = null;
+  [SerializeField] private GameObject armoIndicatorsParent = null;
+  private ArmoButton[] armoButtons = null;
+  private BaseOfInventar baseOfInventar = null;
+
+  private void Start()
+  {
+    armoButtons = armoIndicatorsParent.GetComponentsInChildren<ArmoButton>();
+    baseOfInventar = FindObjectOfType<BaseOfInventar>();
+  }
 
   public override void UpdateUI ()
   {
@@ -17,5 +26,17 @@ public class Status : HeroUI
     matIndicator.text = hero.HeroPropetries.Mat.ToString();
     mdfIndicator.text = hero.HeroPropetries.Mdf.ToString();
     agiIndicator.text = hero.HeroPropetries.Agi.ToString();
+    int i = 0;
+    foreach (var armo in hero.HeroPropetries.Armors)
+    {
+      foreach (var item in baseOfInventar.Items)
+      {
+        if (armo == item.Name)
+        {
+          armoButtons[i].ThingPropetries = item;
+          i++;
+        }
+      }
+    }
   }  
 }

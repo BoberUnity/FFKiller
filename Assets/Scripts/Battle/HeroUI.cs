@@ -12,8 +12,6 @@ public class HeroUI : MonoBehaviour
   [SerializeField] private Image crLine = null;
   [SerializeField] private Text mpIndicator = null;
   [SerializeField] private Text crIndicator = null;
-  [SerializeField] private Image aglImage = null;
-  [SerializeField] private HeroButton heroButton = null;
 
   public Hero Hero
   {

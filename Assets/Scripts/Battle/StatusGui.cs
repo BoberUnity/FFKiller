@@ -2,7 +2,6 @@
 
 public class StatusGui : GuiMenuBase
 {
-  [SerializeField] private Inventar inventar = null;
   [SerializeField] private Status status = null;
   private int currentHero = 0;
 

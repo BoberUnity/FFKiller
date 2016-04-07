@@ -6,8 +6,8 @@ public class ItemButton : MonoBehaviour
   public Text NameText = null;
   [SerializeField] private Text countText = null;
   [HideInInspector] public bool IsBusy = false;
-  private Inventar inventar = null;
   [HideInInspector] public ThingPropetries ThingPropetries = new ThingPropetries();
+  private Inventar inventar = null;  
   private Image thisImage = null;
 
   private void Start()
@@ -52,10 +52,8 @@ public class ItemButton : MonoBehaviour
     {
       if (ThingPropetries.Type == ThingType.Thing)
         AddPropetriesOnHero();
-      if (ThingPropetries.Type == ThingType.Armor)
-      {
-        AddPropetriesOnHero();
-      }
+      if (ThingPropetries.Type == ThingType.Armor)      
+        AddPropetriesOnHero();      
     }        
   }
 
@@ -78,16 +76,19 @@ public class ItemButton : MonoBehaviour
     inventar.HeroesPanel.IsBlock = true;
     UpdateCount(-1);
     if (ThingPropetries.Count == 0)
-    {
-      ThingPropetries = new ThingPropetries();
-      NameText.text = "";
-      countText.text = "";
-      thisImage.sprite = null;
-      IsBusy = false;
-      thisImage.color = new Color(1, 1, 1, 0.04f);//!
-    }
+      Clear();
     inventar.IsReadyAddPower = true;
     inventar.ShowHeroes();
+  }
+
+  public void Clear()
+  {
+    ThingPropetries = new ThingPropetries();
+    NameText.text = "";
+    countText.text = "";
+    thisImage.sprite = null;
+    IsBusy = false;
+    thisImage.color = new Color(1, 1, 1, 0.04f);//!
   }
   
   public void ShowDescription()

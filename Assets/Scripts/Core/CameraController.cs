@@ -20,7 +20,8 @@ public class CameraController : MonoBehaviour
     bool ConstX, ConstY;    //Камера вмещает карту целиком и не двигается по Х и/или У.
 
     private void Start ()
-    {    
+    {
+        Application.targetFrameRate = 30;
         //DV{
         //transform.parent = Target;
         Camera = GetComponent<Camera>();
