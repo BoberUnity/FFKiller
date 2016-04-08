@@ -51,12 +51,12 @@ public class HeroesPanel : MonoBehaviour
   }
 
   public void SelectMenu(int activeMenu)
-  {
+  {    
     int i = 0;
     foreach (var menu in menus)
     {
-      if (i == activeMenu)
-        menu.Show();
+      if (i == activeMenu)      
+        menu.Show();      
       i++;
     }
     isChildMenuOpen = true;
@@ -77,10 +77,5 @@ public class HeroesPanel : MonoBehaviour
   {
     thisAnimator.SetBool("IsVisible", false);
     characterMoving.KeyboardControl = !isChildMenuOpen;
-  }
-
-  public void OnPressHero(int num)
-  {
-
-  }
+  }  
 }

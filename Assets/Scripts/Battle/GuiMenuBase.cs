@@ -19,12 +19,12 @@ public class GuiMenuBase : MonoBehaviour
   public virtual void Hide()
   {
     thisAnimator.SetBool("IsVisible", false);
-    heroesPanel.Show();    
+    heroesPanel.Show();       
   }
 
   private void Update ()
   {
-    if (Input.GetKeyDown(KeyCode.Backspace) && !heroesPanel.IsBlock)
+    if (Input.GetKeyDown(KeyCode.Backspace) && !heroesPanel.IsBlock && thisAnimator.GetBool("IsVisible"))
     {      
       Hide();
     }
