@@ -111,11 +111,13 @@ MonoBehaviour:
     Mmp: 18
     Cr: 0
     Mcr: 0
-    Atk: 0
+    Atk: 5
     Def: 0
-    Mat: 0
+    Mat: 2
     Mdf: 0
     Agi: 2
+    Armors: []
+  HeroUi: {fileID: 0}
 --- !u!114 &11465094
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -128,9 +130,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 0
+  currentStep: 1
   textAssetName: GrandDaughter
   changeTriggers: []
-  currentTrigger: 1
   Portrait: {fileID: 21300008, guid: 1514b627d0276ce4194b4a5d3e5c6d60, type: 3}
   bodyAnimator: {fileID: 9545834}
   CharSpriteRenderer: {fileID: 21272752}

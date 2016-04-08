@@ -29,7 +29,6 @@ GameObject:
   - 61: {fileID: 6137410}
   - 95: {fileID: 9580552}
   - 114: {fileID: 11442256}
-  - 114: {fileID: 11435498}
   m_Layer: 0
   m_Name: GrandDaughter
   m_TagString: Untagged
@@ -1236,32 +1235,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6b7b2c7d6cddeb44eab7ea949ff01cc7, type: 3}
   - {fileID: 21300000, guid: 5f61828f28ce86d41a577a21f39c017d, type: 3}
   - {fileID: 21300000, guid: f7dd3da04eb342a4293c3d73ce36797d, type: 3}
---- !u!114 &11435498
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 109022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 873c0791559e2c84590fb78f865a3eff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heroPropetries:
-    Name: Granddauther
-    Portrait: {fileID: 21300000, guid: 1514b627d0276ce4194b4a5d3e5c6d60, type: 3}
-    Hp: 20
-    Mhp: 50
-    Mp: 2
-    Mmp: 10
-    Cr: 0
-    Mcr: 0
-    Atk: 0
-    Def: 0
-    Mat: 0
-    Mdf: 0
-    Agi: 0
-    Armors: []
 --- !u!114 &11442256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1275,7 +1248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 1
   currentStep: 1
-  textAssetName: GrandDaughter
+  textAssetName: GrandDaughterConnect
   changeTriggers:
   - MyTrigger: 1
     Quest: {fileID: 0}

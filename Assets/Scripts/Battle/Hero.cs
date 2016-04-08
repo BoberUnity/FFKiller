@@ -17,7 +17,7 @@ using System.Collections.Generic;
   public float Mat = 0;
   public float Mdf = 0;
   public float Agi = 0;
-  /*[HideInInspector]*/ public List<string> Armors = new List<string>();
+  [HideInInspector] public List<string> Armors = new List<string>();
 }
 
 public enum ThingType

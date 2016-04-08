@@ -27,6 +27,11 @@ public class Status : HeroUI
     mdfIndicator.text = hero.HeroPropetries.Mdf.ToString();
     agiIndicator.text = hero.HeroPropetries.Agi.ToString();
     int i = 0;
+    foreach (var armobutton in armoButtons)
+    {
+      armobutton.ThingPropetries = null;
+    }
+
     foreach (var armo in hero.HeroPropetries.Armors)
     {
       foreach (var item in baseOfInventar.Items)

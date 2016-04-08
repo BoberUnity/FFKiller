@@ -2,7 +2,7 @@
 
 public class ConnectToParty : MonoBehaviour
 {
-  [SerializeField] private Hero hero = null;
+  [SerializeField] private TriggerBase hero = null;
 
   public void OnEventAction()
   {
