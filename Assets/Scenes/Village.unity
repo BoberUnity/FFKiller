@@ -128,6 +128,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11454042, guid: f64748629cc6d034ba35c9d86b3aa4a8, type: 2}
+      propertyPath: goldIndicator
+      value: 
+      objectReference: {fileID: 1049590725}
+    - target: {fileID: 11454042, guid: f64748629cc6d034ba35c9d86b3aa4a8, type: 2}
+      propertyPath: timeIndicator
+      value: 
+      objectReference: {fileID: 359657526}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f64748629cc6d034ba35c9d86b3aa4a8, type: 2}
   m_IsPrefabParent: 0
@@ -256,6 +264,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 192294141}
+--- !u!114 &359657526 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11458152, guid: fcf7b297f3d893d4c86aa82e54392f2f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1394249345}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!114 &373179348 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11442256, guid: 4825f08e52ea9c9418ce309d173590a3,
@@ -487,6 +501,12 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1049590725 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11440238, guid: fcf7b297f3d893d4c86aa82e54392f2f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1394249345}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!114 &1168255927 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11435350, guid: 81649ee94d610c84da0b1a2a1b7d9a5d,
@@ -917,18 +937,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11426426, guid: fcf7b297f3d893d4c86aa82e54392f2f, type: 2}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1386286495}
     - target: {fileID: 11493890, guid: fcf7b297f3d893d4c86aa82e54392f2f, type: 2}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1386286495}
-    - target: {fileID: 11491162, guid: fcf7b297f3d893d4c86aa82e54392f2f, type: 2}
-      propertyPath: IsBlock
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 11426426, guid: fcf7b297f3d893d4c86aa82e54392f2f, type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1386286495}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fcf7b297f3d893d4c86aa82e54392f2f, type: 2}
   m_IsPrefabParent: 0

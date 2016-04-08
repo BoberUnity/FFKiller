@@ -110,8 +110,12 @@ public class SaveController : MonoBehaviour
     foreach (var vagon in party.Vagons)
     {
       AddAtribute("vagon", vagon.gameObject.name);
-      AddXmlElements(doc, rootNode, "Vagon"/* + vagon.gameObject.name*/);
+      AddXmlElements(doc, rootNode, "Vagon");
     }
+    AddAtribute("gold", party.Gold.ToString());
+    AddXmlElements(doc, rootNode, "Gold");
+    AddAtribute("timeGame", party.TimeGame.ToString());
+    AddXmlElements(doc, rootNode, "TimeGame");
     // 
     doc.Save(filePath);
     //Save Inventar    
@@ -226,33 +230,15 @@ public class SaveController : MonoBehaviour
       string mapName = elemList[i].Attributes["MapName"].Value;
       cameraController.Map = GameObject.Find(mapName);
       cameraController.TuneMap(cameraController.Map);
-    }       
-    ///////////////////////Save current Scene
-    doc = new XmlDocument();
-    XmlNode rootNode = null;
-    filePath = Application.dataPath + "/StreamingAssets/Saves/LastScene.xml";
-    if (!File.Exists(filePath))
-    {
-      rootNode = doc.CreateElement("LastSceneData");
-      doc.AppendChild(rootNode);
-    }
-    else
-    {
-      doc.Load(filePath);
-      rootNode = doc.DocumentElement;
-    }
-    rootNode.RemoveAll();
-    AddAtribute("lastScene", sceneName);
-    AddXmlElements(doc, rootNode, "LastScene");
-    doc.Save(filePath);
+    }      
   }
 
   private void LoadHeroesParams()
   {
     string filePath = Application.dataPath + "/StreamingAssets/Saves/Heroes.xml";
+    XmlDocument doc = new XmlDocument();
     if (File.Exists(filePath))
-    {
-      XmlDocument doc = new XmlDocument();
+    {      
       XmlNodeList elemList = null;
       doc.Load(filePath);
       Hero[] heroes = FindObjectsOfType<Hero>();
@@ -278,8 +264,36 @@ public class SaveController : MonoBehaviour
       {
         party.Connect(elemList[i].Attributes["vagon"].Value);         
       }
+      elemList = doc.GetElementsByTagName("Gold");
+      for (int i = 0; i < elemList.Count; i++)
+      {
+        party.Gold = Int32.Parse(elemList[i].Attributes["gold"].Value);
+      }
+      elemList = doc.GetElementsByTagName("TimeGame");
+      for (int i = 0; i < elemList.Count; i++)
+      {
+        party.TimeGame = Convert.ToSingle(elemList[i].Attributes["timeGame"].Value, new CultureInfo("en-US"));
+      }
       //
     }
+    ///////////////////////Save current Scene
+    doc = new XmlDocument();
+    XmlNode rootNode = null;
+    filePath = Application.dataPath + "/StreamingAssets/Saves/LastScene.xml";
+    if (!File.Exists(filePath))
+    {
+      rootNode = doc.CreateElement("LastSceneData");
+      doc.AppendChild(rootNode);
+    }
+    else
+    {
+      doc.Load(filePath);
+      rootNode = doc.DocumentElement;
+    }
+    rootNode.RemoveAll();
+    AddAtribute("lastScene", sceneName);
+    AddXmlElements(doc, rootNode, "LastScene");
+    doc.Save(filePath);
     //Load Inventar
     LoadInventar();
   }

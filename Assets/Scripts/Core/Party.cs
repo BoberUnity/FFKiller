@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
 
@@ -8,7 +9,31 @@ public class Party : MonoBehaviour
   public List<Transform> Vagons = new List<Transform>();
   public List<GameObject> HeroPrefabs = new List<GameObject>();
   [SerializeField] private int distance = 40; //diistance = 40 - 1,3 sec
+  [SerializeField] private Text goldIndicator;
+  [SerializeField] private Text timeIndicator;
+  private int gold = 0;
   private Vector3[] trace = new Vector3[0];
+  private float timeGame = 0;
+
+  public int Gold
+  {
+    get { return gold; }
+    set
+    {
+      gold = value;
+      goldIndicator.text = gold.ToString();
+    }
+  }
+
+  public float TimeGame
+  {
+    get { return timeGame; }
+    set
+    {
+      timeGame = value;
+      timeIndicator.text = timeGame.ToString("f0");
+    }
+  }
 
   private void Start ()
   {
@@ -36,6 +61,7 @@ public class Party : MonoBehaviour
         n += 1;
       }
     }
+    TimeGame += Time.fixedDeltaTime;
   }
 
   public void Connect(string newNpcName)
