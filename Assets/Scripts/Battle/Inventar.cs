@@ -17,7 +17,7 @@ public class Inventar : MonoBehaviour
   [SerializeField] private Animator heroesAnimaator = null;
   public HeroesPanel HeroesPanel = null;
   [HideInInspector] public bool IsReadyAddPower = false;
-  /*[HideInInspector]*/ public HeroPropetries HeroPropetries = null;
+  public HeroPropetries HeroPropetries = null;
   private int groupNum = 0;
 
   private void Awake()
@@ -56,6 +56,7 @@ public class Inventar : MonoBehaviour
       if (itemButton.ThingPropetries.Name == thingPropetries.Name)
       {
         itemButton.UpdateCount(thingPropetries.Count);
+        itemButton.GetComponent<Button>().interactable = true;
         addToExistButton = true;
       }
     }

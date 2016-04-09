@@ -6,7 +6,7 @@ public class ItemButton : MonoBehaviour
   public Text NameText = null;
   [SerializeField] private Text countText = null;
   [HideInInspector] public bool IsBusy = false;
-  [HideInInspector] public ThingPropetries ThingPropetries = new ThingPropetries();
+  /*[HideInInspector] */public ThingPropetries ThingPropetries = new ThingPropetries();
   private Inventar inventar = null;  
   private Image thisImage = null;
 
@@ -82,13 +82,20 @@ public class ItemButton : MonoBehaviour
   }
 
   public void Clear()
-  {
-    ThingPropetries = new ThingPropetries();
-    NameText.text = "";
-    countText.text = "";
-    thisImage.sprite = null;
-    IsBusy = false;
-    thisImage.color = new Color(1, 1, 1, 0.04f);//!
+  {    
+    if (ThingPropetries.Type == ThingType.Armor)
+    {
+      GetComponent<Button>().interactable = false;
+    }
+    else
+    {
+      ThingPropetries = new ThingPropetries();
+      NameText.text = "";
+      countText.text = "";
+      thisImage.sprite = null;
+      IsBusy = false;
+      thisImage.color = new Color(1, 1, 1, 0.04f);//Цвет неактивной кнопки в меню
+    }    
   }
   
   public void ShowDescription()

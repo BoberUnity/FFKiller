@@ -14,14 +14,16 @@ public class Party : MonoBehaviour
   private int gold = 0;
   private Vector3[] trace = new Vector3[0];
   private float timeGame = 0;
-
   public int Gold
   {
     get { return gold; }
     set
     {
       gold = value;
-      goldIndicator.text = gold.ToString();
+      if (goldIndicator != null)
+        goldIndicator.text = gold.ToString();
+      else
+        Debug.LogWarning("На объекте " + gameObject.name + " на компоненте Party надо проставить GPIndicator");
     }
   }
 
@@ -31,7 +33,15 @@ public class Party : MonoBehaviour
     set
     {
       timeGame = value;
-      timeIndicator.text = timeGame.ToString("f0");
+      int hours = (int)timeGame / 3600;
+      int minutes = (int)((timeGame - hours * 3600) / 60);
+      string minutesText = minutes.ToString();
+      if (minutes < 10)
+        minutesText = "0" + minutesText;
+      if (timeIndicator != null)
+        timeIndicator.text = hours.ToString() + ":" + minutesText;
+      else
+        Debug.LogWarning("На объекте " + gameObject.name + " на компоненте Party надо проставить timeIndicator");
     }
   }
 
@@ -61,7 +71,7 @@ public class Party : MonoBehaviour
         n += 1;
       }
     }
-    TimeGame += Time.fixedDeltaTime;
+    TimeGame += Time.fixedDeltaTime;    
   }
 
   public void Connect(string newNpcName)
