@@ -120,6 +120,22 @@ MonoBehaviour:
     Mat: 0
     Mdf: 0
     Agi: 0
+  - Name: GoldenRing
+    Portrait: {fileID: 21300000, guid: 21bf694d3760f364282de08e41ec5aa1, type: 3}
+    Type: 1
+    Description: Add 20 Mp
+    Count: 0
+    Hp: 0
+    Mhp: 0
+    Mp: 20
+    Mmp: 0
+    Cr: 0
+    Mcr: 0
+    Atk: 0
+    Def: 0
+    Mat: 0
+    Mdf: 0
+    Agi: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

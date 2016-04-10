@@ -3,11 +3,11 @@ using UnityEngine.UI;
 
 public class ItemButton : MonoBehaviour
 {
-  [SerializeField] private Text nameText = null;
+  public Text NameText = null;
   [SerializeField] private Text countText = null;
   [HideInInspector] public bool IsBusy = false;
-  private Inventar inventar = null;
-  [HideInInspector] public ThingPropetries ThingPropetries = new ThingPropetries();
+  /*[HideInInspector] */public ThingPropetries ThingPropetries = new ThingPropetries();
+  private Inventar inventar = null;  
   private Image thisImage = null;
 
   private void Start()
@@ -32,7 +32,7 @@ public class ItemButton : MonoBehaviour
     ThingPropetries.Def = tPropetries.Def;
     ThingPropetries.Mat = tPropetries.Mat;
     ThingPropetries.Mdf = tPropetries.Mdf;
-    nameText.text = ThingPropetries.Name;
+    NameText.text = ThingPropetries.Name;
     countText.text = ThingPropetries.Count.ToString();
     thisImage = GetComponent<Image>();
     thisImage.sprite = ThingPropetries.Portrait;
@@ -52,10 +52,8 @@ public class ItemButton : MonoBehaviour
     {
       if (ThingPropetries.Type == ThingType.Thing)
         AddPropetriesOnHero();
-      if (ThingPropetries.Type == ThingType.Armor)
-      {
-        AddPropetriesOnHero();
-      }
+      if (ThingPropetries.Type == ThingType.Armor)      
+        AddPropetriesOnHero();      
     }        
   }
 
@@ -78,16 +76,26 @@ public class ItemButton : MonoBehaviour
     inventar.HeroesPanel.IsBlock = true;
     UpdateCount(-1);
     if (ThingPropetries.Count == 0)
+      Clear();
+    inventar.IsReadyAddPower = true;
+    inventar.ShowHeroes();
+  }
+
+  public void Clear()
+  {    
+    if (ThingPropetries.Type == ThingType.Armor)
+    {
+      GetComponent<Button>().interactable = false;
+    }
+    else
     {
       ThingPropetries = new ThingPropetries();
-      nameText.text = "";
+      NameText.text = "";
       countText.text = "";
       thisImage.sprite = null;
       IsBusy = false;
-      thisImage.color = new Color(1, 1, 1, 0.04f);//!
-    }
-    inventar.IsReadyAddPower = true;
-    inventar.ShowHeroes();
+      thisImage.color = new Color(1, 1, 1, 0.04f);//Цвет неактивной кнопки в меню
+    }    
   }
   
   public void ShowDescription()

@@ -90,6 +90,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 409058}
   - 114: {fileID: 11432488}
+  - 114: {fileID: 11439504}
   m_Layer: 0
   m_Name: 1_DoNotRepeatDialog
   m_TagString: Untagged
@@ -806,7 +807,7 @@ GameObject:
   - 114: {fileID: 11405314}
   - 61: {fileID: 6121600}
   m_Layer: 0
-  m_Name: PeasantWife
+  m_Name: PeasantAxe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -909,7 +910,7 @@ GameObject:
   - 114: {fileID: 11484248}
   - 61: {fileID: 6155302}
   m_Layer: 0
-  m_Name: PeasantWife
+  m_Name: PeasantWifeKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2395,6 +2396,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 111220}
   newValue: 0
+--- !u!114 &11439504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79aaf5461f6893642b95af7fdf9622c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addValue: 120
 --- !u!114 &11442714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2601,7 +2614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3579ad1aab8b0a488e079f43fbaba65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 11405314}
+  trigger: {fileID: 11484248}
   triggerType: 0
 --- !u!114 &11463824
 MonoBehaviour:

@@ -51,7 +51,7 @@ public enum ThingType
 public class Hero : MonoBehaviour
 {
   [SerializeField] private HeroPropetries heroPropetries = null;
-  private HeroUI heroUi = null;
+  [HideInInspector] public HeroUI HeroUi = null;
 
   public HeroPropetries HeroPropetries
   {
@@ -59,8 +59,8 @@ public class Hero : MonoBehaviour
     set
     {
       heroPropetries = value;
-      if (heroUi != null)
-        heroUi.UpdateUI();      
+      if (HeroUi != null)
+        HeroUi.UpdateUI();      
     }
   }
 
@@ -68,7 +68,7 @@ public class Hero : MonoBehaviour
   {
     HeroesPanel heroesPanel = FindObjectOfType<HeroesPanel>();
     if (heroesPanel != null)
-      heroUi = FindObjectOfType<HeroesPanel>().AttachHero(this);
+      HeroUi = FindObjectOfType<HeroesPanel>().AttachHero(this);
   }
 
   public void AddPower(HeroPropetries hps)
@@ -87,7 +87,7 @@ public class Hero : MonoBehaviour
     if (hps.Armors.Count > 0)
       heroPropetries.Armors.Add(hps.Armors[0]);    
     
-    if (heroUi != null)
-      heroUi.UpdateUI();
+    if (HeroUi != null)
+      HeroUi.UpdateUI();
   }
 }

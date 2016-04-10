@@ -12,8 +12,6 @@ public class HeroUI : MonoBehaviour
   [SerializeField] private Image crLine = null;
   [SerializeField] private Text mpIndicator = null;
   [SerializeField] private Text crIndicator = null;
-  [SerializeField] private Image aglImage = null;
-  [SerializeField] private HeroButton heroButton = null;
 
   public Hero Hero
   {
@@ -35,6 +33,6 @@ public class HeroUI : MonoBehaviour
     mpIndicator.text = hero.HeroPropetries.Mp.ToString("f0") + "/" + hero.HeroPropetries.Mmp.ToString("f0");
     mpLine.fillAmount = hero.HeroPropetries.Mp / hero.HeroPropetries.Mmp;
     crIndicator.text = hero.HeroPropetries.Cr.ToString("f0") + "/" + hero.HeroPropetries.Mcr.ToString("f0");
-    crLine.fillAmount = hero.HeroPropetries.Cr / hero.HeroPropetries.Mcr;
+    crLine.fillAmount = 1 - hero.HeroPropetries.Cr / hero.HeroPropetries.Mcr;
   }
 }
