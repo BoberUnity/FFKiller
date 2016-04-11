@@ -16,7 +16,7 @@ GameObject:
   - 114: {fileID: 11454042}
   - 114: {fileID: 11486684}
   - 81: {fileID: 8150672}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gehend
   m_TagString: SavePosition
   m_Icon: {fileID: 0}
@@ -106,6 +106,8 @@ MonoBehaviour:
   HeroPrefabs:
   - {fileID: 154926, guid: 8e3cfd7ceae3939408eae916a2580a55, type: 2}
   distance: 40
+  goldIndicator: {fileID: 0}
+  timeIndicator: {fileID: 0}
 --- !u!114 &11486684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -132,6 +134,7 @@ MonoBehaviour:
     Mdf: 0
     Agi: 2
     Armors: []
+  HeroUi: {fileID: 0}
 --- !u!114 &11499816
 MonoBehaviour:
   m_ObjectHideFlags: 1
