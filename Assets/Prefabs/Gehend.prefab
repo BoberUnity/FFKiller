@@ -16,6 +16,7 @@ GameObject:
   - 114: {fileID: 11454042}
   - 114: {fileID: 11486684}
   - 81: {fileID: 8150672}
+  - 114: {fileID: 11411318}
   m_Layer: 8
   m_Name: Gehend
   m_TagString: SavePosition
@@ -90,6 +91,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11411318
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f26d8e2e8cf4a942b0fd0558fc24b2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11454042
 MonoBehaviour:
   m_ObjectHideFlags: 1
