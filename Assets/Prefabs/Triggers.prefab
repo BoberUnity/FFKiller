@@ -109,8 +109,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 437742}
-  - 61: {fileID: 6147060}
-  - 61: {fileID: 6118016}
+  - 58: {fileID: 5879036}
+  - 58: {fileID: 5813454}
   - 95: {fileID: 9538910}
   - 212: {fileID: 21225336}
   - 114: {fileID: 11490630}
@@ -674,6 +674,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 471968}
   m_RootOrder: 8
+--- !u!58 &5813454
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133852}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -11}
+  serializedVersion: 2
+  m_Radius: 9
+--- !u!58 &5879036
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133852}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -11}
+  serializedVersion: 2
+  m_Radius: 23
 --- !u!61 &6106880
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -702,20 +730,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
---- !u!61 &6118016
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 133852}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.35}
-  serializedVersion: 2
-  m_Size: {x: 0.85, y: 0.7}
 --- !u!61 &6122340
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -828,20 +842,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -7}
   serializedVersion: 2
   m_Size: {x: 20, y: 15}
---- !u!61 &6147060
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 133852}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.24}
-  serializedVersion: 2
-  m_Size: {x: 0.94, y: 1.1}
 --- !u!61 &6147586
 BoxCollider2D:
   m_ObjectHideFlags: 1

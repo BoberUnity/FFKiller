@@ -142,8 +142,8 @@ Prefab:
 --- !u!1 &82788718 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 160148, guid: 4825f08e52ea9c9418ce309d173590a3, type: 2}
-  m_PrefabInternal: {fileID: 124399326}
---- !u!1001 &124399326
+  m_PrefabInternal: {fileID: 151073472}
+--- !u!1001 &151073472
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -182,14 +182,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 11442256, guid: 4825f08e52ea9c9418ce309d173590a3, type: 2}
-      propertyPath: changeTriggers.Array.data[0].Quest
-      value: 
-      objectReference: {fileID: 1198888197}
     - target: {fileID: 11464706, guid: 4825f08e52ea9c9418ce309d173590a3, type: 2}
       propertyPath: changeTriggers.Array.data[0].Quest
       value: 
       objectReference: {fileID: 1168255927}
+    - target: {fileID: 11442256, guid: 4825f08e52ea9c9418ce309d173590a3, type: 2}
+      propertyPath: changeTriggers.Array.data[0].Quest
+      value: 
+      objectReference: {fileID: 1198888197}
     - target: {fileID: 11443864, guid: 4825f08e52ea9c9418ce309d173590a3, type: 2}
       propertyPath: changeTriggers.Array.data[0].Quest
       value: 
@@ -268,7 +268,7 @@ CanvasRenderer:
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11442256, guid: 4825f08e52ea9c9418ce309d173590a3,
     type: 2}
-  m_PrefabInternal: {fileID: 124399326}
+  m_PrefabInternal: {fileID: 151073472}
   m_Script: {fileID: 11500000, guid: 367292982c02e274caebd4b3f1b91b71, type: 3}
 --- !u!4 &432879257 stripped
 Transform:
@@ -332,7 +332,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11443864, guid: 4825f08e52ea9c9418ce309d173590a3,
     type: 2}
-  m_PrefabInternal: {fileID: 124399326}
+  m_PrefabInternal: {fileID: 151073472}
   m_Script: {fileID: 11500000, guid: df79eaea827173541aa87a435f976046, type: 3}
 --- !u!1 &824087332
 GameObject:

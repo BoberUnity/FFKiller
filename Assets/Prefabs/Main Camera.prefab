@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
-  EffectTime: 1
+  EffectTime: 1.2
   Map: {fileID: 0}
   CameraZoom: 2
   traction: 0
@@ -271,6 +271,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: -1448531991
   m_SortingOrder: 0
   m_TargetDisplay: 0
