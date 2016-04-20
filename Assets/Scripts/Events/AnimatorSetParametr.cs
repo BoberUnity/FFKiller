@@ -43,7 +43,7 @@ public class AnimatorSetParametr : MonoBehaviour
         Invoke("EndAction", ActionTime);
     }
     else
-      Debug.LogWarning("Дмитрий! Объект " + gameObject.name + " targetAnimator не назначен!");    
+      Debug.LogWarning("Объект " + gameObject.name + " targetAnimator не назначен!");    
   }
 
   private void EndAction()

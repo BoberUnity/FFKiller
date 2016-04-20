@@ -271,6 +271,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: -1448531991
   m_SortingOrder: 0
   m_TargetDisplay: 0

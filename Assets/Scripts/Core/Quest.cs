@@ -35,10 +35,10 @@ public class Quest : MonoBehaviour
 
   private void DoAction()
   {
-    Debug.Log("Выполняется " + steps[actioningStep].TargetObject.name);
+    Debug.Log("Выполняется " + steps[actioningStep].TargetObject.name + " | Step = " + actioningStep);
     if (steps[actioningStep].TargetObject != null)
       steps[actioningStep].TargetObject.BroadcastMessage("OnEventAction");
     else
-      Debug.LogWarning("Дмитрий! На объекте " + gameObject.name + " Step " + actioningStep + " TargetObject не назначен!");   
+      Debug.LogWarning("На объекте " + gameObject.name + " Step " + actioningStep + " TargetObject не назначен!");   
   }
 }
