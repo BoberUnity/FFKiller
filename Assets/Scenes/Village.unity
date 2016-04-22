@@ -3312,6 +3312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetQuest: {fileID: 1168255927}
   stepOnEndAction: 9
+  TimeTillEnd: 0
   MovePropetrieses:
   - Direction: 3
     Time: 3
@@ -4998,9 +4999,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetQuest: {fileID: 1614922126}
   stepOnEndAction: 102
+  TimeTillEnd: 2
   MovePropetrieses:
   - Direction: 4
-    Time: 1
+    Time: 2
 --- !u!1 &1383364975
 GameObject:
   m_ObjectHideFlags: 0
@@ -5031,6 +5033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetQuest: {fileID: 19853715}
   stepOnEndAction: 9
+  TimeTillEnd: 0
   MovePropetrieses:
   - Direction: 3
     Time: 3
@@ -6178,7 +6181,7 @@ MonoBehaviour:
   steps:
   - Description: "\u0421\u043C\u0435\u043D\u0430 "
     ValueOfAction: 1
-    TargetObject: {fileID: 1714388144}
+    TargetObject: {fileID: 1249308595}
   - Description: "\u0421\u043C\u0435\u043D\u0430 "
     ValueOfAction: 100
     TargetObject: {fileID: 458067655}
@@ -6754,8 +6757,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1714388145}
-  - 114: {fileID: 1714388146}
   - 61: {fileID: 1714388147}
+  - 114: {fileID: 1714388146}
   m_Layer: 0
   m_Name: Activator
   m_TagString: Untagged

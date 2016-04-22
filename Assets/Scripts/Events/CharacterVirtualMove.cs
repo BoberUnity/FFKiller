@@ -19,6 +19,9 @@ public class CharacterVirtualMove : MonoBehaviour
 {
   [SerializeField] private Quest targetQuest = null;
   [SerializeField] private int stepOnEndAction = 0;
+    // DM
+  [SerializeField] private int TimeTillEnd = 0;
+    // DM
   [SerializeField] private MovePropetries[] MovePropetrieses = null;  
   private CharacterMoving characterMoving = null;
   private int currentStep = 0;
@@ -30,7 +33,13 @@ public class CharacterVirtualMove : MonoBehaviour
 
   public void OnEventAction()
   {
-    SetDirection();
+    
+    // DM
+      if(TimeTillEnd > 0)
+          Invoke("SetDirection", TimeTillEnd);
+    // DM
+      else
+          SetDirection();
   }
 
   private void SetDirection()
