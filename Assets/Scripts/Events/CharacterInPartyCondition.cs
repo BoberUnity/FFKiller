@@ -2,7 +2,7 @@
 using System.Collections;
 
 // DM
-public class Test : MonoBehaviour
+public class CharacterInPartyCondition : MonoBehaviour
 {
     [SerializeField]
     private Party party = null; // необходимость под вопросом
