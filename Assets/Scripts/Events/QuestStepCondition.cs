@@ -19,6 +19,11 @@ public class QuestStepCondition : MonoBehaviour
 
     public void OnEventAction()
     {
+        Invoke("CheckCondition", 0);
+    }
+
+    private void CheckCondition()
+    {
         foreach (var item in ListOfConditions)
         {
             if (item.quest == null)
@@ -27,7 +32,10 @@ public class QuestStepCondition : MonoBehaviour
                 return;
             }
             if (item.ifCurrStep == currentStep)
+            {
                 item.quest.CurrentStep = item.newQuestStep;
+                Debug.Log("quest.name = " + item.quest.name + " " + currentStep.ToString() + " New val = " + item.newQuestStep);
+            }
         }
     }
 }

@@ -32,8 +32,7 @@ public class CharacterVirtualMove : MonoBehaviour
   }
 
   public void OnEventAction()
-  {
-    
+  {    
     // DM
       if(TimeTillEnd > 0)
           Invoke("SetDirection", TimeTillEnd);
