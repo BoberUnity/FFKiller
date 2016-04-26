@@ -26,7 +26,7 @@ public class CameraMovingEffect : MonoBehaviour
         Invoke("EndAction", actionTime);
     }
     else
-      Debug.LogWarning("Дмитрий! Объект " + gameObject.name + " targetAnimator не назначен!");
+      Debug.LogWarning("Объект " + gameObject.name + " targetAnimator не назначен!");
   }
 
   private void EndAction()

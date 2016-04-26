@@ -7,9 +7,14 @@ public class ChangeQuestStep : MonoBehaviour
 
   public void OnEventAction()
   {
+    Invoke("ChangeCurrentStep", 0);
+  }
+
+  void ChangeCurrentStep()
+  {
     if (quest != null)
       quest.CurrentStep = newValue;
     else
-      Debug.LogWarning("Дмитрий! Объект " + gameObject.name + " quest не назначен!");
+      Debug.LogWarning("Объект " + gameObject.name + " quest не назначен!");
   }
 }
