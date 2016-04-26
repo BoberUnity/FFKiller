@@ -45,6 +45,9 @@ TagManager:
   - name: Bottom
     uniqueID: 4063356159
     locked: 0
+  - name: Shadows
+    uniqueID: 2451465651
+    locked: 0
   - name: Characters
     uniqueID: 103704465
     locked: 0

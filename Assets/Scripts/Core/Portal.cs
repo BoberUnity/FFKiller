@@ -11,6 +11,7 @@ public class Portal : MonoBehaviour
   private CameraController cameraController = null;
     //DV{
     public GameObject TargetMap;
+    public bool Wind = false;   //После перехода нужно включить анимацию ветра на персонаже.
     //DV}
 
     private void Start ()
@@ -44,6 +45,7 @@ public class Portal : MonoBehaviour
     //  doorAnimator.SetTrigger("Open");
 
     //DV{
+    characterMoving.thisAnimator.SetBool("Wind", Wind);
     cameraController.TuneMap(TargetMap);
     //DV}
   }

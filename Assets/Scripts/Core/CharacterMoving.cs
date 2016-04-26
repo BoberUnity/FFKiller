@@ -9,7 +9,7 @@ public class CharacterMoving : MonoBehaviour
   [SerializeField] private float speedWalk = 1;
   [SerializeField] private float speedRun = 1;
   private float currentSpeed = 0;
-  private Animator thisAnimator = null;
+  public Animator thisAnimator = null;
   /*[HideInInspector]*/ public bool KeyboardControl = true;
   [HideInInspector] public Direction AutoMoveDirection = Direction.None;
   public float HandlingDelay;
