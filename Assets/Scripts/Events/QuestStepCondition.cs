@@ -10,10 +10,10 @@ public class Conditions
     public int newQuestStep = 0;
 }
 
-public class QuestStepCondition : MonoBehaviour
+public class QuestStepCondition : Quest
 {
-    [SerializeField]
-    private int currentStep = 0;
+    //[SerializeField]
+    //private int currentStep = 0;
     [SerializeField]
     private Conditions[] ListOfConditions = null;
 

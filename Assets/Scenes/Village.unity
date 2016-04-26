@@ -185,7 +185,7 @@ Transform:
   - {fileID: 378938627}
   - {fileID: 738692218}
   m_Father: {fileID: 1827595836}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!114 &19853715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,6 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5647e277d7a57c4689bb8676a8c1b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentStep: 0
   steps:
   - Description: "\u0414\u0432\u0438\u0436\u0435\u043D\u0438\u0435 \u0432\u0432\u0435\u0440\u0445"
     ValueOfAction: 1
@@ -250,7 +251,6 @@ MonoBehaviour:
   - Description: "\u0414\u0432\u0438\u0436\u0435\u043D\u0438\u0435 \u0432\u0432\u0435\u0440\u0445"
     ValueOfAction: 13
     TargetObject: {fileID: 738692217}
-  currentStep: 0
 --- !u!1 &27286415
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,6 +334,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trigger: {fileID: 1340672367}
   triggerType: 2
+--- !u!1 &43802738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 43802740}
+  - 114: {fileID: 43802739}
+  m_Layer: 0
+  m_Name: 2_DisableWindAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &43802739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 43802738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee55c90acfa767a4891aff22a493b7ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 1535125968}
+  newValue: 0
+--- !u!4 &43802740
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 43802738}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 374972152}
+  m_RootOrder: 6
 --- !u!1 &56581605
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,11 +429,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 429642, guid: f64748629cc6d034ba35c9d86b3aa4a8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1030
+      value: 1737
       objectReference: {fileID: 0}
     - target: {fileID: 429642, guid: f64748629cc6d034ba35c9d86b3aa4a8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1712
+      value: 1263
       objectReference: {fileID: 0}
     - target: {fileID: 429642, guid: f64748629cc6d034ba35c9d86b3aa4a8, type: 2}
       propertyPath: m_LocalPosition.z
@@ -476,6 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5647e277d7a57c4689bb8676a8c1b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentStep: 0
   steps:
   - Description: "\u041A\u0440\u0435\u0441\u0442\u044C\u044F\u043D\u0438\u043D \u0434\u0430\u0435\u0442
       \u043C\u0435\u0447"
@@ -485,7 +527,6 @@ MonoBehaviour:
       \u0434\u0438\u0430\u043B\u043E\u0433\u0430"
     ValueOfAction: 1
     TargetObject: {fileID: 325918516}
-  currentStep: 0
 --- !u!1 &103168193
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,7 +640,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 374972152}
-  m_RootOrder: 5
+  m_RootOrder: 7
 --- !u!114 &150010587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -815,6 +856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5647e277d7a57c4689bb8676a8c1b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentStep: 0
   steps:
   - Description: "\u041E\u0442\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u0435 \u0442\u0440\u0438\u0433\u0433\u0435\u0440\u0430"
     ValueOfAction: 1
@@ -834,7 +876,6 @@ MonoBehaviour:
   - Description: "\u0421\u043D\u044F\u0442\u0438\u0435 \u0431\u043B\u043E\u043A\u0430"
     ValueOfAction: 4
     TargetObject: {fileID: 855964910}
-  currentStep: 0
 --- !u!1 &270439757
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,7 +1495,9 @@ Transform:
   - {fileID: 824316773}
   - {fileID: 1040912459}
   - {fileID: 272814179}
+  - {fileID: 1764731846}
   - {fileID: 749843849}
+  - {fileID: 43802740}
   - {fileID: 150010586}
   - {fileID: 1988828566}
   - {fileID: 854706128}
@@ -1474,6 +1517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5647e277d7a57c4689bb8676a8c1b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentStep: 0
   steps:
   - Description: 
     ValueOfAction: 1
@@ -1486,7 +1530,13 @@ MonoBehaviour:
     TargetObject: {fileID: 272814177}
   - Description: 
     ValueOfAction: 1
+    TargetObject: {fileID: 1764731844}
+  - Description: 
+    ValueOfAction: 1
     TargetObject: {fileID: 749843847}
+  - Description: 
+    ValueOfAction: 2
+    TargetObject: {fileID: 43802738}
   - Description: 
     ValueOfAction: 2
     TargetObject: {fileID: 150010585}
@@ -1505,7 +1555,6 @@ MonoBehaviour:
   - Description: 
     ValueOfAction: 5
     TargetObject: {fileID: 716030582}
-  currentStep: 0
 --- !u!1 &378938626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1855,6 +1904,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1836976747}
   m_RootOrder: 0
+--- !u!1 &527614327 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 172602, guid: 586c6608a3bfed742a656e0fa4fbb81b, type: 2}
+  m_PrefabInternal: {fileID: 1270814116}
 --- !u!1 &527933618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2153,6 +2206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5647e277d7a57c4689bb8676a8c1b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentStep: 0
   steps:
   - Description: "\u041A\u0440\u0435\u0441\u0442\u044C\u044F\u043D\u0438\u043D \u0434\u0430\u0435\u0442
       \u043A\u043B\u044E\u0447"
@@ -2162,7 +2216,6 @@ MonoBehaviour:
       \u0434\u0438\u0430\u043B\u043E\u0433"
     ValueOfAction: 1
     TargetObject: {fileID: 1387742794}
-  currentStep: 0
 --- !u!1 &608978845
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,7 +2332,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 899973107}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!114 &639736096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2411,7 +2464,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 374972152}
-  m_RootOrder: 10
+  m_RootOrder: 12
 --- !u!114 &716030584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2640,7 +2693,7 @@ GameObject:
   - 4: {fileID: 741625939}
   - 114: {fileID: 741625940}
   m_Layer: 0
-  m_Name: Exit-204-GehendGoExit
+  m_Name: Exit-203-GehendGoExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2671,10 +2724,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetQuest: {fileID: 1614922126}
   stepOnEndAction: 205
-  TimeTillEnd: 0
+  TimeTillEnd: 1
   MovePropetrieses:
   - Direction: 3
-    Time: 3
+    Time: 2
 --- !u!1 &749843847
 GameObject:
   m_ObjectHideFlags: 0
@@ -2709,7 +2762,7 @@ MonoBehaviour:
   NewInt: 0
   NewFloat: 0
   Delay: 0
-  ActionTime: 2
+  ActionTime: 1
   TargetQuest: {fileID: 374972153}
   StepOnEndAction: 2
 --- !u!4 &749843849
@@ -2723,7 +2776,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 374972152}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &779741410
 GameObject:
   m_ObjectHideFlags: 0
@@ -3125,7 +3178,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 374972152}
-  m_RootOrder: 7
+  m_RootOrder: 9
 --- !u!114 &854706129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3306,9 +3359,9 @@ Transform:
   - {fileID: 2014136135}
   - {fileID: 1380896124}
   - {fileID: 966303670}
-  - {fileID: 1947189469}
   - {fileID: 1419847780}
   - {fileID: 639736095}
+  - {fileID: 1947189469}
   m_Father: {fileID: 1614922125}
   m_RootOrder: 4
 --- !u!1 &912687528
@@ -3377,7 +3430,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &914801402
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3661,7 +3714,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1039064151
 Transform:
   m_ObjectHideFlags: 0
@@ -4379,6 +4432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5647e277d7a57c4689bb8676a8c1b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentStep: 0
   steps:
   - Description: "\u041E\u0442\u043A\u043B\u044E\u0447\u0438\u043C \u0442\u0440\u0438\u0433\u0433\u0435\u0440
       \u0432\u044B\u0445\u043E\u0434\u0430"
@@ -4442,7 +4496,6 @@ MonoBehaviour:
       \u0441\u0446\u0435\u043D\u0443"
     ValueOfAction: 13
     TargetObject: {fileID: 1431173813}
-  currentStep: 0
 --- !u!1 &1192093231
 GameObject:
   m_ObjectHideFlags: 0
@@ -4487,12 +4540,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5647e277d7a57c4689bb8676a8c1b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentStep: 0
   steps:
   - Description: "\u041F\u0440\u0438\u043D\u0438\u043C\u0430\u0435\u043C \u0434\u043E\u0447\u043A\u0443
       \u0432 \u043F\u0430\u0440\u0442\u0438\u044E"
     ValueOfAction: 1
     TargetObject: {fileID: 1731086520}
-  currentStep: 0
 --- !u!1 &1210417752
 GameObject:
   m_ObjectHideFlags: 0
@@ -4581,10 +4634,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1210417752}
---- !u!1 &1220668880 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 186596, guid: 586c6608a3bfed742a656e0fa4fbb81b, type: 2}
-  m_PrefabInternal: {fileID: 1270814116}
 --- !u!1 &1221309409
 GameObject:
   m_ObjectHideFlags: 0
@@ -4627,12 +4676,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5647e277d7a57c4689bb8676a8c1b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentStep: 0
   steps:
   - Description: "\u041A\u0440\u0435\u0441\u0442\u044C\u044F\u043D\u0438\u043D \u0434\u0430\u0435\u0442
       \u043B\u0435\u043A\u0430\u0440\u0441\u0442\u0432\u043E"
     ValueOfAction: 1
     TargetObject: {fileID: 1678255190}
-  currentStep: 0
 --- !u!1001 &1237559720
 Prefab:
   m_ObjectHideFlags: 0
@@ -4679,7 +4728,7 @@ Prefab:
     - target: {fileID: 11443720, guid: 26425cd0ba5875345b009b64a01c08fc, type: 2}
       propertyPath: Map
       value: 
-      objectReference: {fileID: 1220668880}
+      objectReference: {fileID: 527614327}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26425cd0ba5875345b009b64a01c08fc, type: 2}
   m_IsPrefabParent: 0
@@ -4723,13 +4772,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentStep: 1
+  steps: []
   ListOfConditions:
   - ifCurrStep: 1
     quest: {fileID: 1614922126}
     newQuestStep: 100
   - ifCurrStep: 2
     quest: {fileID: 1614922126}
-    newQuestStep: 200
+    newQuestStep: 201
 --- !u!114 &1252622589 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11442966, guid: fcf7b297f3d893d4c86aa82e54392f2f,
@@ -5070,7 +5120,7 @@ Transform:
   - {fileID: 1126575490}
   - {fileID: 1431173815}
   m_Father: {fileID: 1827595836}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &1340672364
 GameObject:
   m_ObjectHideFlags: 0
@@ -5509,7 +5559,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 374972152}
-  m_RootOrder: 8
+  m_RootOrder: 10
 --- !u!114 &1400824701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5615,7 +5665,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 899973107}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!114 &1419847781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5697,7 +5747,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1487903097}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1111, y: -1688, z: 0}
+  m_LocalPosition: {x: 1042.5, y: -859, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1627548399}
@@ -5719,8 +5769,8 @@ MonoBehaviour:
   textAssetName: Pilgrim
   changeTriggers:
   - MyTrigger: 1
-    Quest: {fileID: 1614922126}
-    NewCurrentStep: 1
+    Quest: {fileID: 1249308597}
+    NewCurrentStep: 2
   Portrait: {fileID: 21300008, guid: 5a81276de80f0d045894a3207aa6567e, type: 3}
   bodyAnimator: {fileID: 1487903101}
   CharSpriteRenderer: {fileID: 1487903100}
@@ -5863,7 +5913,7 @@ GameObject:
   - 4: {fileID: 1515041493}
   - 114: {fileID: 1515041494}
   m_Layer: 0
-  m_Name: Exit-203-TextGehend
+  m_Name: Exit-202-TextGehend
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5898,7 +5948,7 @@ MonoBehaviour:
   changeTriggers:
   - MyTrigger: 2
     Quest: {fileID: 1614922126}
-    NewCurrentStep: 204
+    NewCurrentStep: 203
   Portrait: []
 --- !u!1 &1522348999
 GameObject:
@@ -6369,7 +6419,7 @@ Transform:
   - {fileID: 565792902}
   - {fileID: 1707414500}
   m_Father: {fileID: 1827595836}
-  m_RootOrder: 6
+  m_RootOrder: 4
 --- !u!114 &1614922126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6381,6 +6431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5647e277d7a57c4689bb8676a8c1b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentStep: 0
   steps:
   - Description: 
     ValueOfAction: 1
@@ -6407,13 +6458,13 @@ MonoBehaviour:
     ValueOfAction: 201
     TargetObject: {fileID: 1002544725}
   - Description: "\u0421\u043C\u0435\u043D\u0430 "
-    ValueOfAction: 202
+    ValueOfAction: 201
     TargetObject: {fileID: 1940013344}
   - Description: "\u0421\u043C\u0435\u043D\u0430 "
-    ValueOfAction: 203
+    ValueOfAction: 202
     TargetObject: {fileID: 1515041492}
   - Description: "\u0421\u043C\u0435\u043D\u0430 "
-    ValueOfAction: 204
+    ValueOfAction: 203
     TargetObject: {fileID: 741625938}
   - Description: "\u0421\u043C\u0435\u043D\u0430 "
     ValueOfAction: 205
@@ -6429,14 +6480,13 @@ MonoBehaviour:
     TargetObject: {fileID: 966303669}
   - Description: "\u0421\u043C\u0435\u043D\u0430 "
     ValueOfAction: 207
-    TargetObject: {fileID: 1947189468}
-  - Description: "\u0421\u043C\u0435\u043D\u0430 "
-    ValueOfAction: 207
     TargetObject: {fileID: 1419847779}
   - Description: "\u0421\u043C\u0435\u043D\u0430 "
     ValueOfAction: 207
     TargetObject: {fileID: 639736094}
-  currentStep: 0
+  - Description: "\u0421\u043C\u0435\u043D\u0430 "
+    ValueOfAction: 207
+    TargetObject: {fileID: 1947189468}
 --- !u!1 &1627321980
 GameObject:
   m_ObjectHideFlags: 0
@@ -6873,7 +6923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c92bdcab396748748a19b6f0e0a5660a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newValue: 0
+  newValue: 1
 --- !u!1 &1677217917
 GameObject:
   m_ObjectHideFlags: 0
@@ -7236,6 +7286,47 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1764731844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1764731846}
+  - 114: {fileID: 1764731845}
+  m_Layer: 0
+  m_Name: 1_EnableMainAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1764731845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1764731844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee55c90acfa767a4891aff22a493b7ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 1039064150}
+  newValue: 1
+--- !u!4 &1764731846
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1764731844}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 374972152}
+  m_RootOrder: 4
 --- !u!1 &1767609091
 GameObject:
   m_ObjectHideFlags: 0
@@ -7313,7 +7404,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 374972152}
-  m_RootOrder: 9
+  m_RootOrder: 11
 --- !u!114 &1772283123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7394,9 +7485,9 @@ Transform:
   - {fileID: 779741411}
   - {fileID: 1960914094}
   - {fileID: 1865147094}
+  - {fileID: 1614922125}
   - {fileID: 1300570018}
   - {fileID: 19853714}
-  - {fileID: 1614922125}
   m_Father: {fileID: 0}
   m_RootOrder: 6
 --- !u!1 &1827648476
@@ -7468,12 +7559,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5647e277d7a57c4689bb8676a8c1b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentStep: 0
   steps:
   - Description: "\u041A\u0440\u0435\u0441\u0442\u044C\u044F\u043D\u0438\u043D \u0434\u0430\u0435\u0442
       \u043B\u0435\u043A\u0430\u0440\u0441\u0442\u0432\u043E"
     ValueOfAction: 1
     TargetObject: {fileID: 512418309}
-  currentStep: 0
 --- !u!1 &1865147093
 GameObject:
   m_ObjectHideFlags: 0
@@ -7517,11 +7608,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5647e277d7a57c4689bb8676a8c1b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentStep: 0
   steps:
   - Description: "\u041F\u0435\u0440\u0435\u0445\u043E\u0434 \u043D\u0430 \u043A\u0430\u0440\u0442\u0443"
     ValueOfAction: 1
     TargetObject: {fileID: 1102909626}
-  currentStep: 0
 --- !u!1 &1881973960
 GameObject:
   m_ObjectHideFlags: 0
@@ -7752,7 +7843,7 @@ GameObject:
   - 4: {fileID: 1940013345}
   - 114: {fileID: 1940013346}
   m_Layer: 0
-  m_Name: Exit-202-WindAudioOn
+  m_Name: Exit-201-WindAudioOn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7784,13 +7875,13 @@ MonoBehaviour:
   targetAnimator: {fileID: 1535125969}
   paramName: IsPlay
   ParametrType: 0
-  NewBool: 0
+  NewBool: 1
   NewInt: 0
   NewFloat: 0
   Delay: 0
   ActionTime: 2
   TargetQuest: {fileID: 1614922126}
-  StepOnEndAction: 0
+  StepOnEndAction: 202
 --- !u!1 &1947189468
 GameObject:
   m_ObjectHideFlags: 0
@@ -7818,7 +7909,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 899973107}
-  m_RootOrder: 10
+  m_RootOrder: 12
 --- !u!114 &1947189470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7916,12 +8007,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5647e277d7a57c4689bb8676a8c1b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentStep: 0
   steps:
   - Description: "\u041A\u0440\u0435\u0441\u0442\u044C\u044F\u043D\u0438\u043D \u0434\u0430\u0435\u0442
       \u0433\u0440\u0438\u0431"
     ValueOfAction: 1
     TargetObject: {fileID: 1881973960}
-  currentStep: 0
 --- !u!1 &1960914093
 GameObject:
   m_ObjectHideFlags: 0
@@ -8019,7 +8110,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 374972152}
-  m_RootOrder: 6
+  m_RootOrder: 8
 --- !u!114 &1988828567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8348,6 +8439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentStep: 0
+  steps: []
   ListOfConditions: []
 --- !u!114 &2029209661
 MonoBehaviour:

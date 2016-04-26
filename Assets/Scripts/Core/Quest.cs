@@ -9,9 +9,10 @@ using System;
 }
 
 public class Quest : MonoBehaviour
-{  
+{
+  [SerializeField] public int currentStep = 0;
   [SerializeField] private Step[] steps = null;
-  [HideInInspector] public int currentStep = 0;
+
   private int actioningStep = -1;
 
   public int CurrentStep
