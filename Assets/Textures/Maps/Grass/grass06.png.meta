@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 50e9d2a29e8d540408322cdec33f3d2b
-timeCreated: 1458577513
+timeCreated: 1461700562
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -60,17 +60,17 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -9, y: 6}
-        - {x: -16, y: 6}
-        - {x: -16, y: -16}
-        - {x: 15, y: -16}
-        - {x: 16, y: -15}
-        - {x: 16, y: -1}
-        - {x: 15, y: 2}
+      - - {x: -9, y: 22}
+        - {x: -16, y: 22}
+        - {x: -16, y: 0}
+        - {x: 15, y: 0}
+        - {x: 16, y: 1}
+        - {x: 16, y: 15}
+        - {x: 15, y: 18}
     - name: grass06_1
       rect:
         serializedVersion: 2
@@ -78,20 +78,20 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -3, y: 1}
-        - {x: -6, y: 0}
-        - {x: -10, y: 6}
-        - {x: -13, y: 5}
-        - {x: -16, y: -1}
-        - {x: -16, y: -16}
-        - {x: 15, y: -16}
-        - {x: 16, y: -14}
-        - {x: 16, y: -7}
-        - {x: 11, y: 3}
+      - - {x: -3, y: 17}
+        - {x: -6, y: 16}
+        - {x: -10, y: 22}
+        - {x: -13, y: 21}
+        - {x: -16, y: 15}
+        - {x: -16, y: 0}
+        - {x: 15, y: 0}
+        - {x: 16, y: 2}
+        - {x: 16, y: 9}
+        - {x: 11, y: 19}
     - name: grass06_2
       rect:
         serializedVersion: 2
@@ -99,19 +99,19 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -10, y: 6}
-        - {x: -14, y: 5}
-        - {x: -16, y: -5}
-        - {x: -16, y: -15}
-        - {x: -15, y: -16}
-        - {x: 13, y: -16}
-        - {x: 16, y: -14}
-        - {x: 16, y: -7}
-        - {x: 12, y: 2}
+      - - {x: -10, y: 22}
+        - {x: -14, y: 21}
+        - {x: -16, y: 11}
+        - {x: -16, y: 1}
+        - {x: -15, y: 0}
+        - {x: 13, y: 0}
+        - {x: 16, y: 2}
+        - {x: 16, y: 9}
+        - {x: 12, y: 18}
     outline: []
   spritePackingTag: 
   userData: 

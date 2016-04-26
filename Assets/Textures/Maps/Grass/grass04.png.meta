@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 45beb01a4e45a16409d06ddab9f846f3
-timeCreated: 1458933253
+timeCreated: 1461700533
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -61,15 +61,15 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -16, y: 12}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 8}
-        - {x: 3, y: 12}
+      - - {x: -16, y: 28}
+        - {x: -16, y: 0}
+        - {x: 16, y: 0}
+        - {x: 16, y: 24}
+        - {x: 3, y: 28}
     - name: grass04_1
       rect:
         serializedVersion: 2
@@ -77,16 +77,16 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -10, y: 12}
-        - {x: -13, y: 11}
-        - {x: -16, y: 7}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 8}
+      - - {x: -10, y: 28}
+        - {x: -13, y: 27}
+        - {x: -16, y: 23}
+        - {x: -16, y: 0}
+        - {x: 16, y: 0}
+        - {x: 16, y: 24}
     - name: grass04_2
       rect:
         serializedVersion: 2
@@ -94,15 +94,15 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -16, y: 12}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 8}
-        - {x: 3, y: 12}
+      - - {x: -16, y: 28}
+        - {x: -16, y: 0}
+        - {x: 16, y: 0}
+        - {x: 16, y: 24}
+        - {x: 3, y: 28}
     - name: grass04_3
       rect:
         serializedVersion: 2
@@ -110,16 +110,16 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -13, y: 14}
-        - {x: -16, y: 8}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 12}
-        - {x: 13, y: 14}
+      - - {x: -13, y: 30}
+        - {x: -16, y: 24}
+        - {x: -16, y: 0}
+        - {x: 16, y: 0}
+        - {x: 16, y: 28}
+        - {x: 13, y: 30}
     outline: []
   spritePackingTag: 
   userData: 

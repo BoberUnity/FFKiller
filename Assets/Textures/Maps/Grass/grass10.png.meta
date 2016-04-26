@@ -1,11 +1,12 @@
 fileFormatVersion: 2
 guid: cea2b914855b5da4c91bd13779091d99
-timeCreated: 1458577624
+timeCreated: 1461700689
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: grass10_0
     21300002: grass10_1
+    21300004: grass10_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -28,8 +29,8 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
-  maxTextureSize: 64
+  textureFormat: -2
+  maxTextureSize: 128
   textureSettings:
     filterMode: 0
     aniso: 16
@@ -59,20 +60,25 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 1, y: 13}
-        - {x: -4, y: 13}
-        - {x: -14, y: 10}
-        - {x: -16, y: 5}
-        - {x: -16, y: -4}
-        - {x: -15, y: -5}
-        - {x: -11, y: -12}
-        - {x: 10, y: -12}
-        - {x: 13, y: -5}
-        - {x: 13, y: 1}
+      - - {x: 12, y: 19}
+        - {x: 1, y: 30}
+        - {x: -6, y: 30}
+        - {x: -15, y: 26}
+        - {x: -14, y: 16}
+        - {x: -13, y: 13}
+        - {x: -14, y: 13}
+        - {x: -16, y: 12}
+        - {x: -16, y: 9}
+        - {x: -14, y: 6}
+        - {x: -9, y: 4}
+        - {x: 4, y: 4}
+        - {x: 8, y: 5}
+        - {x: 13, y: 9}
+        - {x: 13, y: 16}
     - name: grass10_1
       rect:
         serializedVersion: 2
@@ -80,17 +86,38 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -14, y: 14}
-        - {x: -14, y: -8}
-        - {x: -11, y: -12}
-        - {x: 11, y: -12}
-        - {x: 14, y: -6}
-        - {x: 14, y: 4}
-        - {x: 8, y: 14}
+      - - {x: 3, y: 30}
+        - {x: -9, y: 30}
+        - {x: -14, y: 24}
+        - {x: -14, y: 7}
+        - {x: -8, y: 4}
+        - {x: 12, y: 4}
+        - {x: 14, y: 8}
+        - {x: 14, y: 20}
+    - name: grass10_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: 29}
+        - {x: -12, y: 25}
+        - {x: -15, y: 20}
+        - {x: -15, y: 13}
+        - {x: -11, y: 4}
+        - {x: 11, y: 4}
+        - {x: 14, y: 11}
+        - {x: 14, y: 17}
+        - {x: 3, y: 29}
     outline: []
   spritePackingTag: 
   userData: 
