@@ -10,6 +10,7 @@ public class CharacterMoving : MonoBehaviour
   [SerializeField] private float speedRun = 1;
   private float currentSpeed = 0;
   public Animator thisAnimator = null;
+  [HideInInspector] public bool Block = true;
   /*[HideInInspector]*/ public bool KeyboardControl = true;
   [HideInInspector] public Direction AutoMoveDirection = Direction.None;
   public float HandlingDelay;
@@ -40,7 +41,7 @@ public class CharacterMoving : MonoBehaviour
     {
         CharSpriteRenderer.sortingOrder = (int)(-transform.position.y * 2);
 
-        if (KeyboardControl)
+        if (KeyboardControl && Block)
         {
           left = Input.GetKey(KeyCode.LeftArrow);
           right = Input.GetKey(KeyCode.RightArrow);

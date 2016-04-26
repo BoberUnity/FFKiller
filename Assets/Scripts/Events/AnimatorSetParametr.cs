@@ -16,9 +16,11 @@ public class AnimatorSetParametr : MonoBehaviour
   [HideInInspector] public bool NewBool = false;
   [HideInInspector] public int NewInt = 0;
   [HideInInspector] public float NewFloat = 0;
+  [HideInInspector] public int Delay = 0;
   [HideInInspector] public float ActionTime = -1;
   [HideInInspector] public Quest TargetQuest = null;
   [HideInInspector] public int StepOnEndAction = 0;
+
 
   public void OnEventAction()
   {
@@ -40,10 +42,10 @@ public class AnimatorSetParametr : MonoBehaviour
           break;
       }
       if (ActionTime > 0)
-        Invoke("EndAction", ActionTime);
+          Invoke("EndAction", Delay);
     }
     else
-      Debug.LogWarning("Дмитрий! Объект " + gameObject.name + " targetAnimator не назначен!");    
+      Debug.LogWarning("Объект " + gameObject.name + " targetAnimator не назначен!");    
   }
 
   private void EndAction()

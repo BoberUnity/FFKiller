@@ -10,6 +10,6 @@ public class ObjectSetActive : MonoBehaviour
     if (targetObject != null)    
       targetObject.SetActive(newValue);     
     else
-      Debug.LogWarning("Дмитрий! Объект " + gameObject.name + " targetObject не назначен!");
+      Debug.LogWarning("Объект " + gameObject.name + " targetObject не назначен!");
   }  
 }

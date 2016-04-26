@@ -8,6 +8,6 @@ public class BlockControl : MonoBehaviour
   {
     CharacterMoving characterMoving = FindObjectOfType<CharacterMoving>();
     if (characterMoving != null)
-      characterMoving.KeyboardControl = !newValue;
+      characterMoving.Block = !newValue;
   }  
 }
