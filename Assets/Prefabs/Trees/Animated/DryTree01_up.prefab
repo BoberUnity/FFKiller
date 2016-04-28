@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21235124}
   - 95: {fileID: 9506216}
   m_Layer: 0
-  m_Name: DryTree01
+  m_Name: DryTree01_up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
