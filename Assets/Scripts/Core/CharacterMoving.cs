@@ -13,13 +13,11 @@ public class CharacterMoving : MonoBehaviour
   [HideInInspector] public bool Block = true;
   /*[HideInInspector]*/ public bool KeyboardControl = true;
   [HideInInspector] public Direction AutoMoveDirection = Direction.None;
-  public float HandlingDelay;
   private float TimeToHandle;
   private bool left = false;
   private bool right = false;
   private bool up = false;
   private bool down = false;
-
 
   //DV{
   public SpriteRenderer CharSpriteRenderer;
@@ -56,12 +54,7 @@ public class CharacterMoving : MonoBehaviour
           down = AutoMoveDirection == Direction.Down;
         }
 
-        TimeToHandle -= Time.deltaTime;
-        if (TimeToHandle < 0f)
-        {
-            MovingHandling();
-            TimeToHandle = HandlingDelay;
-        }
+        MovingHandling();
     }
 
 
@@ -120,6 +113,35 @@ public class CharacterMoving : MonoBehaviour
         else
             thisAnimator.SetBool("Running", false);
         //DV}
+    }
 
+    public void TurnTo(Direction Dir)
+    {
+        switch (Dir)
+        {
+            case Direction.Left:
+                thisAnimator.SetFloat("SpeedX", -1);
+                thisAnimator.SetFloat("SpeedY", 0);
+                break;
+            case Direction.Right:
+                thisAnimator.SetFloat("SpeedX", 1);
+                thisAnimator.SetFloat("SpeedY", 0);
+                break;
+            case Direction.Down:
+                thisAnimator.SetFloat("SpeedX", 0);
+                thisAnimator.SetFloat("SpeedY", -1);
+                break;
+            case Direction.Up:
+                thisAnimator.SetFloat("SpeedX", 0);
+                thisAnimator.SetFloat("SpeedY", 1);
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void SetWind(bool sw)
+    {
+        thisAnimator.SetBool("Wind", sw);
     }
 }
