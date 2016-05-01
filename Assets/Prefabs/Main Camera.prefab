@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
-  EffectTime: 1.4
+  EffectTime: 1.2
   Map: {fileID: 0}
   CameraZoom: 2
   traction: 0
