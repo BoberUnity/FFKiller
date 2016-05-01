@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: f1b3b1703de73eb43823c1d7e07c5443
-timeCreated: 1461700658
+timeCreated: 1462123869
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -60,19 +60,19 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -11, y: 32}
-        - {x: -16, y: 26}
-        - {x: -16, y: 7}
-        - {x: -14, y: 1}
-        - {x: -10, y: 0}
-        - {x: 9, y: 0}
-        - {x: 14, y: 7}
-        - {x: 16, y: 10}
-        - {x: 16, y: 32}
+      - - {x: -11, y: 22.4}
+        - {x: -16, y: 16.4}
+        - {x: -16, y: -2.6000004}
+        - {x: -14, y: -8.6}
+        - {x: -10, y: -9.6}
+        - {x: 9, y: -9.6}
+        - {x: 14, y: -2.6000004}
+        - {x: 16, y: 0.39999962}
+        - {x: 16, y: 22.4}
     - name: grass08_1
       rect:
         serializedVersion: 2
@@ -80,28 +80,28 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -12, y: 32}
-        - {x: -16, y: 24}
-        - {x: -16, y: 7}
-        - {x: -13, y: 4}
-        - {x: -9, y: 4}
-        - {x: -7, y: 5}
-        - {x: -3, y: 5}
-        - {x: 1, y: 8}
-        - {x: 2, y: 7}
-        - {x: 1, y: 7}
-        - {x: -2, y: 5}
-        - {x: -7, y: 5}
-        - {x: -9, y: 3}
-        - {x: -9, y: 2}
-        - {x: -7, y: 0}
-        - {x: 11, y: 0}
-        - {x: 16, y: 1}
-        - {x: 16, y: 32}
+      - - {x: -12, y: 22.4}
+        - {x: -16, y: 14.4}
+        - {x: -16, y: -2.6000004}
+        - {x: -13, y: -5.6000004}
+        - {x: -9, y: -5.6000004}
+        - {x: -7, y: -4.6000004}
+        - {x: -3, y: -4.6000004}
+        - {x: 1, y: -1.6000004}
+        - {x: 2, y: -2.6000004}
+        - {x: 1, y: -2.6000004}
+        - {x: -2, y: -4.6000004}
+        - {x: -7, y: -4.6000004}
+        - {x: -9, y: -6.6000004}
+        - {x: -9, y: -7.6000004}
+        - {x: -7, y: -9.6}
+        - {x: 11, y: -9.6}
+        - {x: 16, y: -8.6}
+        - {x: 16, y: 22.4}
     - name: grass08_2
       rect:
         serializedVersion: 2
@@ -109,18 +109,18 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -12, y: 32}
-        - {x: -16, y: 23}
-        - {x: -16, y: 2}
-        - {x: -14, y: 0}
-        - {x: 7, y: 0}
-        - {x: 16, y: 5}
-        - {x: 16, y: 30}
-        - {x: 14, y: 32}
+      - - {x: -12, y: 22.4}
+        - {x: -16, y: 13.4}
+        - {x: -16, y: -7.6000004}
+        - {x: -14, y: -9.6}
+        - {x: 7, y: -9.6}
+        - {x: 16, y: -4.6000004}
+        - {x: 16, y: 20.4}
+        - {x: 14, y: 22.4}
     outline: []
   spritePackingTag: 
   userData: 
