@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21206186}
   - 95: {fileID: 9529828}
   - 114: {fileID: 11435468}
+  - 114: {fileID: 11468618}
   m_Layer: 0
   m_Name: grass10
   m_TagString: Untagged
@@ -39,7 +40,7 @@ Animator:
   m_GameObject: {fileID: 164214}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cd9c3f1f881798d40bfbcbaebc6f5895, type: 2}
+  m_Controller: {fileID: 22100000, guid: 67c3969232fcd1b47931a19a4f2008b5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -56,6 +57,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d869dfd283cb144da1dff91f0549845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11468618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09c22919ee7d2c2448cb2425ee6d3c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &21206186

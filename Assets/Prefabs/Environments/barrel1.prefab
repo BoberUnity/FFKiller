@@ -10,6 +10,8 @@ GameObject:
   - 4: {fileID: 454414}
   - 212: {fileID: 21251268}
   - 95: {fileID: 9568162}
+  - 114: {fileID: 11409138}
+  - 114: {fileID: 11418332}
   m_Layer: 0
   m_Name: barrel1
   m_TagString: Untagged
@@ -46,6 +48,28 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11409138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d869dfd283cb144da1dff91f0549845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11418332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09c22919ee7d2c2448cb2425ee6d3c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21251268
 SpriteRenderer:
   m_ObjectHideFlags: 1

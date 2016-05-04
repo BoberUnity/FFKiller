@@ -7,4 +7,6 @@ AnimatorOverrideController:
   m_PrefabInternal: {fileID: 0}
   m_Name: Grass05
   m_Controller: {fileID: 9100000, guid: 35d74949d5a1f634b80bb9e0cf159fca, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: accf73e877e072943b72749db0a5319b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f7475e07ba98b64418262b50221fc081, type: 2}
